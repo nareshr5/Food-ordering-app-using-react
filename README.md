@@ -1,3 +1,12 @@
+# App building flow:
+- created app using npx create-react-app command
+- removed the unwanted things
+- initializd the tailwindcss into the project
+- created the basic components [Head , Body , Footer]
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
