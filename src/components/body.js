@@ -1,6 +1,21 @@
-// import whats_on_your_mind from "../utils/constant";
+import ResRecomendations from "./resrecomendations";
 import WhatsOnMind from "./whatsonmind";
+import { useEffect } from "react";
 const Body = () =>{
+
+    useEffect(()=>{
+        getBestPlacesToEat();
+    });
+
+    const getBestPlacesToEat = async () =>{
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.89960&lng=80.22090&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const jsonValue = await data.json();
+        const bestPlacesToEat = jsonValue?.data.cards[6]?.card?.card?.brands;
+        // console.log(bestPlacesToEat);
+
+
+    }
+
     return(
         <div className="h-96 w-3/4 m-auto mt-4  bg-slate-400  flex flex-col">
             
@@ -8,6 +23,7 @@ const Body = () =>{
 
         <div>
             <WhatsOnMind/>
+            <ResRecomendations title="Best Places to Eat Across Cities data={bestPlacesToEat}" />
         </div>          
         </div>
     );
