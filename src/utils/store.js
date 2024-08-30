@@ -1,12 +1,12 @@
-import {createStore} from "@reduxjs/toolkit";
+import {configureStore} from "@reduxjs/toolkit";
 
 import recommendationSliceReducer from "./recomedationSlice";
 
-const AppSlice = createStore({
+const appStore = configureStore({
     reducer:{
         rec:recommendationSliceReducer,
 
     }
 });
 
-export default AppSlice;
+export default appStore;
