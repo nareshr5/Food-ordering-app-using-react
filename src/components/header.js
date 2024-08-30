@@ -8,8 +8,8 @@ const Header = () =>{
             
             <div>
                 <ul className="flex py-6 ">
-                    {headerNavigation.map((item) => (
-                        <li className="px-4 mx-4 font-semibold">{item}</li>
+                    {headerNavigation.map((item,index) => (
+                        <li className="px-4 mx-4 font-semibold" key={index}>{item}</li>
                     ))
                     }
                 </ul>
