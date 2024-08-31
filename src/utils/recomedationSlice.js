@@ -5,14 +5,17 @@ const recommendationSlice = createSlice({
     name:"recomendation",
     initialState:{
         bestPlaces:null,
+        bestCuisines:null,
     },
     reducers:{
         addBestPlacesToEat:(state,action)=>{
             state.bestPlaces = action.payload;
-
+        },
+        addBestCuisines:(state,action) =>{
+            state.bestCuisines=action.payload;
         }
     },
 });
 
-export const {addBestPlacesToEat} = recommendationSlice.actions;
+export const {addBestPlacesToEat,addBestCuisines} = recommendationSlice.actions;
 export default recommendationSlice.reducer;
