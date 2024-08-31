@@ -1,7 +1,7 @@
 
 const Footer = () =>{
     return(
-        <div >
+        <div>
             
             <footer className="cursor-pointer text-white bg-black w-screen flex justify-evenly ">
                 <div>
