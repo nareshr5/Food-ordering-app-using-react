@@ -1,13 +1,11 @@
-import React from "react";
 import { useSelector } from "react-redux";
 
-const ResRecomendations = (props) =>{
-
+const BestCuisines = (props) =>{
     const {title} = props;
 
-    const {bestPlaces}= useSelector((store) => store.rec);
+    const {bestCuisines}= useSelector((store) => store.rec);
 
-    if(!bestPlaces || bestPlaces.length === 0) return ;
+    if(!bestCuisines || bestCuisines.length === 0) return ;
     // console.log(bestPlaces[0]);
 
     
@@ -20,9 +18,9 @@ const ResRecomendations = (props) =>{
             <div className="w-[1171.13px] h-[207px]  flex flex-wrap text-gray mt-4 text-center justify-evenly ">
 
                 
-               {bestPlaces.map((place,index) =>(
+               {bestCuisines.map((cuisine,index) =>(
                 //    console.log(index)
-                    ((index<=10) && <div className="p-4 w-[260.78px] h-[53px] border border-white rounded-lg " key={place.text} >{place.text}</div>) 
+                    ((index<=10) && <div className="p-4 w-[260.78px] h-[53px] border border-white rounded-lg text-[15px] " key={cuisine.text} >{cuisine.text}</div>) 
                 
                ))}
 
@@ -34,7 +32,8 @@ const ResRecomendations = (props) =>{
 
         </div>
         </div>
-    );
+    ) 
 };
 
-export default ResRecomendations;
+export default BestCuisines;
+
