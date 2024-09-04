@@ -13,8 +13,8 @@ const ResRecomendations = (props) =>{
     
 
     return(
-        <div className="m-auto w-[1172px] h-[251px]  bg-slate-400 flex flex-col">
-        <div className="absolute w-[1171.13px]  h-[251px]">
+        <div className=" m-auto w-[1172px] h-[251px]  flex flex-col">
+         <div className="absolute w-[1171.13px]  h-[251px]">
             <h2 className="text-2xl font-bold mx-6">{title}</h2>
 
             <div className="w-[1171.13px] h-[207px]  flex flex-wrap text-gray mt-4 text-center justify-evenly ">
@@ -22,11 +22,11 @@ const ResRecomendations = (props) =>{
                 
                {bestPlaces.map((place,index) =>(
                 //    console.log(index)
-                    ((index<=10) && <div className="p-4 w-[260.78px] h-[53px] border border-white rounded-lg " key={place.text} >{place.text}</div>) 
+                    ((index<=10) && <div className="p-4 w-[260.78px] h-[53px] border border-gray rounded-xl " key={place.text} >{place.text}</div>) 
                 
                ))}
 
-                <div className="p-4 w-[260.78px] h-[53px] border border-white rounded-lg font-bold " >More ...</div>
+                <div className="p-4 w-[260.78px] h-[53px] border border-gray rounded-xl font-bold " >More ...</div>
                 
 
     
