@@ -13,7 +13,7 @@ const WhatsOnMind = () =>{
 
             {whatsOnMind.map((res,index) => (
 
-                   index <6 && <img className="w-36 h-[180px] pr-6 object-cover" alr="whats_onmind_images" src={CDN_URL_FOR_DISHES+res?.imageId}/>
+                   index <6 && <img key={res} className="w-36 h-[180px] pr-6 object-cover" alr="whats_onmind_images" src={CDN_URL_FOR_DISHES+res?.imageId}/>
                 )
             
             )}
