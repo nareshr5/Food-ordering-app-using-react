@@ -4,10 +4,16 @@ const recommendationSlice = createSlice({
 
     name:"recomendation",
     initialState:{
+        whatsOnMind:null,
         bestPlaces:null,
         bestCuisines:null,
+        
     },
     reducers:{
+        addWhatsOnMind:(state,action)=>{
+            state.whatsOnMind = action.payload;
+        },
+        
         addBestPlacesToEat:(state,action)=>{
             state.bestPlaces = action.payload;
         },
@@ -17,5 +23,5 @@ const recommendationSlice = createSlice({
     },
 });
 
-export const {addBestPlacesToEat,addBestCuisines} = recommendationSlice.actions;
+export const {addBestPlacesToEat,addBestCuisines,addWhatsOnMind} = recommendationSlice.actions;
 export default recommendationSlice.reducer;

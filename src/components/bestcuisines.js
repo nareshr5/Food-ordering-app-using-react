@@ -6,12 +6,12 @@ const BestCuisines = (props) =>{
     const {bestCuisines}= useSelector((store) => store.rec);
 
     if(!bestCuisines || bestCuisines.length === 0) return ;
-    // console.log(bestPlaces[0]);
+    console.log(bestCuisines);
 
     
 
     return(
-        <div className="m-auto w-[1172px] h-[251px]  bg-slate-400 flex flex-col">
+        <div className="m-auto w-[1172px] h-[251px] flex flex-col">
         <div className="absolute w-[1171.13px]  h-[251px]">
             <h2 className="text-2xl font-bold mx-6">{title}</h2>
 
@@ -20,11 +20,12 @@ const BestCuisines = (props) =>{
                 
                {bestCuisines.map((cuisine,index) =>(
                 //    console.log(index)
-                    ((index<=10) && <div className="p-4 w-[260.78px] h-[53px] border border-white rounded-lg text-[15px] " key={cuisine.text} >{cuisine.text}</div>) 
+                    ((index<=10) && <div className="p-4 w-[260.78px] h-[53px] border border-gray rounded-xl text-[15px] " key={cuisine.text} >{cuisine.text}</div>) 
                 
-               ))}
+               )
+                )}
 
-                <div className="p-4 w-[260.78px] h-[53px] border border-white rounded-lg font-bold " >More ...</div>
+                <div className="p-4 w-[260.78px] h-[53px] border border-gray rounded-xl font-bold " >More ...</div>
                 
 
     
