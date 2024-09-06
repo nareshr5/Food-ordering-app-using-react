@@ -3,6 +3,8 @@
 - removed the unwanted things
 - initializd the tailwindcss into the project
 - created the basic components [Head , Body , Footer]
+- creating the routing 
+- need to create the help , offer pages
 
 
 
