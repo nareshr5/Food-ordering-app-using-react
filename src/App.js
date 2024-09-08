@@ -12,6 +12,12 @@ import { createBrowserRouter } from "react-router-dom";
 import MainContainer from "./components/maincontainer";
 import RestaurantPage from "../src/components/restaurantpage";
 import { RouterProvider } from "react-router-dom";
+import HelpAndSupport from "./components/helpandsupport";
+import SwiggyCorporate from "./components/swiggycorporate";
+import Search from "./components/search";
+import SignIn from "./components/signin";
+import Cart from "./components/cart";
+import Offers from "./components/offers";
 
 
 const appRouter = createBrowserRouter([{
@@ -20,17 +26,42 @@ const appRouter = createBrowserRouter([{
     element:<Body/>,
     children:[
       {
-          path:"/",
+          path:"",
           element:<MainContainer/>
      },
      {
-      path:"/restaurantpage",
+      path:"restaurantpage",
       element:<RestaurantPage/>
 
      }
   ]
 
 },
+{
+  path:"help",
+  element:<HelpAndSupport/>
+},
+{
+  path:"swiggycorporate",
+  element:<SwiggyCorporate/>
+},
+{
+ path:"search",
+ element:<Search/>
+
+},
+{
+  path:"signin",
+  element:<SignIn/>
+},
+{
+  path:"cart",
+  element:<Cart/>
+},
+{
+  path:"offers",
+  element:<Offers/>
+}
 
 ]);
 
