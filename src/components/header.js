@@ -1,4 +1,5 @@
 import logo from "../images/logo.png";
+import { Link } from "react-router-dom";
 const Header = () =>{
     const headerNavigation = ["💼Swiggy corporate","🔍 Search","💰 Offers","📎 Help","🔐 Sign in","🛒 Cart"]
     return(
@@ -9,9 +10,10 @@ const Header = () =>{
             <div>
                 <ul className="flex py-6 ">
                     {headerNavigation.map((item,index) => (
-                        <li className="px-4 mx-4 font-semibold" key={index}>{item}</li>
+                       <li className="px-4 mx-4 font-semibold" key={index}>{item}</li> 
                     ))
                     }
+                    
                 </ul>
                 
             </div>

@@ -12,6 +12,7 @@ import { createBrowserRouter } from "react-router-dom";
 import MainContainer from "./components/maincontainer";
 import RestaurantPage from "../src/components/restaurantpage";
 import { RouterProvider } from "react-router-dom";
+import HelpAndSupport from "./components/helpandsupport";
 
 
 const appRouter = createBrowserRouter([{
@@ -20,17 +21,21 @@ const appRouter = createBrowserRouter([{
     element:<Body/>,
     children:[
       {
-          path:"/",
+          path:"",
           element:<MainContainer/>
      },
      {
-      path:"/restaurantpage",
+      path:"restaurantpage",
       element:<RestaurantPage/>
 
      }
   ]
 
 },
+{
+  path:"help",
+  element:<HelpAndSupport/>
+}
 
 ]);
 
