@@ -11,23 +11,24 @@ import {Provider} from "react-redux";
 import { createBrowserRouter } from "react-router-dom";
 import MainContainer from "./components/maincontainer";
 import RestaurantPage from "../src/components/restaurantpage";
+import { RouterProvider } from "react-router-dom";
 
 
 const appRouter = createBrowserRouter([{
 
-    // path:"/",
-    // element:<Body/>,
-  //   children:[
-  //     {
-  //         path:"/",
-  //         element:<MainContainer/>
-  //    },
-  //    {
-  //     path:"/restaurantpage",
-  //     element:<RestaurantPage/>
+    path:"/",
+    element:<Body/>,
+    children:[
+      {
+          path:"/",
+          element:<MainContainer/>
+     },
+     {
+      path:"/restaurantpage",
+      element:<RestaurantPage/>
 
-  //    }
-  // ]
+     }
+  ]
 
 },
 
@@ -39,7 +40,7 @@ function App() {
         <Provider store={appStore}>
           <div>
             <Header/>
-            <Body/>
+            <RouterProvider  router={appRouter}/>
             <Footer/>
           </div>
         </Provider>
