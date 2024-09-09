@@ -2,6 +2,7 @@ import {useEffect,} from "react";
 import {useDispatch} from "react-redux";
 import { useSelector } from "react-redux";
 import { addHelpOptions } from "../utils/helpandsupportslice";
+import { toggleOnboarding, toggleLegal,toggleFaqs,toggleInstamart } from "../utils/helpandsupportslice";
 
 const HelpAndSupport = () =>{
     useEffect(()=>{
@@ -39,29 +40,33 @@ const HelpAndSupport = () =>{
 
                     
                         <div className="w-[260px] h-[630.55px]">
-                            <ul className=" h-[316.75px] w-[260px] py-[20px] bg-slate-100 cursor-pointer">
-                                {/* <li className="w-[240px] h-[69.19px] bg-white ml-5 px-5 py-[25px]">
-                                     <span className="w-[144.375px] h-[19.18px] font-semibold ml-[40px]">Partner Onboarding </span>
-                                </li> */}
+                            <div>
+                                <ul className=" h-[316.75px] w-[260px] py-[20px] bg-slate-100 cursor-pointer">
+                                    {/* <li className="w-[240px] h-[69.19px] bg-white ml-5 px-5 py-[25px]">
+                                        <span className="w-[144.375px] h-[19.18px] font-semibold ml-[40px]">Partner Onboarding </span>
+                                    </li> */}
 
-                                {options.map((option) => (
+                                    {options.map((option) => (
 
+                                        
+                                        <li key={option.title} className="w-[240px] h-[69.19px] bg-slate-100 hover:bg-white ml-5 px-5 py-[25px]  text-slate-500 hover:text-black ">
+                                            
+                                            <span className="w-[144.5px] h-[19.18px] font-semibold ml-[40px]">{option.title}
+
+                                            </span>
+                                            
+                                        </li>
                                     
-                                    <li key={option.title} className="w-[240px] h-[69.19px] bg-slate-100 hover:bg-white ml-5 px-5 py-[25px]  text-slate-500 hover:text-black ">
-                                        
-                                        <span className="w-[144.5px] h-[19.18px] font-semibold ml-[40px]">{option.title}
+                                        // <div>
+                                        //     <li  key={index} className="w-[240px] h-[69.19px] bg-white ml-5 px-5 py-[25px]">
+                                        //     <span className="w-[144.375px] h-[19.18px] font-semibold ml-[40px]">{option} </span>
+                                        //     </li>
+                                        // </div>
+                                    ))}
+                                </ul>
+                            </div>
 
-                                        </span>
-                                        
-                                    </li>
-                                   
-                                    // <div>
-                                    //     <li  key={index} className="w-[240px] h-[69.19px] bg-white ml-5 px-5 py-[25px]">
-                                    //     <span className="w-[144.375px] h-[19.18px] font-semibold ml-[40px]">{option} </span>
-                                    //     </li>
-                                    // </div>
-                                ))}
-                            </ul>
+
                         </div>
                     
                 </div>
