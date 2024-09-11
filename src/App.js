@@ -72,7 +72,7 @@ function App() {
           <div>
             <Header/>
             <RouterProvider  router={appRouter}/>
-            <Footer/>
+            {/* <Footer/> */}
           </div>
         </Provider>
         
