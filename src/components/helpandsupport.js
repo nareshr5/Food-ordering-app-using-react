@@ -2,9 +2,10 @@ import {useEffect,} from "react";
 import {useDispatch} from "react-redux";
 import { useSelector } from "react-redux";
 import { addHelpOptions } from "../utils/helpandsupportslice";
-import { toggleOnboarding, toggleLegal,toggleFaqs,toggleInstamart } from "../utils/helpandsupportslice";
+//import { toggleOnboarding, toggleLegal,toggleFaqs,toggleInstamart } from "../utils/helpandsupportslice";
 import { addOnboardingDetails } from "../utils/helpandsupportslice";
-import { toggle } from "../utils/helpandsupportslice";
+//import { toggle } from "../utils/helpandsupportslice";
+
 const HelpAndSupport = () =>{
     useEffect(()=>{
         getSupportOptions();
@@ -31,9 +32,12 @@ const HelpAndSupport = () =>{
         
     }
 
+    
+
     const options = useSelector((store) => store?.help?.optionsList);
     const details = useSelector((store) => store?.help?.onboardingDetails);
-    const toggle = useSelector((store)=> store?.help?.toggle);
+    //const toggleValue = useSelector((store)=> store?.help?.toggle);
+    const isToggleOpen = useSelector((store) => store?.help?.isToggleOpen);
 
     if(!options) return null;
     if(!details) return null;
@@ -55,6 +59,7 @@ const HelpAndSupport = () =>{
                 <div className="w-[1200px] h-[630.5px] bg-white mx-[50px] py-[50px] flex">
 
                     
+                         {/* side navigation bar code */}
                         <div className="w-[260px] h-[630.55px]">
                             <div>
                                 <ul className=" h-[316.75px] w-[260px] py-[20px] bg-slate-100 cursor-pointer">
@@ -87,20 +92,47 @@ const HelpAndSupport = () =>{
 
                         </div>
 
-                        <div className=" w-[940px] h-[630.5px] pl-[50px] pt-[37px]">
+
+
+                        {/* accordion coding  */}
+                        <div className=" w-[940px] h-[1265.45px] pl-[50px] pt-[37px]">
                              <div className="w-[890px] h-[28.8px] text-[24px] font-semibold">Partner Onboarding</div>
                              {/* <button className="w-[890px] h-[69.59px] pt-[22px] pb-[26px] border-b border-gray-400"></button> */}
                              
                              {details.map((detail)=> (
-                                 <div>
-                                    <button key={detail.title} className="flex justify-between w-[890px] h-[69.59px] pt-[22px] pb-[26px] border-b border-gray-400  text-start hover:text-orange-500">
+
+                                 <div className="border-b border-gray-400">
+
+                                    <button  key={detail.title} className="flex justify-between w-[890px] h-[69.59px] pt-[22px] pb-[26px]   text-start hover:text-orange-500">
                                             <span className="text-lg">{detail.title} </span>
                                             <span className="w-5 h-5 mr-5">🔻</span>
+
+                                            
                                     </button>
-                                 </div>   
+
+                                {(detail.description) && (<div className="w-[800px] h-[85.78px] pr-[50px] pb-[27px] text-gray-500 text-sm">
+                                            {detail.description}
+                                   </div>)}
+
+                                   <div className="w-[890px] h-[84px] pb-[27px] cursor-pointer">
+
+                                        {/* the below line is causing the things to be in a line , need to fix it later */}
+                                       {/* {(detail?.hyperLinkText) && <a href={detail?.hyperLink} classroom=" w-[91.6px] h-[38.8px]  pb-[22px] mr-[20px] align-center">{detail?.hyperLinkText}</a> } */}
+
+                                      {(detail?.options[0]?.type ) && (<a href={detail?.hyperLink} className="text-orange-500 font-semibold border border-orange-500 px-[15px] text-sm w-[136.64px] h-[40px]">SEND AN MAIL</a> ) }
+
+                                      <div className="w-[136.64px] h-[12px] mt-[5px] text-[10px] text-gray-500">
+                                            {detail?.options[0]?.waitTime}
+                                      </div>
+
+                                   </div> 
+
+                                    
+
+                                   </div>   
                                 
                                 ))
-                             }
+                                }
                         </div>
                     
                 </div>
