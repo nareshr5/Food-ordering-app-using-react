@@ -7,6 +7,7 @@ const helpAndSupport = createSlice({
         optionsList:null,
         onboardingDetails:null,
         toggle:false,
+        isToggleOpen:false,
         isOnboarding:false,
         isLegal:false,
         isFaqs:false,
