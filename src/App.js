@@ -38,28 +38,28 @@ const appRouter = createBrowserRouter([{
 
 },
 {
-  path:"help",
+  path:"/help",  // we need to always add the / (slach) to the path
   element:<HelpAndSupport/>
 },
 {
-  path:"swiggycorporate",
+  path:"/swiggycorporate",
   element:<SwiggyCorporate/>
 },
 {
- path:"search",
+ path:"/search",
  element:<Search/>
 
 },
 {
-  path:"signin",
+  path:"/signin",
   element:<SignIn/>
 },
 {
-  path:"cart",
+  path:"/cart",
   element:<Cart/>
 },
 {
-  path:"offers",
+  path:"/offers",
   element:<Offers/>
 }
 
