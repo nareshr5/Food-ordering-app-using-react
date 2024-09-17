@@ -3,6 +3,9 @@
 - removed the unwanted things
 - initializd the tailwindcss into the project
 - created the basic components [Head , Body , Footer]
+- creating the routing 
+- need to create the help , offer pages (almost done)
+- optimize the home page (making the api calls from the respective components)
 
 
 
