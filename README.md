@@ -7,6 +7,7 @@
 - need to create the help , offer pages (almost done)
 - optimize the home page (making the api calls from the respective components)
 - created the signin/ signuplogic in the signin page
+- deploying steps using fire base ( 1 install firebase CLI)
 
 
 
