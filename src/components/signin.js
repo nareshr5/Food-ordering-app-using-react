@@ -8,6 +8,7 @@ const SignIn = () =>{
     const name=useRef(null);
 
     const [isSignType,setIsSigninType] = useState(true);
+    const [validationStatus,setValidationStatus] = useState(null);
 
     const formSubmit=() =>{
         // console.log(email.current.value);
@@ -16,8 +17,9 @@ const SignIn = () =>{
         // if the result valiable gets "null" then the email and password is good , if the result contains some "string value" then email or password is wrong
         
         const result = validateFormData(email.current.value,password.current.value);
+        setValidationStatus(result);
 
-        console.log(result);
+        //console.log(result);
 
     }
 
@@ -37,6 +39,7 @@ const SignIn = () =>{
                 <input ref={password}  className="py-1.5 px-2 mx-4 my-3 text-black" type="password" placeholder="Password"/>
                 <button  onClick={() => formSubmit()} className="py-1.5 px-2 mx-4 my-3 bg-green-800 rounded-lg">Submit</button>
                 <p className="py-1.5 px-2 mx-4 my-3 text-white cursor-pointer" onClick={()=>toggleUser()}>{isSignType? "If you are a new user- Sign up !": "If already registered user ? - sign In"}</p>
+               { validationStatus && (<p className="py-1.5 px-2 mx-4 my-3 text-white bg-red-700 cursor-pointer text-xl text-center" >{validationStatus}</p>) }
               </form>
             </div>
        
