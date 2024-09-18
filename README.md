@@ -6,6 +6,8 @@
 - creating the routing 
 - need to create the help , offer pages (almost done)
 - optimize the home page (making the api calls from the respective components)
+- created the signin/ signuplogic in the signin page
+- deploying steps using fire base ( 1 install firebase CLI  2 firebase login 3 Initialize Firebase  / --> before step4 you need to do "npm run build" command /  4 firebase deploy )
 
 
 
