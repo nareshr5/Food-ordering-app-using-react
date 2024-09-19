@@ -1,6 +1,9 @@
 import { useRef , useState} from "react";
 import validateFormData from "./validateformdata";
 
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import {auth} from "../utils/firebase";
+
 const SignIn = () =>{
 
     const email = useRef(null);
@@ -20,6 +23,29 @@ const SignIn = () =>{
         setValidationStatus(result);
 
         //console.log(result);
+
+        if(result) return   
+
+
+        if(result === null){
+
+          createUserWithEmailAndPassword(auth, email.current.value,password.current.value)
+        .then((userCredential) => {
+          // Sign up  logic
+          const user = userCredential.user;
+          console.log(user);
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setValidationStatus(errorCode+"-"+errorMessage);
+          
+        });
+
+        }
+        
+
+       
 
     }
 
