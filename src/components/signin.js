@@ -1,7 +1,7 @@
 import { useRef , useState} from "react";
 import validateFormData from "./validateformdata";
 
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword , signInWithEmailAndPassword} from "firebase/auth";
 import {auth} from "../utils/firebase";
 
 const SignIn = () =>{
@@ -42,6 +42,20 @@ const SignIn = () =>{
           
         });
 
+        }
+        else{
+          signInWithEmailAndPassword(auth, email.current.value,password.current.value)
+            .then((userCredential) => {
+              // Sign in logic
+              const user = userCredential.user;
+              // console.log(user);
+             
+            })
+            .catch((error) => {
+              const errorCode = error.code;
+              const errorMessage = error.message;
+              setValidationStatus(errorCode+"-"+errorMessage);
+            });
         }
         
 
