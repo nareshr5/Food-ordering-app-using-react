@@ -1,8 +1,10 @@
 import { useRef , useState} from "react";
 import validateFormData from "./validateformdata";
 
-import { createUserWithEmailAndPassword , signInWithEmailAndPassword} from "firebase/auth";
+import { createUserWithEmailAndPassword , signInWithEmailAndPassword, updateProfile} from "firebase/auth";
 import {auth} from "../utils/firebase";
+import {updateProfile } from "firebase/auth";
+
 
 const SignIn = () =>{
 
@@ -34,6 +36,29 @@ const SignIn = () =>{
           // Sign up  logic
           const user = userCredential.user;
           console.log(user);
+
+          // updating the user profile with displayName and photourl
+          updateProfile(user, {
+            displayName: name.current.value, photoURL: "https://example.com/jane-q-user/profile.jpg"
+          }).then(() => {
+            // Profile updated!
+
+           //  const {uid,email,displayName,photoURL}=user;  we should not use "user" because user here won't have displayName and photoURL details , so we need to use "auth.currentUser" becuase it contains the displayName and photURL details
+
+           const {uid,email,displayName,photoURL}=auth.currentUser;
+
+            dispatch(addUser({
+              uid:uid,
+              email:email,
+              displayName:displayName,
+              photoURL:photoURL,
+            })
+
+          );
+
+          }).catch((error) => {
+            setValidationStatus(error.message);
+          });
         })
         .catch((error) => {
           const errorCode = error.code;

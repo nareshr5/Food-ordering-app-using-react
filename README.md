@@ -12,6 +12,11 @@
 
 
 
+ERROR :- "display name" is not being updated in the redux store
+we need to use "auth.currentuser" and not "user" in the login.js file , because we are trying to fetch the details (uid, displaymname and etc) from a updated user (which is auth.currentuser)
+
+
+
 
 # Getting Started with Create React App
 
