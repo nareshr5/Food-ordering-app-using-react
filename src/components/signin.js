@@ -5,6 +5,8 @@ import { createUserWithEmailAndPassword , signInWithEmailAndPassword, updateProf
 import {auth} from "../utils/firebase";
 import {updateProfile } from "firebase/auth";
 
+import { useNavigate } from "react-router-dom";
+
 
 const SignIn = () =>{
 
@@ -14,6 +16,8 @@ const SignIn = () =>{
 
     const [isSignType,setIsSigninType] = useState(true);
     const [validationStatus,setValidationStatus] = useState(null);
+
+    const navigate = useNavigate();
 
     const formSubmit=() =>{
         // console.log(email.current.value);
@@ -56,8 +60,12 @@ const SignIn = () =>{
 
           );
 
+          navigate("/");
+
           }).catch((error) => {
             setValidationStatus(error.message);
+
+            navigate("/error");
           });
         })
         .catch((error) => {
