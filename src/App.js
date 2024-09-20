@@ -18,6 +18,7 @@ import Search from "./components/search";
 import SignIn from "./components/signin";
 import Cart from "./components/cart";
 import Offers from "./components/offers";
+import ErrorPage from "./components/error";
 
 
 const appRouter = createBrowserRouter([{
@@ -61,6 +62,10 @@ const appRouter = createBrowserRouter([{
 {
   path:"/offers",
   element:<Offers/>
+},
+{
+  path:"/error",
+  element:<ErrorPage/>
 }
 
 ]);
