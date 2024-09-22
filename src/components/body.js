@@ -1,5 +1,5 @@
-import MainContainer from "./maincontainer";
-import ResturantPage from "./restaurantpage";
+// import MainContainer from "./maincontainer";
+// import ResturantPage from "./restaurantpage";
 import { Outlet } from "react-router-dom";
 import Footer from "./footer";
 
@@ -14,37 +14,38 @@ const Body = () =>{
   const dispatch  = useDispatch();
   const navigate = useNavigate();
 
-   useEffect(()=>{
+  //  useEffect(()=>{
 
       // this "onAuthStateChanged" will be called whenever the user --> signin/signup  or signout <-- , we can handle the dispatch function for all of them from here itself , instead of doing it in 3 places seperately
 
-      onAuthStateChanged(auth, (user) => {
-        if (user) {
-          // the below code will be executed when a user sign up or sign in
-          //const uid = user.uid;
-          const {uid,email,displayName,photoURL}=user;
+    
+  //     onAuthStateChanged(auth, (user) => {
+  //       if (user) {
+  //         // the below code will be executed when a user sign up or sign in
+  //         //const uid = user.uid;
+  //         const {uid,email,displayName,photoURL}=user;
 
-          dispatch(addUser({
-            uid:uid,
-            email:email,
-            displayName:displayName,
-            photoURL:photoURL,
-          })
+  //         dispatch(addUser({
+  //           uid:uid,
+  //           email:email,
+  //           displayName:displayName,
+  //           photoURL:photoURL,
+  //         })
 
-        );
+  //       );
 
-        navigate("/");
+  //       navigate("/");
 
-        }
-       else {
-          dispatch(removeUser());
+  //       }
+  //      else {
+  //         dispatch(removeUser());
 
-          navigate("/signin");
+  //         navigate("/signin");
           
-        }
-      });
+  //       }
+  //     });
 
-   },[]);
+  //  },[]);
 
     return(
 

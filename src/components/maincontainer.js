@@ -50,7 +50,7 @@ const MainContainer=()=>{
         const jsonValue = await data.json();
         //console.log(jsonValue);
         const onlineDelivery = jsonValue?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-        console.log(onlineDelivery);
+       // console.log(onlineDelivery);
         dispatch(addOnlineDelivery(onlineDelivery));
     }
 
