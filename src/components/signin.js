@@ -3,7 +3,7 @@ import validateFormData from "./validateformdata";
 
 import { createUserWithEmailAndPassword , signInWithEmailAndPassword, updateProfile} from "firebase/auth";
 import {auth} from "../utils/firebase";
-import {updateProfile } from "firebase/auth";
+// import {updateProfile } from "firebase/auth";
 
 import { useNavigate } from "react-router-dom";
 
@@ -42,31 +42,31 @@ const SignIn = () =>{
           console.log(user);
 
           // updating the user profile with displayName and photourl
-          updateProfile(user, {
-            displayName: name.current.value, photoURL: "https://example.com/jane-q-user/profile.jpg"
-          }).then(() => {
-            // Profile updated!
+          // updateProfile(user, {
+          //   displayName: name.current.value, photoURL: "https://example.com/jane-q-user/profile.jpg"
+          // }).then(() => {
+          //   // Profile updated!
 
-           //  const {uid,email,displayName,photoURL}=user;  we should not use "user" because user here won't have displayName and photoURL details , so we need to use "auth.currentUser" becuase it contains the displayName and photURL details
+          //  //  const {uid,email,displayName,photoURL}=user;  we should not use "user" because user here won't have displayName and photoURL details , so we need to use "auth.currentUser" becuase it contains the displayName and photURL details
 
-           const {uid,email,displayName,photoURL}=auth.currentUser;
+          //  const {uid,email,displayName,photoURL}=auth.currentUser;
 
-            dispatch(addUser({
-              uid:uid,
-              email:email,
-              displayName:displayName,
-              photoURL:photoURL,
-            })
+          //   dispatch(addUser({
+          //     uid:uid,
+          //     email:email,
+          //     displayName:displayName,
+          //     photoURL:photoURL,
+          //   })
 
-          );
+          // );
 
-          navigate("/");
+          // navigate("/");
 
-          }).catch((error) => {
-            setValidationStatus(error.message);
+          // }).catch((error) => {
+          //   setValidationStatus(error.message);
 
-            navigate("/error");
-          });
+          //   navigate("/error");
+          // });
         })
         .catch((error) => {
           const errorCode = error.code;

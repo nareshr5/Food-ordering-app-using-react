@@ -1,17 +1,13 @@
-import Body from "./components/body";
+
 import Footer from "./components/footer";
-import Header from "./components/header";
+
 
 import "./index.css";
 
-import appStore from "./utils/store";
-
-import {Provider} from "react-redux";
-
-import { createBrowserRouter } from "react-router-dom";
+import Body from './components/body';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainContainer from "./components/maincontainer";
 import RestaurantPage from "../src/components/restaurantpage";
-import { RouterProvider } from "react-router-dom";
 import HelpAndSupport from "./components/helpandsupport";
 import SwiggyCorporate from "./components/swiggycorporate";
 import Search from "./components/search";
@@ -19,55 +15,52 @@ import SignIn from "./components/signin";
 import Cart from "./components/cart";
 import Offers from "./components/offers";
 import ErrorPage from "./components/error";
+import Header from './components/header';
+import { Provider } from 'react-redux';
+import appStore from './utils/store';
 
 
-const appRouter = createBrowserRouter([{
 
-    path:"/",
-    element:<Body/>,
-    children:[
-      {
-          path:"",
-          element:<MainContainer/>
+const appRouter = createBrowserRouter([
+  {
+     path:"/",
+     element:<Body/>,
+     children:[{
+        path:"/",
+        element:<MainContainer/>,
+        
      },
      {
-      path:"restaurantpage",
-      element:<RestaurantPage/>
-
+        path:"/restaurantpage",
+        element:<RestaurantPage/>
      }
-  ]
-
-},
-{
-  path:"/help",  // we need to always add the / (slach) to the path
-  element:<HelpAndSupport/>
-},
-{
-  path:"/swiggycorporate",
-  element:<SwiggyCorporate/>
-},
-{
- path:"/search",
- element:<Search/>
-
-},
-{
-  path:"/signin",
-  element:<SignIn/>
-},
-{
-  path:"/cart",
-  element:<Cart/>
-},
-{
-  path:"/offers",
-  element:<Offers/>
-},
-{
-  path:"/error",
-  element:<ErrorPage/>
-}
-
+     ],
+     errorElement:<ErrorPage/>
+  },
+  {
+     path:"/help",
+     element:<HelpAndSupport/>
+  },
+  {
+     path:"/signin",
+     element:<SignIn/>
+  },
+  {
+     path:"/search",
+     element:<Search/>
+  },
+  {
+     path:"/swiggycorporate",
+     element:<SwiggyCorporate/>
+  },
+  {
+     path:"/offers",
+     element:<Offers/>
+  },
+  {
+     path:"/cart",
+     element:<Cart/>
+  }
 ]);
 
 
@@ -76,8 +69,7 @@ function App() {
         <Provider store={appStore}>
           <div>
             <Header/>
-            <RouterProvider  router={appRouter}/>
-            {/* <Footer/> */}
+           <RouterProvider router={appRouter}/>
           </div>
         </Provider>
         
