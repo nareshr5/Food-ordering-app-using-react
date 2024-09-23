@@ -9,7 +9,7 @@ const Header = () =>{
            <img className="py-3 px-3" alt="logo" src={logo} />
             
             <div>
-                <ul className="flex py-6 ">
+                <ul className="flex py-6 cursor-pointer ">
                     {headerNavigation.map((item,index) => (
                        //<Link to={item}><li className="px-4 mx-4 font-semibold" key={index}>{item}</li> </Link>
                         <li className="px-4 mx-4 font-semibold" key={index}>{item}</li> 
