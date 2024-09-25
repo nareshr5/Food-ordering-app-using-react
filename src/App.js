@@ -7,7 +7,7 @@ import "./index.css";
 import Body from './components/body';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainContainer from "./components/maincontainer";
-import RestaurantPage from "../src/components/restaurantpage";
+import RestaurantMenu from "../src/components/restaurantmenu";
 import HelpAndSupport from "./components/helpandsupport";
 import SwiggyCorporate from "./components/swiggycorporate";
 import Search from "./components/search";
@@ -31,8 +31,8 @@ const appRouter = createBrowserRouter([
         
      },
      {
-        path:"/restaurantpage",
-        element:<RestaurantPage/>
+        path:"/restaurantmenu",
+        element:<RestaurantMenu/>
      }
      ],
      errorElement:<ErrorPage/>
