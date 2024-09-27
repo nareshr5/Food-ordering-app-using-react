@@ -9,6 +9,7 @@
 - created the signin/ signuplogic in the signin page
 - deploying steps using fire base ( 1 install firebase CLI  2 firebase login 3 Initialize Firebase  / --> before step4 you need to do "npm run build" command /  4 firebase deploy )
 - creating the signup authentication logic
+- working on the restaurant accordion
 
 
 
