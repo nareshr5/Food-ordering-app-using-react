@@ -10,7 +10,7 @@
 - deploying steps using fire base ( 1 install firebase CLI  2 firebase login 3 Initialize Firebase  / --> before step4 you need to do "npm run build" command /  4 firebase deploy )
 - creating the signup authentication logic
 - working on the restaurant accordion
-- working on cart page
+- working on cart page (redirect to signin page if not signed in , display order details on the cart page)
 
 
 
