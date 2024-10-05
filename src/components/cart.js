@@ -14,6 +14,8 @@ const Cart = ()=>{
 
             
             </div>
+
+            <div>fried rice</div>
             
         </div>
 
