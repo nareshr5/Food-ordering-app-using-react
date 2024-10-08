@@ -1,10 +1,14 @@
 import BillDetails from "./billdetails";
 import {useState} from "react";
+import {useNavigate} from "react-router-dom" 
+
 
 const Cart = ()=>{
 
     // if the user is not signed in redirect the user to the signin page and then direct him to the cart page
     const [count,setCount] = useState(1);
+
+    const navigate = useNavigate();
 
     
     
@@ -97,7 +101,7 @@ const Cart = ()=>{
                     </div>
                   
                 </div>
-                <button className="text-white bg-green-700 w-full h-[50px] font-bold rounded-xl mb-20">PROCEED TO PAY</button>
+                <button onClick={() => navigate("/payment")} className="text-white bg-green-700 w-full h-[50px] font-bold rounded-xl mb-20">PROCEED TO PAY</button>
             </div>
             
         </div>
