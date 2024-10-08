@@ -1,7 +1,7 @@
 const BillDetails = () =>{
     return (
     <div>
-        <ul className="border-black border-4 text-slate-500 mx-5 my-5">
+        <ul className="border-gray-400 border-4 text-slate-500 mx-5 my-5 rounded-xl">
 
             <div className="mx-3">
 
@@ -36,7 +36,7 @@ const BillDetails = () =>{
 
                 <div className="border-b-2 border-black my-4"> </div>
 
-                <div className="flex justify-between text-black font-bold">
+                <div className="flex justify-between text-black font-bold mb-2">
                     <li>To PAY</li>
                     <li>₹139</li>
                 </div>
