@@ -2,7 +2,7 @@ const Payment = () =>{
     return(
         <div className="w-8/12 h-auto  mx-auto my-5  bg-slate-100">
             <div className="mx-5 pb-[40px]">
-                <div className="font-bold my-5 text-2xl">Payment options </div>
+                <div className="font-bold my-5 text-2xl pt-5">Payment options </div>
 
                 <div className="py-[18px] border-slate-500 border-2 px-2 rounded-xl">
                     
@@ -37,7 +37,7 @@ const Payment = () =>{
 
 
                                 <div className=" h-[24px] w-[32px] border-[1px] border-slate-400 rounded-lg ">
-                                    <button className="text-orange-600 font-bold text-xl px-[6px] -py-[4px] w-[10px] h-[22px]  ">+</button>
+                                    <button className="text-orange-600 font-bold text-xl  w-[10px] h-[22px] px-[6px] -py-[4px] ">+</button>
                                 </div>
 
                                 <div className="px-4">
@@ -76,12 +76,12 @@ const Payment = () =>{
 
 
                                 <div className=" h-[24px] w-[32px] border-[1px] border-slate-400 rounded-lg ">
-                                    <button className="text-orange-600 font-bold text-xl px-[6px] -py-[4px] w-[10px] h-[22px]  ">+</button>
+                                    <button className="text-orange-600 font-bold text-xl  w-[10px] h-[22px] px-[6px] ">+</button>
                                 </div>
 
                                 <div className="px-4">
 
-                                        <div className="text-orange-500 font-bold w-full h-5">Add New UPI ID</div>
+                                        <div className="text-orange-500 font-bold w-full h-5">Add New card</div>
                                         <div className="mt-1 text-gray-500">Save and pay via cards.</div>
                                 </div>
                                 
