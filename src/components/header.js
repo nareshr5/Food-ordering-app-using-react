@@ -1,5 +1,5 @@
 import logo from "../images/logo.png";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 const Header = () =>{
     //const headerNavigation = ["💼Swiggy corporate","🔍 Search","💰 Offers","📎 Help","🔐 Sign in","🛒 Cart"]
     const headerNavigation = ["Swiggy corporate","Search","Offers","Help","Sign in","Cart"]

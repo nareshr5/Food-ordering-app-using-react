@@ -6,7 +6,7 @@ const BestCuisines = (props) =>{
     const {bestCuisines}= useSelector((store) => store.rec);
 
     if(!bestCuisines || bestCuisines.length === 0) return ;
-    console.log(bestCuisines);
+    //console.log(bestCuisines);
 
     
 
