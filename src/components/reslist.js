@@ -17,7 +17,7 @@ const ResList = (props) =>{
             <div className="flex  pl-4 ">
             {resList.map((res)=> (
                 
-                    <ResCard resList={res} type={type} key={res.name}/>
+                    <ResCard resList={res} type={type} key={res}/>
                  
             )
             
