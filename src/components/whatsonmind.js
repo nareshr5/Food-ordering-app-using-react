@@ -1,11 +1,24 @@
 import { useSelector } from "react-redux";
 import { CDN_URL_FOR_DISHES } from "../utils/constant";
+import {useState} from "react";
 
 const WhatsOnMind = () =>{
     const {whatsOnMind}= useSelector((store) =>store.rec);
     // const  {imageId} = whatsOnMind?.
 
+    const [value,setValue] = useState(0);
+
     if(!whatsOnMind) return null;
+
+    const handleLeftClick=() =>{
+        setValue((prev) => prev-100);
+        console.log(value);
+    }
+
+    const handleRightClick=()=>{
+        setValue((prev)=> prev+100);
+        console.log(value);
+    }
 
     return(
     <div className="p-4   m-auto  w-[1007.22px]  h-[256px]  flex flex-col"> {/** removed this from here --> border-b-2 */}
@@ -14,16 +27,16 @@ const WhatsOnMind = () =>{
             <h1 className="font-bold text-2xl mb-4">What's on your mind?</h1>
 
             <div className="flex ">
-                 <button className="bg-gray-200 rounded-full px-3 mx-1 " onClick={() =>console.log("left clicked")}>👈</button>
-                <button className="bg-gray-200 rounded-full px-3 mx-1" onClick={()=>console.log("right clicked")}>👉</button>
+                 <button className="bg-gray-200 rounded-full px-3 mx-1 " onClick={() =>handleLeftClick()}>👈</button>
+                <button className="bg-gray-200 rounded-full px-3 mx-1" onClick={()=>handleRightClick()}>👉</button>
                 
             </div>
         </div>
         
-        {/* <div className=" w-[1007.22px] translate-x-[200px] duration-500"> */}
-        <div className=" w-[1007.22px] ">
+         <div className= {` w-full overflow-hidden  -translate-x-[${value}px] duration-500`}> 
+            {/* <div className=" w-[1007.22px] "> */}
 
-            <div className="flex pl-4 justify-evenly overflow-hidden ">
+            <div className="flex pl-4 justify-evenly ">
 
                 {whatsOnMind.map((res,index) => (
 
