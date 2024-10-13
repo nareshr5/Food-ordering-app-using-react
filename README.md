@@ -1,3 +1,4 @@
+
 # App building flow:
 - created app using npx create-react-app command
 - removed the unwanted things
@@ -18,6 +19,19 @@ ERROR :- "display name" is not being updated in the redux store
 we need to use "auth.currentuser" and not "user" in the login.js file , because we are trying to fetch the details (uid, displaymname and etc) from a updated user (which is auth.currentuser)
 
 
+
+
+npm install @flaticon/flaticon-uicons --> install this
+
+@import "@flaticon/flaticon-uicons/css/all/all";  -->add this to the index.css file
+
+if you are using the thing from the uicons , put them in a div tag
+
+
+
+how to make scroable what on mind :
+add -> overflow-hidden
+translate-x-[100px] duration-1000
 
 
 # Getting Started with Create React App
