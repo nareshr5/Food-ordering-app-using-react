@@ -19,6 +19,7 @@ import Header from './components/header';
 import { Provider } from 'react-redux';
 import appStore from './utils/store';
 import Payment from "./components/payment";
+import OrderSummary from "./components/ordersummary";
 
 
 
@@ -65,6 +66,10 @@ const appRouter = createBrowserRouter([
   {
    path:"/payment",
    element:<Payment/>
+  },
+  {
+   path:"/summary",
+   element:<OrderSummary/>
   }
 ]);
 
