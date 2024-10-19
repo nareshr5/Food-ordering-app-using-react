@@ -1,7 +1,8 @@
 const OrderSummary = () =>{
     return(
-        <div>Order Summary
-            <h1>Order details</h1>
+        <div>
+            <h1>Order Summary</h1>
+            <h2>Order details</h2>
             <ul className="flex">
                 <li>Items - </li>
                 <li>Price</li>
