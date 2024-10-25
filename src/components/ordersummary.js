@@ -6,9 +6,11 @@ const OrderSummary = () =>{
                 <h2>Order details</h2>
 
                 <div className="bg-gray-500 w-full h-70">
-                    <ul className="flex p-2 font-semibold">
-                        <li>Items - </li>
-                        <li>Price</li>
+                    <ul className="flex p-2 font-semibold justify-around">
+                        <li>restaurant image </li>
+                        <li>Quantity </li>
+                        <li>Items - Price </li>
+                        
                     </ul>
                 </div>
 
