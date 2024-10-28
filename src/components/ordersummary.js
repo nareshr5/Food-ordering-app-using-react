@@ -1,3 +1,5 @@
+import veglogo from ".././images/veg_logo.png";
+
 const OrderSummary = () =>{
     return(
         <div className="mt-2 mx-2">
@@ -26,15 +28,27 @@ const OrderSummary = () =>{
                             <ul className="border-b-2 border-gray-400 pb-6">
 
                                 <li className="flex justify-between">
-                                    <li>can coke</li>
+                                    <div className="flex items-center">
+                                        <img  className="w-10 h-10" src={veglogo} alt="veg_logo" />
+                                        <li className="pb-1">can coke</li>
+                                    </div>
+                                    
                                     <li>₹70</li>
                                 </li>
                                 <li className="flex justify-between">
-                                    <li>peri peri paneer burger</li>
+                                    <div className="flex items-center">
+                                        <img  className="w-10 h-10" src={veglogo} alt="veg_logo" />
+                                        <li className="pb-1">peri peri paneer burger</li>
+                                    </div>
+                                    
                                     <li>₹199</li>
                                 </li>
                                 <li className="flex justify-between">
-                                    <li>French Fries Large</li>
+                                    <div className="flex items-center">
+                                        <img  className="w-10 h-10" src={veglogo} alt="veg_logo" />
+                                        <li className="pb-1">French Fries Large</li>
+                                    </div>
+                                    
                                     <li>₹119</li>
                                 </li>
 
