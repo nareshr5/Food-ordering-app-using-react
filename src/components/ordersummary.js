@@ -13,6 +13,7 @@ const OrderSummary = () =>{
                 
 
                 <div className="bg-gray-500 w-full h-70 py-4 my-4">
+
                     <ul className="flex p-2 font-semibold justify-around">
                         <li><img className="w-[50%] h-[70%] object object-cover pt-2" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/10/24/f030a47f-b499-4c05-9d19-ab50fc288e07_PCTIleIndianSweets1.png" alt="res_image" /> </li>
                         <li>Quantity </li>
@@ -27,7 +28,14 @@ const OrderSummary = () =>{
 
                             <ul className="border-b-2 border-gray-400 pb-6">
 
+                                    <div className="flex justify-between font-bold pb-1 mx-3 -mr-1">
+                                        <li>Items</li>
+                                        <li>Price</li>
+                                    </div>
+
                                 <li className="flex justify-between">
+
+                                    
                                     <div className="flex items-center">
                                         <img  className="w-10 h-10" src={veglogo} alt="veg_logo" />
                                         <li className="pb-1">can coke</li>
@@ -55,7 +63,7 @@ const OrderSummary = () =>{
                             </ul>
 
                             <div > 
-                                <ul className="text-slate-600 my-4">
+                                <ul className="text-slate-600 my-4 ">
                                     <li className="flex justify-between">
                                         <li>Item Total</li>
                                         <li>₹388</li>
