@@ -2,9 +2,9 @@ import veglogo from ".././images/veg_logo.png";
 
 const OrderSummary = () =>{
     return(
-        <div className="mt-2 mx-2">
-            <h1 className="text-2xl font-bold bg-orange-600 text-white p-2  ">Order Summary</h1>
-            <div className="px-2 bg-gray-300 w-full h-96 mt-2 py-4">
+        <div className="mt-2 mx-2 border-8 border-orange-600">
+            <h1 className="text-2xl font-bold bg-orange-600 text-white p-2 ">Order Summary</h1>
+            <div className="px-2 bg-gray-300 w-auto h-70 mt-2 py-4 mx-2">
 
                 <div className="flex items-center">
                     <h2 className="text-xl font-bold mx-2">Order details: </h2>
