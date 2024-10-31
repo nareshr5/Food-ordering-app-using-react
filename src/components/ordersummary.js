@@ -14,12 +14,12 @@ const OrderSummary = () =>{
 
                 <div className="bg-gray-500 w-full h-70 py-4 my-4">
 
-                    <ul className="flex p-2 font-semibold justify-around">
+                    {/* <ul className="flex p-2 font-semibold justify-around">
                         <li><img className="w-[50%] h-[70%] object object-cover pt-2" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/10/24/f030a47f-b499-4c05-9d19-ab50fc288e07_PCTIleIndianSweets1.png" alt="res_image" /> </li>
                         <li>Quantity </li>
                         <li>Items - Price </li>
                         
-                    </ul>
+                    </ul> */}
 
                     <div className="bg-slate-200 w-3/4 mx-auto p-4 rounded-xl mb-7">
                         <p className="font-semibold text-xl px-6">Bill Details</p>
