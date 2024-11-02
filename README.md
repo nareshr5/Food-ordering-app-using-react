@@ -12,7 +12,8 @@
 - creating the signup authentication logic
 - working on the restaurant accordion
 - working on cart page (redirect to signin page if not signed in , display order details on the cart page)
--order summary basic component is created
+-order summary basic component is created 
+- working on the styling of the order summary page.
 
 
 
