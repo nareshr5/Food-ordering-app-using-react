@@ -2,11 +2,12 @@ import veglogo from ".././images/veg_logo.png";
 
 const OrderSummary = () =>{
     return(
-        <div className="mt-2 mx-2 border-8 border-orange-600">
-            <h1 className="text-2xl font-bold bg-orange-600 text-white p-2 ">Order Summary</h1>
+        <div className="mt-4 mx-2 border-8 border-orange-600">
+            <h1 className="text-2xl font-bold bg-orange-600 text-white p-2  ">Order Summary</h1>
+           
             <div className="px-2 bg-gray-300 w-auto h-70 mt-2 py-4 mx-2">
 
-                <div className="flex items-center">
+                <div className="flex items-center ">
                     <h2 className="text-xl font-bold mx-2">Order details: </h2>
                     <p className="text-semibold mt-1 mx-1">OrderNumber - #48289272989804</p>
                 </div>
@@ -21,7 +22,7 @@ const OrderSummary = () =>{
                         
                     </ul> */}
 
-                    <div className="bg-slate-200 w-3/4 mx-auto p-4 rounded-xl mb-7">
+                    <div className="bg-slate-200 w-3/4 mx-auto p-4 rounded-xl my-8">
                         <p className="font-semibold text-xl px-6">Bill Details</p>
 
                         <div className="w-3/4 mx-auto my-2 ">
