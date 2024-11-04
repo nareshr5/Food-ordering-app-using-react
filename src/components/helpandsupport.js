@@ -69,8 +69,8 @@ const HelpAndSupport = () =>{
 
                                     {options.map((option) => (
 
-                                        <button >
-                                        <li key={option.title} className="w-[240px] h-[69.19px] bg-slate-100 hover:bg-white ml-5 px-5 py-[25px]  text-slate-500 hover:text-black " value={option.title}>
+                                        <button key={option.title} >
+                                        <li  className="w-[240px] h-[69.19px] bg-slate-100 hover:bg-white ml-5 px-5 py-[25px]  text-slate-500 hover:text-black " value={option.title}>
                                             
                                             <span className="w-[144.5px] h-[19.18px] font-semibold ml-[40px]">{option.title}
 
