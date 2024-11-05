@@ -3,7 +3,7 @@ import veglogo from ".././images/veg_logo.png";
 const OrderSummary = () =>{
     return(
         <div className="mt-4 mx-2 border-8 border-orange-600">
-            <h1 className="text-2xl font-bold bg-orange-600 text-white p-2  ">Order Summary</h1>
+            <h1 className="text-3xl font-bold bg-orange-600 text-white p-2  ">Order Summary</h1>
            
             <div className="px-2 bg-gray-300 w-auto h-70 my-4 py-4 mx-2 ">
 
