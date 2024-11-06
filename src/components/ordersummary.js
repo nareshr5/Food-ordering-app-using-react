@@ -13,11 +13,11 @@ const OrderSummary = () =>{
                 </div>
                 
 
-                <div className="bg-gray-500 w-[80%] h-70 py-4 my-4 mx-auto">
+                <div className="bg-orange-500 w-[80%] h-70 py-4 my-4 mx-auto rounded-full">
 
                     
 
-                    <div className="bg-slate-200 w-3/4 mx-auto p-4 rounded-xl my-8">
+                    <div className="bg-slate-200 w-3/4 mx-auto p-4 rounded-3xl my-8">
                         <p className="font-semibold text-xl px-6">Bill Details</p>
 
                         <div className="w-3/4 mx-auto my-2 ">
@@ -57,7 +57,7 @@ const OrderSummary = () =>{
                                         <img  className="w-10 h-10" src={veglogo} alt="veg_logo" />
                                         <li className="pb-1">French Fries Large</li>
                                     </div>
-                                    <p>1</p>
+                                    {/* <p>1</p> */}
                                     <li>₹119</li>
                                 </li>
 
