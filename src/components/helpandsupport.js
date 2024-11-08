@@ -55,7 +55,7 @@ const HelpAndSupport = () =>{
 
             <div className="w-[1300px] h-[730.5px] mx-[4.5px] bg-white">
                 {/* <div className="w-[35px] h-[730.5px]"></div> */}
-                blank
+                {/* blank */}
                 <div className="w-[1200px] h-[630.5px] bg-white mx-[50px] py-[50px] flex">
 
                     
