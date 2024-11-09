@@ -47,22 +47,22 @@ const HelpAndSupport = () =>{
     
 
     return(
-        <div className="px-5 bg-cyan-800">
+        <div className="px-5 bg-cyan-800 h-[2250.5px]">
             <div className="pt-[33px] mx-[54.5px] text-white w-[1200px] h-[130px] align-middle">
                 <h1 className="font-bold text-3xl">Help & Support</h1>
                 <div>Let's take a step ahead and help you better</div>
             </div>
 
-            <div className="w-[1300px] h-[730.5px] mx-[4.5px] bg-white">
+            <div className="w-[1300px]  h-[2000.5px] mx-[4.5px] bg-white rounded-3xl">
                 {/* <div className="w-[35px] h-[730.5px]"></div> */}
                 {/* blank */}
-                <div className="w-[1200px] h-[630.5px] bg-white mx-[50px] py-[50px] flex">
+                <div className="w-[1200px] h-[630.5px]  bg-white mx-[50px] py-[50px] flex">
 
                     
                          {/* side navigation bar code */}
                         <div className="w-[260px] h-[630.55px]">
                             <div>
-                                <ul className=" h-[316.75px] w-[260px] py-[20px] bg-slate-100 cursor-pointer">
+                                <ul className=" h-[316.75px] w-[260px] py-[20px] bg-slate-100 cursor-pointer ">
                                     {/* <li className="w-[240px] h-[69.19px] bg-white ml-5 px-5 py-[25px]">
                                         <span className="w-[144.375px] h-[19.18px] font-semibold ml-[40px]">Partner Onboarding </span>
                                     </li> */}
