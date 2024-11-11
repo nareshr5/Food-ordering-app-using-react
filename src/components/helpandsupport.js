@@ -1,4 +1,4 @@
-import {useEffect,} from "react";
+import { useEffect , useState} from "react";
 import {useDispatch} from "react-redux";
 import { useSelector } from "react-redux";
 import { addHelpOptions } from "../utils/helpandsupportslice";
@@ -38,6 +38,14 @@ const HelpAndSupport = () =>{
     const details = useSelector((store) => store?.help?.onboardingDetails);
     //const toggleValue = useSelector((store)=> store?.help?.toggle);
     const isToggleOpen = useSelector((store) => store?.help?.isToggleOpen);
+
+    const [isAccordionOpen , setIsAccordionOpen]= useState(false);
+
+    const toggleHandle = ()=>{
+        const value = !isAccordionOpen;
+        setIsAccordionOpen(value);
+        console.log(isAccordionOpen);
+    }
 
     if(!options) return null;
     if(!details) return null;
@@ -80,11 +88,7 @@ const HelpAndSupport = () =>{
                                         </button>
 
                                     
-                                        // <div>
-                                        //     <li  key={index} className="w-[240px] h-[69.19px] bg-white ml-5 px-5 py-[25px]">
-                                        //     <span className="w-[144.375px] h-[19.18px] font-semibold ml-[40px]">{option} </span>
-                                        //     </li>
-                                        // </div>
+                                
                                     ))}
                                 </ul>
                             </div>
@@ -105,10 +109,17 @@ const HelpAndSupport = () =>{
 
                                     <button  key={detail.title} className="flex justify-between w-[890px] h-[69.59px] pt-[22px] pb-[26px]   text-start hover:text-orange-500">
                                             <span className="text-lg">{detail.title} </span>
-                                            <span className="w-5 h-5 mr-5">🔻</span>
+                                            {/* <span className="w-5 h-5 mr-5">🔻</span> */}
+                                            < button className="w-5 h-5 mr-5" onClick={toggleHandle}
+                                            >🔻</button>
+
 
                                             
                                     </button>
+
+
+
+                                {(isAccordionOpen) && <div>
 
                                 {(detail.description) && (<div className="w-[800px] h-[85.78px] pr-[50px] pb-[27px] text-gray-500 text-sm">
                                             {detail.description}
@@ -125,7 +136,11 @@ const HelpAndSupport = () =>{
                                             {detail?.options[0]?.waitTime}
                                       </div>
 
-                                   </div> 
+                                   </div>
+
+
+                                </div>}
+                                 
 
                                     
 
