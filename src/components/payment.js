@@ -1,3 +1,6 @@
+import { payment_icons } from "../utils/constant";
+
+
 const Payment = () =>{
     return(
         <div className="w-8/12 h-auto  mx-auto my-5  bg-slate-100">
@@ -107,7 +110,7 @@ const Payment = () =>{
                                 <div className="px-4 py-[18px] h-[37px] flex">
 
                                         <div className="h-[36px] w-[36px] p-[7px] border-[1px] border-gray-300 rounded-lg" >
-                                           <img className="h-5 w-5" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_64/PaymentLogos/instruments/4x/Wallet" alt="wallets"/>
+                                           <img className="h-5 w-5" src={payment_icons+"Wallet"} alt="wallets"/>
                                         </div>
 
                                         <div className="px-4 h-[37px]">
@@ -125,7 +128,7 @@ const Payment = () =>{
                                 <div className="px-4 py-[18px] h-[37px] flex">
 
                                         <div className="h-[36px] w-[36px] p-[7px] border-[1px] border-gray-300 rounded-lg" >
-                                                <img className="h-5 w-5" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_64/PaymentLogos/instruments/4x/food_card" alt="pluxee"/>
+                                                <img className="h-5 w-5" src={payment_icons+"food_card"} alt="pluxee"/>
 
                                         </div>
 
@@ -145,7 +148,7 @@ const Payment = () =>{
 
                                         <div className="h-[36px] w-[36px] p-[7px] border-[1px] border-gray-300 rounded-lg" >
 
-                                           <img className="h-5 w-5" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_64/PaymentLogos/instruments/4x/Net_banking" alt="net_banking"/>
+                                           <img className="h-5 w-5" src={payment_icons+"Net_banking"} alt="net_banking"/>
                                         
                                         </div>
 
@@ -167,7 +170,7 @@ const Payment = () =>{
 
                                         <div className="h-[36px] w-[36px] p-[7px] border-[1px] border-gray-300 rounded-lg" >
 
-                                            <img className="h-5 w-5" src="	https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_64/PaymentLogos/instruments/4x/Cash" alt="pay_ondelivery"/>
+                                            <img className="h-5 w-5" src={payment_icons+"Cash"} alt="pay_ondelivery"/>
 
 
                                         </div>
