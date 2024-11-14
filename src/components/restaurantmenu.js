@@ -1,4 +1,5 @@
 import RestaurantAccordion from "./resaccordion";
+import { delivery_icon } from "../utils/constant";
 
 const RestaurantMenu = () =>{
     return(
@@ -55,7 +56,7 @@ const RestaurantMenu = () =>{
 
                     <ul>
                         <li className="flex mx-4 ">
-                            <img className="w-5 h-5 mr-2" alt="delivery_image" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_40,h_40/v1648635511/Delivery_fee_new_cjxumu"/>
+                            <img className="w-5 h-5 mr-2" alt="delivery_image" src={delivery_icon}/>
                             <div className="text-sm text-gray-600">
                                 <b> 4.0 kms </b>
                                  | ₹39 Delivery fee will apply
@@ -74,10 +75,7 @@ const RestaurantMenu = () =>{
                <RestaurantAccordion/>
                <RestaurantAccordion/>
 
-           
-   
-       
-       
+    
         </div>
 
  

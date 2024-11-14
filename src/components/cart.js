@@ -1,6 +1,7 @@
 import BillDetails from "./billdetails";
 import {useState} from "react";
 import {useNavigate} from "react-router-dom" 
+import { veg_logo , rough_res_cartimg} from "../utils/constant";
 
 
 const Cart = ()=>{
@@ -22,7 +23,7 @@ const Cart = ()=>{
 
             <div className="py-5 px-[30px] flex">
                 <span>
-                     <img className="w-15 h-15" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_100,h_100,c_fill/dxtygbfmmlrsdtrf7hf2" alt="res_image" />
+                     <img className="w-15 h-15" src={rough_res_cartimg} alt="res_image" />
                 </span>
                 <span className="ml-3">
                     <div className="font-bold text-2xl">Fayaz Restaurant</div>
@@ -37,7 +38,7 @@ const Cart = ()=>{
                     <div className="py-[10px] flex justify-between">
 
                         <div className="flex">
-                            <img className="w-7 h-7" src="https://packagingguruji.com/wp-content/uploads/2022/09/Veg-Logo-2.png" alt="veg_icon" />
+                            <img className="w-7 h-7" src={veg_logo} alt="veg_icon" />
                             <div className="ml-[5px] mr-[14px] ">Chicken Salad Sandwich</div>
                         </div>
 

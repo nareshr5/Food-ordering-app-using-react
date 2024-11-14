@@ -6,6 +6,9 @@ import { addHelpOptions } from "../utils/helpandsupportslice";
 import { addOnboardingDetails } from "../utils/helpandsupportslice";
 //import { toggle } from "../utils/helpandsupportslice";
 
+import {support_api} from "../utils/constant";
+import {partner_onboard} from "../utils/constant";
+
 const HelpAndSupport = () =>{
     useEffect(()=>{
         getSupportOptions();
@@ -15,7 +18,7 @@ const HelpAndSupport = () =>{
     const dispatch = useDispatch();
 
     const getSupportOptions= async ()=>{
-        const data = await fetch("https://www.swiggy.com/dapi/support?");
+        const data = await fetch(support_api);
         const jsonValue = await data.json();
         const options = jsonValue?.data?.issueTypes?.data;
         dispatch(addHelpOptions(options));
@@ -24,7 +27,7 @@ const HelpAndSupport = () =>{
     }
 
     const getOnboardingDetails= async() =>{
-        const data = await fetch("https://www.swiggy.com/dapi/support/issues/partner-onboarding?");
+        const data = await fetch(partner_onboard);
         const jsonValue=await data.json();
         const details = jsonValue?.data?.issues?.data;
         console.log(details);
