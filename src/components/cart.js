@@ -1,15 +1,23 @@
 import BillDetails from "./billdetails";
 import {useState} from "react";
 import {useNavigate} from "react-router-dom" 
-import { veg_logo , rough_res_cartimg} from "../utils/constant";
+import { veg_logo , rough_res_cartimg
+
+
+} from "../utils/constant";
 
 
 const Cart = ()=>{
 
     // if the user is not signed in redirect the user to the signin page and then direct him to the cart page
-    const [count,setCount] = useState(1);
+ 
 
     const navigate = useNavigate();
+ 
+    const [count,setCount] = useState(1);
+    const [exampleItemPrice, setexampleItemPrice] =useState(100);
+   
+ 
 
     
     
@@ -26,8 +34,8 @@ const Cart = ()=>{
                      <img className="w-15 h-15" src={rough_res_cartimg} alt="res_image" />
                 </span>
                 <span className="ml-3">
-                    <div className="font-bold text-2xl">Fayaz Restaurant</div>
-                    <div className="text-slate-500 text-xl">Kumbakonam Locality</div>
+                    <div className="font-bold text-2xl">Restaurant Name</div>
+                    <div className="text-slate-500 text-xl">Locality Name</div>
                 </span>
             </div>
 
@@ -46,25 +54,18 @@ const Cart = ()=>{
                         <div className="flex">
                             <div className="border-2 border-slate-300 h-[32px] w-[70px] flex justify-around">
                                 <div><button onClick={() => {
-                                    if(count>1){
-                                        const c=count-1;
-                                        setCount(c)
-                                    }
+                                   count>1 && setCount(count-1)
                                     
                                 }} >-</button></div>
 
                                 <div>{count}</div>
 
-                                <div><button onClick={() => {
-
-                                    if(count>0){
-                                        const c=count+1;
-                                        setCount(c);
-                                    }
+                                <div><button onClick={() =>{
+                                    setCount(count+1);
                                     
                                 }} >+</button></div>
                             </div>
-                            <div className="ml-5"><span>₹270</span></div>
+                            <div className="ml-5"><span>₹{exampleItemPrice}</span></div>
                         </div>
 
                     </div>
