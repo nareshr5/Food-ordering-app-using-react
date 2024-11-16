@@ -14,10 +14,10 @@ const Cart = ()=>{
 
     const navigate = useNavigate();
  
+    const default_value = 100;
     const [count,setCount] = useState(1);
-    const [exampleItemPrice, setexampleItemPrice] =useState(100);
-   
- 
+    const [exampleItemPrice, setexampleItemPrice] =useState(default_value);
+
 
     
     
@@ -54,7 +54,8 @@ const Cart = ()=>{
                         <div className="flex">
                             <div className="border-2 border-slate-300 h-[32px] w-[70px] flex justify-around">
                                 <div><button onClick={() => {
-                                   count>1 && setCount(count-1)
+                                   count>1 && setCount(count-1);
+                                   count>1 && setexampleItemPrice(exampleItemPrice-default_value);
                                     
                                 }} >-</button></div>
 
@@ -62,6 +63,7 @@ const Cart = ()=>{
 
                                 <div><button onClick={() =>{
                                     setCount(count+1);
+                                    setexampleItemPrice(exampleItemPrice+default_value);
                                     
                                 }} >+</button></div>
                             </div>
@@ -94,7 +96,9 @@ const Cart = ()=>{
 
             
 
-            <div className="my-15"><BillDetails/></div>
+            <div className="my-15"><BillDetails exampleItemPrice={exampleItemPrice}/></div>
+
+
 
             <div>
                 <div className="mb-[32px] my-10">
