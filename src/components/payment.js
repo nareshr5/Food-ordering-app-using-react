@@ -123,8 +123,9 @@ const Payment = () =>{
                         <div className="h-[73px] border-b-[1px] border-gray-500 border-dotted ">
 
                               
-                                        <div className="px-4 py-[18px] h-[37px] flex">
+                                        <div className="px-4 py-[18px] h-[37px] flex cursor-pointer">
 
+                                            
                                             <div className="h-[36px] w-[36px] p-[7px] border-[1px] border-gray-300 rounded-lg" >
                                             <img className="h-5 w-5" src={payment_icons+"Wallet"} alt="wallets"/>
                                             </div>
@@ -143,7 +144,7 @@ const Payment = () =>{
 
                         <div className="h-[73px] border-b-[1px] border-gray-500 border-dotted ">
 
-                                <div className="px-4 py-[18px] h-[37px] flex">
+                                <div className="px-4 py-[18px] h-[37px] flex cursor-pointer">
 
                                         <div className="h-[36px] w-[36px] p-[7px] border-[1px] border-gray-300 rounded-lg" >
                                                 <img className="h-5 w-5" src={payment_icons+"food_card"} alt="pluxee"/>
@@ -162,7 +163,7 @@ const Payment = () =>{
 
                         <div className="h-[73px] border-b-[1px] border-gray-500 border-dotted ">
 
-                                <div className="px-4 py-[18px] h-[37px] flex">
+                                <div className="px-4 py-[18px] h-[37px] flex cursor-pointer">
 
                                         <div className="h-[36px] w-[36px] p-[7px] border-[1px] border-gray-300 rounded-lg" >
 
@@ -184,7 +185,7 @@ const Payment = () =>{
 
                         <div className="h-[73px] ">
 
-                                <div className="px-4 py-[18px] h-[37px] flex">
+                                <div className="px-4 py-[18px] h-[37px] flex cursor-pointer">
 
                                         <div className="h-[36px] w-[36px] p-[7px] border-[1px] border-gray-300 rounded-lg" >
 
