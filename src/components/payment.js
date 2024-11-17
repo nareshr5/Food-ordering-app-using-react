@@ -1,15 +1,20 @@
 import { payment_icons } from "../utils/constant";
 
+import { useSelector } from "react-redux";
+import appStore from "../utils/store";
+
 
 const Payment = () =>{
+
+     const {paymentValue} = useSelector((store)=> store.payment);
+    // console.log(toPay);
+
     return(
         <div className="w-8/12 h-auto  mx-auto my-5  bg-slate-100">
             <div className="mx-5 pb-[40px]">
                 <div className="font-bold my-5 text-2xl pt-5">Payment options </div>
 
-                <div className="py-[18px] border-slate-500 border-2 px-2 rounded-xl">
-                    
-                        <div>
+                 <div className="border-2 border-gray-600 p-4 rounded-3xl">
                             <div className="flex">
                                 <div className="pr-2 text-gray-800 font-bold">Starbucks</div>
                                 <p className="mr-2 text-gray-500">| Delivery in: 41 mins</p>
@@ -20,9 +25,19 @@ const Payment = () =>{
                                 <div className="pr-2 pb-1 text-gray-800 font-bold">Work</div>
                                 <div className="text-gray-500">| 11, House, 1st Main Rd, Peenya Iii Phase, Peenya, Bengaluru, Karnataka 560058, India</div>
                             </div>
-                        </div>
+                 </div>
 
-                </div>
+
+
+
+                 <div className="border-2 border-orange-600 p-4 rounded-3xl mt-4 w-3/4 mx-auto">
+                            
+                            <div className="bg-green-500 text-white flex mx-auto w-[80%] p-2 rounded-2xl cursor-pointer ">
+                                <p className="font-bold text-2xl ml-28 ">Amount to be paid: </p>
+                                <p className=" text-2xl font-semibold mx-4 text-black font-serif">{paymentValue}</p>
+                            </div>
+                            <p className="mt-2 font-semibold w-[30%] mx-auto rounded-lg border-2 border-black">Select a payment option</p>
+                 </div>
 
 
                 <div className="mt-6 h-[19px] mb-5">
@@ -107,19 +122,22 @@ const Payment = () =>{
 
                         <div className="h-[73px] border-b-[1px] border-gray-500 border-dotted ">
 
-                                <div className="px-4 py-[18px] h-[37px] flex">
+                              
+                                        <div className="px-4 py-[18px] h-[37px] flex">
 
-                                        <div className="h-[36px] w-[36px] p-[7px] border-[1px] border-gray-300 rounded-lg" >
-                                           <img className="h-5 w-5" src={payment_icons+"Wallet"} alt="wallets"/>
-                                        </div>
+                                            <div className="h-[36px] w-[36px] p-[7px] border-[1px] border-gray-300 rounded-lg" >
+                                            <img className="h-5 w-5" src={payment_icons+"Wallet"} alt="wallets"/>
+                                            </div>
 
-                                        <div className="px-4 h-[37px]">
-                                             <div className="font-bold">Wallets</div>
-                                             <div className="text-gray-600 text-sm font-semibold">PhonePe, Amazon Pay & more</div>
-                                        </div>
+                                            <div className="px-4 h-[37px]">
+                                                <div className="font-bold">Wallets</div>
+                                                <div className="text-gray-600 text-sm font-semibold">PhonePe, Amazon Pay & more</div>
+                                            </div>
 
-                                </div>
+                                       </div>
 
+                              
+                                
                         </div>
 
 
