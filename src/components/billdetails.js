@@ -1,11 +1,20 @@
+import { useDispatch } from "react-redux";
+import { addPayment } from "../utils/paymentslice";
+
+
 import { useEffect, useState } from "react";
 const BillDetails = ({exampleItemPrice}) =>{
+
+    const dispatch = useDispatch();
 
     const delivery_fee = exampleItemPrice*0.08;
     const platform_fee=6;
     const total=exampleItemPrice+delivery_fee+platform_fee;
     const taxes = total*0.07;
     const toPay=total+taxes;
+
+    dispatch(addPayment(toPay));
+
 
 
 

@@ -1,10 +1,8 @@
 import BillDetails from "./billdetails";
 import {useState} from "react";
 import {useNavigate} from "react-router-dom" 
-import { veg_logo , rough_res_cartimg
+import { veg_logo , rough_res_cartimg} from "../utils/constant";
 
-
-} from "../utils/constant";
 
 
 const Cart = ()=>{
@@ -12,6 +10,7 @@ const Cart = ()=>{
     // if the user is not signed in redirect the user to the signin page and then direct him to the cart page
  
 
+   
     const navigate = useNavigate();
  
     const default_value = 100;
@@ -107,7 +106,9 @@ const Cart = ()=>{
                     </div>
                   
                 </div>
-                <button onClick={() => navigate("/payment")} className="text-white bg-green-700 w-full h-[50px] font-bold rounded-xl mb-20">PROCEED TO PAY</button>
+                <button onClick={() => 
+                   
+                    navigate("/payment")} className="text-white bg-green-700 w-full h-[50px] font-bold rounded-xl mb-20">PROCEED TO PAY</button>
             </div>
             
         </div>
