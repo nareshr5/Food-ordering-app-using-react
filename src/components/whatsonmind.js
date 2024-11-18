@@ -2,11 +2,16 @@ import { useSelector } from "react-redux";
 import { CDN_URL_FOR_DISHES } from "../utils/constant";
 import {useState} from "react";
 
+import { useNavigate } from "react-router-dom";
+
 const WhatsOnMind = () =>{
+
     const {whatsOnMind}= useSelector((store) =>store.rec);
     // const  {imageId} = whatsOnMind?.
 
     const [value,setValue] = useState(0);
+
+    const navigate = useNavigate();
 
     if(!whatsOnMind) return null;
 
@@ -52,8 +57,11 @@ const WhatsOnMind = () =>{
                 {whatsOnMind.map((res,index) => (
 
                    // index <6 && 
+
+
                      <img  style={{translate:`-${value}%`}}
-                     key={index} className=" w-36 h-[180px] pr-6 object-cover cursor-pointer duration-1000" alt="whats_onmind_images" src={CDN_URL_FOR_DISHES+res?.imageId}/>
+                     key={index} className=" w-36 h-[180px] pr-6 object-cover cursor-pointer duration-1000" alt="whats_onmind_images" src={CDN_URL_FOR_DISHES+res?.imageId} onClick={() => navigate("/whatsonminditemspecific") }/>
+
                     
                     )
 
