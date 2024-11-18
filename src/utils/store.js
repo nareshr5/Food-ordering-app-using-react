@@ -5,6 +5,8 @@ import restaurantSliceReducer from "./restaurantslice";
 import helpAndSupportReducer from "./helpandsupportslice";
 import userReducer from "./userslice";
 import Whatsonminditemspecificreducer from "../components/whatsonminditemspecific";
+import paymentReducer from "./paymentslice";
+
 
 const appStore = configureStore({
     reducer:{
@@ -13,7 +15,8 @@ const appStore = configureStore({
         help:helpAndSupportReducer,
         user:userReducer,
         Whatsonminditemspecific:Whatsonminditemspecificreducer,
-
+        payment:paymentReducer,
+     
     },
 });
 

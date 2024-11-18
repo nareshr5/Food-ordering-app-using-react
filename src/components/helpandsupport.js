@@ -1,10 +1,13 @@
-import {useEffect,} from "react";
+import { useEffect , useState} from "react";
 import {useDispatch} from "react-redux";
 import { useSelector } from "react-redux";
 import { addHelpOptions } from "../utils/helpandsupportslice";
 //import { toggleOnboarding, toggleLegal,toggleFaqs,toggleInstamart } from "../utils/helpandsupportslice";
 import { addOnboardingDetails } from "../utils/helpandsupportslice";
 //import { toggle } from "../utils/helpandsupportslice";
+
+import {support_api} from "../utils/constant";
+import {partner_onboard} from "../utils/constant";
 
 const HelpAndSupport = () =>{
     useEffect(()=>{
@@ -15,7 +18,7 @@ const HelpAndSupport = () =>{
     const dispatch = useDispatch();
 
     const getSupportOptions= async ()=>{
-        const data = await fetch("https://www.swiggy.com/dapi/support?");
+        const data = await fetch(support_api);
         const jsonValue = await data.json();
         const options = jsonValue?.data?.issueTypes?.data;
         dispatch(addHelpOptions(options));
@@ -24,7 +27,7 @@ const HelpAndSupport = () =>{
     }
 
     const getOnboardingDetails= async() =>{
-        const data = await fetch("https://www.swiggy.com/dapi/support/issues/partner-onboarding?");
+        const data = await fetch(partner_onboard);
         const jsonValue=await data.json();
         const details = jsonValue?.data?.issues?.data;
         console.log(details);
@@ -39,6 +42,14 @@ const HelpAndSupport = () =>{
     //const toggleValue = useSelector((store)=> store?.help?.toggle);
     const isToggleOpen = useSelector((store) => store?.help?.isToggleOpen);
 
+    const [isAccordionOpen , setIsAccordionOpen]= useState(false);
+
+    const toggleHandle = ()=>{
+        const value = !isAccordionOpen;
+        setIsAccordionOpen(value);
+        console.log(isAccordionOpen);
+    }
+
     if(!options) return null;
     if(!details) return null;
 
@@ -47,22 +58,22 @@ const HelpAndSupport = () =>{
     
 
     return(
-        <div className="px-5 bg-cyan-800">
+        <div className="px-5 bg-cyan-800 h-[2250.5px]">
             <div className="pt-[33px] mx-[54.5px] text-white w-[1200px] h-[130px] align-middle">
                 <h1 className="font-bold text-3xl">Help & Support</h1>
                 <div>Let's take a step ahead and help you better</div>
             </div>
 
-            <div className="w-[1300px] h-[730.5px] mx-[4.5px] bg-white">
+            <div className="w-[1300px]  h-[2000.5px] mx-[4.5px] bg-white rounded-3xl">
                 {/* <div className="w-[35px] h-[730.5px]"></div> */}
-                blank
-                <div className="w-[1200px] h-[630.5px] bg-white mx-[50px] py-[50px] flex">
+                {/* blank */}
+                <div className="w-[1200px] h-[630.5px]  bg-white mx-[50px] py-[50px] flex">
 
                     
                          {/* side navigation bar code */}
                         <div className="w-[260px] h-[630.55px]">
                             <div>
-                                <ul className=" h-[316.75px] w-[260px] py-[20px] bg-slate-100 cursor-pointer">
+                                <ul className=" h-[316.75px] w-[260px] py-[20px] bg-slate-100 cursor-pointer ">
                                     {/* <li className="w-[240px] h-[69.19px] bg-white ml-5 px-5 py-[25px]">
                                         <span className="w-[144.375px] h-[19.18px] font-semibold ml-[40px]">Partner Onboarding </span>
                                     </li> */}
@@ -80,11 +91,7 @@ const HelpAndSupport = () =>{
                                         </button>
 
                                     
-                                        // <div>
-                                        //     <li  key={index} className="w-[240px] h-[69.19px] bg-white ml-5 px-5 py-[25px]">
-                                        //     <span className="w-[144.375px] h-[19.18px] font-semibold ml-[40px]">{option} </span>
-                                        //     </li>
-                                        // </div>
+                                
                                     ))}
                                 </ul>
                             </div>
@@ -105,10 +112,17 @@ const HelpAndSupport = () =>{
 
                                     <button  key={detail.title} className="flex justify-between w-[890px] h-[69.59px] pt-[22px] pb-[26px]   text-start hover:text-orange-500">
                                             <span className="text-lg">{detail.title} </span>
-                                            <span className="w-5 h-5 mr-5">🔻</span>
+                                            {/* <span className="w-5 h-5 mr-5">🔻</span> */}
+                                            < button className="w-5 h-5 mr-5" onClick={toggleHandle}
+                                            >🔻</button>
+
 
                                             
                                     </button>
+
+
+
+                                {(isAccordionOpen) && <div>
 
                                 {(detail.description) && (<div className="w-[800px] h-[85.78px] pr-[50px] pb-[27px] text-gray-500 text-sm">
                                             {detail.description}
@@ -125,7 +139,11 @@ const HelpAndSupport = () =>{
                                             {detail?.options[0]?.waitTime}
                                       </div>
 
-                                   </div> 
+                                   </div>
+
+
+                                </div>}
+                                 
 
                                     
 

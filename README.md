@@ -15,6 +15,7 @@
 -order summary basic component is created 
 - working on the styling of the order summary page.
 - need to work on some functionalities of some pages
+- need to work on some funtionalities of help page
 
 
 
