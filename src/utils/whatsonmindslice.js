@@ -4,7 +4,7 @@ import WhatsOnMind from "../components/whatsonmind";
 const Whatsonminditemspecificslice = createSlice({
     name:"whatonminditemspecificslice",
     initialState:{
-        WhatsOnMind_itemList:"",
+        WhatsOnMind_itemList:[],
     },
     reducers:{
         addItem:(state,action) =>{
