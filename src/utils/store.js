@@ -4,7 +4,7 @@ import recommendationSliceReducer from "./recomedationSlice";
 import restaurantSliceReducer from "./restaurantslice";
 import helpAndSupportReducer from "./helpandsupportslice";
 import userReducer from "./userslice";
-import Whatsonminditemspecificreducer from "../components/whatsonminditemspecific";
+// import Whatsonminditemspecificreducer from "../components/whatsonminditemspecific";
 import paymentReducer from "./paymentslice";
 
 
@@ -14,7 +14,7 @@ const appStore = configureStore({
         res:restaurantSliceReducer,
         help:helpAndSupportReducer,
         user:userReducer,
-        Whatsonminditemspecific:Whatsonminditemspecificreducer,
+        // Whatsonminditemspecific:Whatsonminditemspecificreducer,
         payment:paymentReducer,
      
     },
