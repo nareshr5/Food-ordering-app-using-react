@@ -21,7 +21,7 @@ import appStore from './utils/store';
 import Payment from "./components/payment";
 import OrderSummary from "./components/ordersummary";
 import WhatsOnMind from "./components/whatsonmind";
-// import Whatsonminditemspecific from "./components/whatsonminditemspecific";
+import Whatsonmindcontent from "./components/whatsonmindcontent";
 
 
 
@@ -38,10 +38,10 @@ const appRouter = createBrowserRouter([
         path:"/restaurantmenu",
         element:<RestaurantMenu/>
      },
-   //   {
-   //    path:"/whatsonminditemspecific",
-   //    element:<Whatsonminditemspecific />
-   //   },
+     {
+      path:"/whatsonminditemspecific",
+      element:<Whatsonmindcontent />
+     },
      ],
      errorElement:<ErrorPage/>
   },

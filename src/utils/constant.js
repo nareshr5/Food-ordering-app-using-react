@@ -51,3 +51,7 @@ export const payment_icons = "https://media-assets.swiggy.com/swiggy/image/uploa
 //from restaurantmenu file
 
 export const delivery_icon = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_40,h_40/v1648635511/Delivery_fee_new_cjxumu";
+
+
+// to get content of whats on mind 
+export const whatsonmindcontent_api = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=11.01420&lng=76.99410&collection=80477&tags=layout_BAU_Contextual%2Cparotta&sortBy=&filters=&type=rcv2&offset=0&page_type=null";
