@@ -17,12 +17,21 @@ const Whatsonmindcontent = () => {
         const jsonValue = await data.json();
         const result = jsonValue?.data?.cards;
         
-        setList({result});
-        console.log(list);
+        setList(result);
+        
     }
 
+    // console.log(list);
+
+    if(list.length==0) return null;
+   
+
     return(
-        <div>on whats on  mind content page</div>
+        <div className="mx-3">
+        
+            <div className="text-3xl font-semibold my-2">{list[0].card.card.title}</div>
+            <div className=" my-4 text-slate-500">{list[0].card.card.description}</div>
+        </div>
     )
 }
 
