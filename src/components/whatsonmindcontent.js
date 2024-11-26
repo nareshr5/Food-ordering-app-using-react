@@ -35,21 +35,21 @@ const Whatsonmindcontent = () => {
             <div className="text-3xl font-semibold my-2">{list[0].card.card.title}</div>
             <div className=" my-4 text-slate-500">{list[0].card.card.description}</div>
 
-            <div className="flex ">
+            <div className="flex flex-wrap my-5 ">
 
                     {list.map((item,i) =>(
 
-                        (i>=3){
-
-                            { <div className="mx-5">  
+                      (i>=3)  && <div className="mx-5">  
                                 <Whatsonmindcard  data={item?.card?.card?.info}/> 
-                            </div> }
+                            </div> 
 
-                        }
+                            
+
+                        
 
                          
                            
-                    ))}
+                    ))};
 
                    
 
