@@ -60,7 +60,7 @@ const WhatsOnMind = () =>{
 
 
                      <img  style={{translate:`-${value}%`}}
-                     key={index} className=" w-36 h-[180px] pr-6 object-cover cursor-pointer duration-1000" alt="whats_onmind_images" src={CDN_URL_FOR_DISHES+res?.imageId} onClick={() => navigate("/whatsonminditemspecific") }/>
+                     key={index} className=" w-36 h-[180px] pr-6 object-cover cursor-pointer duration-1000" alt="whats_onmind_images" src={CDN_URL_FOR_DISHES+res?.imageId} onClick={() => navigate("/whatsonmindcontent") }/>
 
                     
                     )

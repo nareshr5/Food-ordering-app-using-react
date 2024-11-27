@@ -32,8 +32,8 @@ const Whatsonmindcontent = () => {
     return(
         <div className="mx-3">
         
-            <div className="text-3xl font-semibold my-2">{list[0].card.card.title}</div>
-            <div className=" my-4 text-slate-500">{list[0].card.card.description}</div>
+            <div className="text-3xl font-semibold my-2 mx-2">{list[0].card.card.title}</div>
+            <div className=" my-4 text-slate-500 mx-2">{list[0].card.card.description}</div>
 
             <div className="flex flex-wrap my-5 ">
 
