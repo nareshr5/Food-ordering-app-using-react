@@ -39,7 +39,7 @@ const Whatsonmindcontent = () => {
 
                     {list.map((item,i) =>(
 
-                      (i>=3)  && <div className="mx-5">  
+                      (i>=3)  && <div className="mx-6 my-2">  
                                 <Whatsonmindcard  data={item?.card?.card?.info}/> 
                             </div> 
 
