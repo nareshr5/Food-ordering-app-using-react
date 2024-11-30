@@ -42,11 +42,6 @@ const Whatsonmindcontent = () => {
                       (i>=3)  && <div className="mx-6 my-2">  
                                 <Whatsonmindcard  data={item?.card?.card?.info}/> 
                             </div> 
-
-                            
-
-                        
-
                          
                            
                     ))};
