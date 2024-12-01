@@ -35,7 +35,7 @@ const ResList = (props) =>{
 
 
     if(type==="top restaurants")return(
-        <div className="p-4 w-[1007px] h-[380px] m-auto">
+        <div className="p-4 w-[1007px] h-[380px] m-auto cursor-pointer">
             <div className="flex items-center justify-between w-full">
 
                 <div className="mb-4 text-2xl font-bold">{title}</div>
@@ -72,7 +72,7 @@ const ResList = (props) =>{
     );
 
     if(type==="online delivery")return(
-        <div className=" w-[1007.2px] h-[592.6px] m-auto">
+        <div className=" w-[1007.2px] h-[592.6px] m-auto cursor-pointer">
             <div className="mb-4 text-2xl font-bold">{title}</div>
             <div className="mx-[16px] my-[32px] flex flex-wrap justify-between ">
             {resWithOnlineDelivery.map((res)=> (
