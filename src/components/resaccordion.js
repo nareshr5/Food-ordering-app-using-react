@@ -1,3 +1,5 @@
+import { resMenuImage } from "../utils/constant";
+
 const RestaurantAccordion = () =>{
     return(
         <div>
@@ -45,7 +47,7 @@ const RestaurantAccordion = () =>{
 
                                 <div className="w-[156px] h-[174px] ml-[60px] ">
                                     <button className="w-[165px] h-[144px]">
-                                    <img className="w-[156px] h-[144px] rounded-lg" alt="food_image" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/440c06ace44b931b729d9b6a090aba07"/>
+                                    <img className="w-[156px] h-[144px] rounded-lg" alt="food_image" src={resMenuImage}/>
                                     </button>
 
                                     <div className="w-[156px] h-[58px]">
