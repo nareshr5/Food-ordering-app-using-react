@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ResCard from "./rescard";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 
 const ResList = (props) =>{
@@ -10,6 +11,8 @@ const ResList = (props) =>{
 
     const {resList,resWithOnlineDelivery} = useSelector((store) => store.res);
     const [value,setValue] = useState(0);
+
+    const navigate = useNavigate();
 
     if(!resList) return null;
     if(!resWithOnlineDelivery) return null;
@@ -55,7 +58,11 @@ const ResList = (props) =>{
                 <div className="flex  pl-4 duration-1000" style={{translate:`-${value}%`}} >
                     {resList.map((res,i)=> (
                     
-                            <ResCard resList={res} type={type} key={i} />
+                            < span onClick={() => navigate("/restaurantmenu")}>
+                              <ResCard resList={res} type={type} key={i} />
+                            </span >
+                            
+                            
                     
                             
                         
@@ -77,7 +84,7 @@ const ResList = (props) =>{
             <div className="mx-[16px] my-[32px] flex flex-wrap justify-between ">
             {resWithOnlineDelivery.map((res)=> (
                 
-                    <ResCard resList={res} type={type} key={res}/>
+                    <ResCard  resList={res} type={type} key={res}  />
                  
             )
             
