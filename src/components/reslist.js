@@ -84,7 +84,10 @@ const ResList = (props) =>{
             <div className="mx-[16px] my-[32px] flex flex-wrap justify-between ">
             {resWithOnlineDelivery.map((res)=> (
                 
+                 <span onClick={() => navigate("/restaurantmenu")}>
                     <ResCard  resList={res} type={type} key={res}  />
+                 </span>
+                    
                  
             )
             
