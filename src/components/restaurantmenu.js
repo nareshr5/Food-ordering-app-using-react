@@ -1,7 +1,23 @@
 import RestaurantAccordion from "./resaccordion";
 import { delivery_icon } from "../utils/constant";
 
+import { restaurant_menu } from "../utils/constant";
+import { useState, useEffect } from "react";
+
 const RestaurantMenu = () =>{
+
+    const [resmenu,setResMenu] = useState();
+
+    const getData = async() =>{
+        const data = await fetch(restaurant_menu);
+        const jsonValue = await data.json();
+        console.log(jsonValue);
+    }
+
+    useEffect(() =>{
+        getData();
+    });
+
     return(
 
         <div className="w-[800px] mx-auto  bg-slate-50">
