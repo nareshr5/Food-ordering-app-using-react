@@ -11,7 +11,8 @@ const RestaurantMenu = () =>{
     const getData = async() =>{
         const data = await fetch(restaurant_menu);
         const jsonValue = await data.json();
-        console.log(jsonValue);
+        console.log(jsonValue?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
+        // setResMenu(jsonValue?.data?.cards[4]);
     }
 
     useEffect(() =>{
