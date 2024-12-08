@@ -13,6 +13,7 @@ const RestaurantMenu = () =>{
         const jsonValue = await data.json();
         console.log(jsonValue?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
         // setResMenu(jsonValue?.data?.cards[4]);
+        setResMenu(jsonValue?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
     }
 
     useEffect(() =>{
