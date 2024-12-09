@@ -6,19 +6,23 @@ import { useState, useEffect } from "react";
 
 const RestaurantMenu = () =>{
 
-    const [resmenu,setResMenu] = useState();
-
-    const getData = async() =>{
-        const data = await fetch(restaurant_menu);
-        const jsonValue = await data.json();
-        console.log(jsonValue?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
-        // setResMenu(jsonValue?.data?.cards[4]);
-        setResMenu(jsonValue?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
-    }
+    const [resmenu,setResMenu] = useState([]);
 
     useEffect(() =>{
-        getData();
-    });
+        getResData();
+    },[]);
+
+    const getResData = async() =>{
+        const data = await fetch(restaurant_menu);
+        const jsonValue = await data.json();
+        //console.log(jsonValue?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
+        //const restaurantMenu=jsonValue?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
+       
+        setResMenu(jsonValue?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
+       
+    }
+
+    
 
     return(
 
