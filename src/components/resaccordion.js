@@ -1,6 +1,8 @@
 import { resMenuImage } from "../utils/constant";
 
-const RestaurantAccordion = () =>{
+const RestaurantAccordion = (props) =>{
+    const {data} = props;
+    console.log(data);
     return(
         <div>
              <button className="w-[768px] h-[20.3px] mb-6 pr-4 flex justify-between">
