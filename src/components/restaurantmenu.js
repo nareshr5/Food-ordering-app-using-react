@@ -15,9 +15,7 @@ const RestaurantMenu = () =>{
     const getResData = async() =>{
         const data = await fetch(restaurant_menu);
         const jsonValue = await data.json();
-        //console.log(jsonValue?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
-        //const restaurantMenu=jsonValue?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
-       
+        //console.log(jsonValue?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);   
         setResMenu(jsonValue?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
        
     }
@@ -96,6 +94,7 @@ const RestaurantMenu = () =>{
 
                <RestaurantAccordion/>
                <RestaurantAccordion/>
+               <RestaurantAccordion data={resmenu[1]?.card?.card?.itemCards} />
 
     
         </div>
