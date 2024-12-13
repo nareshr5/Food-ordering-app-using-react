@@ -92,11 +92,11 @@ const RestaurantMenu = () =>{
 
             <div className="test-white bg-gray w-[768px] h-[3105px] mx-[16px] my-[24px]">
 
-               <RestaurantAccordion/>
+               {/* <RestaurantAccordion/> */}
                
                {/* <RestaurantAccordion data={resmenu[1]?.card?.card?.itemCards} /> */}
                {resmenu.map((item,index)=> (
-                    index>0 &&  <div>
+                    index>0 &&  <div key={item?.card?.itemCards}>
                                    <RestaurantAccordion data={item?.card?.card?.itemCards} />
                                 </div>
                    

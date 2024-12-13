@@ -1,19 +1,23 @@
+import { useState } from "react";
 import { resMenuImage } from "../utils/constant";
 
 const RestaurantAccordion = (props) =>{
     const {data} = props;
-    console.log(data);
+    const [isopen,setIsOpen] = useState(true);
+   // console.log(data);
+   console.log(isopen);
     return(
         <div>
              <button className="w-[768px] h-[20.3px] mb-6 pr-4 flex justify-between">
-                <h3 className="font-extrabold w-[154.3px] h-[20px]">Recommended(14)</h3>
-                <div className="w-4 h-5">🔺</div>
+                <h3 className="font-extrabold w-[154.3px] h-[20px]" >Recommended(14)</h3>
+                
+                <div className="w-4 h-5" onClick={() => setIsOpen(!isopen)}>🔺</div>
                 </button>
 
             <div>
 
 
-                <div className="w-[768px] h-[3061]">
+             {isopen && <div className="w-[768px] h-[3061]">
                     <div className="w-[768px] h-[203px]">
                         <div className="w-[768px] h-[174px] my-1">
                             <div className="w-[768px] h-[174px] flex">
@@ -76,6 +80,7 @@ const RestaurantAccordion = (props) =>{
 
 
                 </div>
+              }
 
               <div className="w-[768px] border-b-2 border-slate-300 mt-1 mb-5"> </div>
 
