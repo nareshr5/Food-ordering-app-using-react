@@ -17,7 +17,7 @@
 - need to work on some functionalities of some pages
 - need to work on some funtionalities of help page
 - working on the whats on mind functinality ( facing some issues while using the hoosk , rectifying them)
-- creating accordions on restaurant menu page
+- creating accordions on restaurant menu page (need to use dynamic data further)
 
 
 ERROR :- "display name" is not being updated in the redux store
