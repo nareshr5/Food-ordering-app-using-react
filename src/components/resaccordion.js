@@ -6,9 +6,12 @@ const RestaurantAccordion = (props) =>{
     const [isopen,setIsOpen] = useState(true);
    // console.log(data);
    // dynamic datas to get  --> accordion title , rating , descriptions ,
-   console.log(isopen);
+   console.log(data);
+   // working on to get hte dynamic data
     return(
         <div>
+
+
              <button className="w-[768px] h-[20.3px] mb-6 pr-4 flex justify-between">
                 <h3 className="font-extrabold w-[154.3px] h-[20px]" >Recommended(14)</h3>
                 
