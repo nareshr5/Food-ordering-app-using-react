@@ -6,7 +6,7 @@ const RestaurantAccordion = (props) =>{
     const [isopen,setIsOpen] = useState(true);
    // console.log(data);
    // dynamic datas to get  --> accordion title , rating , descriptions ,
-   console.log(data);
+   //console.log(data);
    // working on to get hte dynamic data
     return(
         <div>

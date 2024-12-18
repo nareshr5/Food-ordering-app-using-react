@@ -17,7 +17,14 @@ const RestaurantMenu = () =>{
         const jsonValue = await data.json();
         //console.log(jsonValue?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);   
         setResMenu(jsonValue?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
+        //console.log(resmenu);
        
+    }
+
+    const resmenu_iteration = (arr) =>{
+       
+     console.log(arr);
+        
     }
 
     
@@ -95,9 +102,13 @@ const RestaurantMenu = () =>{
                {/* <RestaurantAccordion/> */}
                
                {/* <RestaurantAccordion data={resmenu[1]?.card?.card?.itemCards} /> */}
+
+              
                {resmenu.map((item,index)=> (
                     index>0 &&  <div key={item?.card?.itemCards}>
-                                   <RestaurantAccordion data={item?.card?.card?.itemCards} />
+                                
+                                   {/* <RestaurantAccordion data={item?.card?.card?.itemCards} /> */}
+                                  { resmenu_iteration(item?.card?.itemCards)}
                                 </div>
                    
                ))}
