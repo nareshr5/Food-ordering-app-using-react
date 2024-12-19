@@ -7,7 +7,7 @@ const RestaurantAccordion = (props) =>{
    // console.log(data);
    // dynamic datas to get  --> accordion title , rating , descriptions ,
    //console.log(data);
-   // working on to get hte dynamic data
+   // working on to get hte dynamic data ( the dyanamic data is in nested format , working on it)
     return(
         <div>
 
