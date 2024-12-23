@@ -2,8 +2,9 @@ import { useState } from "react";
 import { resMenuImage } from "../utils/constant";
 
 const RestaurantAccordion = (props) =>{
-    const {data} = props;
+    const {accordion} = props;
     const [isopen,setIsOpen] = useState(true);
+   // console.log(accordion);
  
    // dynamic datas to get  --> accordion title , rating , descriptions ,
    //console.log(data);

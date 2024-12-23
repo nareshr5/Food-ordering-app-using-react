@@ -1,4 +1,4 @@
-import RestaurantAccordion from "./resaccordion";
+import RestaurantAccordionList from "../components/resaccordionlist";
 import { delivery_icon } from "../utils/constant";
 
 import { restaurant_menu } from "../utils/constant";
@@ -15,17 +15,17 @@ const RestaurantMenu = () =>{
     const getResData = async() =>{
         const data = await fetch(restaurant_menu);
         const jsonValue = await data.json();
-        //console.log(jsonValue?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);   
+        console.log(jsonValue?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);   
         setResMenu(jsonValue?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
         //console.log(resmenu);
        
     }
 
-    const resmenu_iteration = (arr) =>{
+    // const resmenu_iteration = (arr) =>{
        
-     console.log(arr);
+    //  console.log(arr);
         
-    }
+    // }
 
     
 
@@ -99,16 +99,13 @@ const RestaurantMenu = () =>{
 
             <div className="test-white bg-gray w-[768px] h-[3105px] mx-[16px] my-[24px]">
 
-               {/* <RestaurantAccordion/> */}
-               
-               {/* <RestaurantAccordion data={resmenu[1]?.card?.card?.itemCards} /> */}
 
               
                {resmenu.map((item,index)=> (
-                    index>0 &&  <div key={item?.card?.itemCards}>
+                    index>0 &&  <div>
                                 
-                                   {/* <RestaurantAccordion data={item?.card?.card?.itemCards} /> */}
-                                  { resmenu_iteration(item?.card?.itemCards)}
+                                   <RestaurantAccordionList data={item}  />
+                                 
                                 </div>
                    
                ))}
