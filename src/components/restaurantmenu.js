@@ -6,26 +6,27 @@ import { useState, useEffect } from "react";
 
 const RestaurantMenu = () =>{
 
-    const [resmenu,setResMenu] = useState([]);
+    const [resmenu,setresmenu] = useState();
 
     useEffect(() =>{
-        getResData();
+        getData();
     },[]);
 
-    const getResData = async() =>{
+    
+
+    const getData = async() =>{
         const data = await fetch(restaurant_menu);
         const jsonValue = await data.json();
-        console.log(jsonValue?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);   
-        setResMenu(jsonValue?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
-        //console.log(resmenu);
+        const resdata = jsonValue?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
+           
+        setresmenu(resdata);
+        //console.log(jsonValue?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
+        //console.log(resdata);
        
     }
+    
 
-    // const resmenu_iteration = (arr) =>{
-       
-    //  console.log(arr);
-        
-    // }
+    if(!resmenu) return null;
 
     
 
@@ -102,11 +103,14 @@ const RestaurantMenu = () =>{
 
               
                {resmenu.map((item,index)=> (
-                    index>0 &&  <div>
+
+                     (index>0) && ( <div key={index}>
                                 
-                                   <RestaurantAccordionList data={item}  />
+                                     <RestaurantAccordionList data={item?.card?.card?.itemCards}    />
                                  
-                                </div>
+                                   </div> )
+                
+                  
                    
                ))}
 

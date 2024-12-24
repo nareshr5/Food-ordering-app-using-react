@@ -4,15 +4,30 @@ import { useState } from "react";
 const RestaurantAccordionList = (props) =>{
 
     const {data} =props;
-    //const [accordionData,useAccordiondata] = useState(data);
-    //console.log(data);
+    const [accordionData,useAccordionData]=useState(data);
+    //console.log(accordionData);
+
+   if(!data) return null;
+   
     return(
-        // {accordionData.map((d)=>(
-            <div>
-                <RestaurantAccordion  accordion ={data?.card?.card?.itemCards}/>
-            </div>
-    //     ))
-    // }
+
+        <div>
+            {accordionData.map((acc, index) =>(
+                <div key={index}>
+                  <RestaurantAccordion details={acc} />
+                </div>
+            ))}
+
+        </div>
+
+        
+        // <div>
+
+           
+        //       <RestaurantAccordion details={data?.card?.info} />
+           
+        // </div>
+ 
         
     );
 
