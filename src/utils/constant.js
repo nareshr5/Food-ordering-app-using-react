@@ -64,4 +64,4 @@ export const whatsonmindcontent_api = "https://www.swiggy.com/dapi/restaurants/l
 
 
 // image on restaurant page
-export const resMenuImage = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/440c06ace44b931b729d9b6a090aba07";
+export const resMenuImage = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/";
