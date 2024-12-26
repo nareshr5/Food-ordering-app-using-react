@@ -4,7 +4,9 @@ import { resMenuImage } from "../utils/constant";
 
 const RestaurantAccordion = (props) =>{
     const {details} = props;
-    const {category,imageId,price,name,description} =details?.card?.info;
+    const {category,imageId,price,name,description,ratings} =details?.card?.info;
+    const {rating,ratingCountV2}=ratings?.aggregatedRating;
+    // rating >=4 (thick green) , <4 (light green) else yellow
     console.log(details);
     const [isopen,setIsOpen]=useState(true);
  
@@ -35,7 +37,7 @@ const RestaurantAccordion = (props) =>{
                         <div className="w-[768px] h-[174px] my-1">
                             <div className="w-[768px] h-[174px] flex">
                                 <div className="w-[552px] h-[174px] ">
-                                    <div className="w-[552px] h-[16px] mb-1">🔺</div>
+                                    {/* <div className="w-[552px] h-[16px] mb-1">🔺</div> */}
                                     <div className="w-[552px] h-5 font-bold">Combo for 1 Non-Veg</div>
                                     <div className="w-[552px] h-[19px] mt-1">
                                         <div className="w-[35px] h-[19px] mr-1">
@@ -50,8 +52,8 @@ const RestaurantAccordion = (props) =>{
 
                                     <div className="w-[552px] h-4 mt-3 flex text-sm">
                                         <div className="w-[14px] h-[14px] mr-1">⭐</div>
-                                        <div className="w-[16.5px] h-[16px] mx-1">3.9</div>
-                                        <div className="w-[18.5px] h-[16px] mx-1">(13)</div>
+                                        <div className="w-[16.5px] h-[16px] mx-1">{rating}</div>
+                                        <div className="w-[18.5px] h-[16px] mx-1">({ratingCountV2})</div>
 
                                     </div>
 
@@ -66,7 +68,7 @@ const RestaurantAccordion = (props) =>{
 
                                 <div className="w-[156px] h-[174px] ml-[60px] ">
                                     <button className="w-[165px] h-[144px]">
-                                    <img className="w-[156px] h-[144px] rounded-lg" alt="food_image" src={resMenuImage+imageId}/>
+                                    <img className="w-[156px] h-[144px] rounded-lg object-cover" alt="food_image" src={resMenuImage+imageId}/>
                                     </button>
 
                                     <div className="w-[156px] h-[58px]">
