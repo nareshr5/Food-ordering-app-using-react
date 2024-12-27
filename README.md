@@ -16,11 +16,10 @@
 - working on the styling of the order summary page.
 - need to work on some functionalities of some pages
 - need to work on some funtionalities of help page
-- working on the whats on mind functinality ( facing some issues while using the hoosk , rectifying them)
+- working on the whats on mind functinality 
 - creating accordions on restaurant menu page 
 
-(accordion open and close logic is added , 
-need to use dynamic data further  which is nested format )
+(accordion open and close logic is added , proper acccordion fixing needed little )
 
 
 ERROR :- "display name" is not being updated in the redux store
