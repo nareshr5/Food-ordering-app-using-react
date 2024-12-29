@@ -1,11 +1,15 @@
 
 import { useState } from "react";
-import { resMenuImage } from "../utils/constant";
+import { resMenuImage} from "../utils/constant";
+import nonveg_logo  from "../images/nonveg_logo.png";
+import veg_logo from "../images/veg_logo.png";
 
 const RestaurantAccordion = (props) =>{
     const {details} = props;
-    const {category,imageId,price,name,description,ratings} =details?.card?.info;
+    const {category,imageId,price,name,description,ratings,itemAttribute} =details?.card?.info;
     const {rating,ratingCountV2}=ratings?.aggregatedRating;
+    const {vegClassifier} = itemAttribute;
+
     // rating >=4 (thick green) , <4 (light green) else yellow
     console.log(details);
     const [isopen,setIsOpen]=useState(true);
@@ -38,6 +42,11 @@ const RestaurantAccordion = (props) =>{
                             <div className="w-[768px] h-[174px] flex">
                                 <div className="w-[552px] h-[174px] ">
                                     {/* <div className="w-[552px] h-[16px] mb-1">🔺</div> */}
+                                    <div className="w-[552px] h-5 mb-1 ">
+                                        { (vegClassifier=="NONVEG")? <img  className="w-5 h-5" src={nonveg_logo} alt="veg_logo"/> :  <img  className="w-5 h-5" src={veg_logo} alt="veg_logo"/>}
+                                        
+                                        
+                                    </div>
                                     <div className="w-[552px] h-5 font-bold">Combo for 1 Non-Veg</div>
                                     <div className="w-[552px] h-[19px] mt-1">
                                         <div className="w-[35px] h-[19px] mr-1">
@@ -75,7 +84,7 @@ const RestaurantAccordion = (props) =>{
                                         <div className="w-[156px] h-[58px]">
                                         <div className="w-[156px] h-[58px]">
                                             <div className="w-[118px] h-[38px] border-black -my-5 mx-auto">
-                                                <button className= " w-[118px] h-[38px] text-green-800 font-bold bg-white rounded-lg border-2 border-slate-300">ADD</button>
+                                                <button className= " w-[118px] h-[38px] text-green-800 font-bold bg-white rounded-lg border-2 border-slate-300 hover:bg-slate-300 font-bold">ADD</button>
                                             </div>
                                         </div>
                                         </div>
