@@ -11,8 +11,9 @@ const RestaurantAccordion = (props) =>{
     const {vegClassifier} = itemAttribute;
 
     // rating >=4 (thick green) , <4 (light green) else yellow
-    console.log(details);
+   // console.log(details);
     const [isopen,setIsOpen]=useState(true);
+    const [count,setCount]=useState(0);
  
    // dynamic datas to get  --> accordion title , rating , descriptions ,
    //console.log(data);
@@ -84,7 +85,19 @@ const RestaurantAccordion = (props) =>{
                                         <div className="w-[156px] h-[58px]">
                                         <div className="w-[156px] h-[58px]">
                                             <div className="w-[118px] h-[38px] border-black -my-5 mx-auto">
-                                                <button className= " w-[118px] h-[38px] text-green-800 font-bold bg-white rounded-lg border-2 border-slate-300 hover:bg-slate-300 font-bold">ADD</button>
+
+                                                {/* addin some functionality to the ITEM ADD button */}
+                                               {(count==0) ? 
+                                               
+                                               (<button className= " w-[118px] h-[38px] text-green-800 font-bold bg-white rounded-lg border-2 border-slate-300 hover:bg-slate-300 " onClick={() => setCount(count+1) }>Add</button>)  :
+                                               
+                                               (<div className="absolute flex justify-evenly w-[118px] h-[38px] text-green-800 font-bold bg-white rounded-lg border-2 border-slate-300 hover:bg-slate-300" ><button className="text-green-800 font-extrabold text-3xl mx-2 -my-3 ">-</button><span className="mx-2 my-1">{count}</span><button className="text-green-800 font-extrabold text-2xl mx-2 -my-3" >+</button></div>) 
+                                               
+                                               }
+                                               
+                                                
+
+
                                             </div>
                                         </div>
                                         </div>
