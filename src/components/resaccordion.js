@@ -44,7 +44,7 @@ const RestaurantAccordion = (props) =>{
                                 <div className="w-[552px] h-[174px] ">
                                     {/* <div className="w-[552px] h-[16px] mb-1">🔺</div> */}
                                     <div className="w-[552px] h-5 mb-1 ">
-                                        { (vegClassifier=="NONVEG")? <img  className="w-5 h-5" src={nonveg_logo} alt="veg_logo"/> :  <img  className="w-5 h-5" src={veg_logo} alt="veg_logo"/>}
+                                        { (vegClassifier==="NONVEG")? <img  className="w-5 h-5" src={nonveg_logo} alt="veg_logo"/> :  <img  className="w-5 h-5" src={veg_logo} alt="veg_logo"/>}
                                         
                                         
                                     </div>
@@ -87,7 +87,7 @@ const RestaurantAccordion = (props) =>{
                                             <div className="w-[118px] h-[38px] border-black -my-5 mx-auto">
 
                                                 {/* addin some functionality to the ITEM ADD button */}
-                                               {(count==0) ? 
+                                               {(count===0) ? 
                                                
                                                (<button className= " w-[118px] h-[38px] text-green-800 font-bold bg-white rounded-lg border-2 border-slate-300 hover:bg-slate-100 " onClick={() => setCount(count+1) }>Add</button>)  :
                                                
