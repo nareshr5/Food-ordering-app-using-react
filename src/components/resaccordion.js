@@ -11,7 +11,7 @@ const RestaurantAccordion = (props) =>{
     const {vegClassifier} = itemAttribute;
 
     // rating >=4 (thick green) , <4 (light green) else yellow
-   // console.log(details);
+    console.log(details);
     const [isopen,setIsOpen]=useState(true);
     const [count,setCount]=useState(0);
  
@@ -21,9 +21,6 @@ const RestaurantAccordion = (props) =>{
    
     return(
 
-        // <div>
-        //     RestaurantAccordion
-        // </div>
 
         <div>
 
@@ -48,7 +45,7 @@ const RestaurantAccordion = (props) =>{
                                         
                                         
                                     </div>
-                                    <div className="w-[552px] h-5 font-bold">Combo for 1 Non-Veg</div>
+                                    <div className="w-[552px] h-5 font-bold">{name}</div>
                                     <div className="w-[552px] h-[19px] mt-1">
                                         <div className="w-[35px] h-[19px] mr-1">
                                             <span className="w-[35px] h-[19px] mr-1 font-semibold"> 
