@@ -43,6 +43,11 @@ export const reswithonlinedelivery_api = "https://www.swiggy.com/dapi/restaurant
 export const bestPlacesToEat_api = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.89960&lng=80.22090&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
 export const bestCuisines_api = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.89960&lng=80.22090&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
 
+
+// for restaurant menu
+
+export const restaurant_menu = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=11.01420&lng=76.99410&restaurantId=61502&catalog_qa=undefined&submitAction=ENTER";
+
 // from payment file
 
 export const payment_icons = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_64/PaymentLogos/instruments/4x/";
@@ -55,3 +60,8 @@ export const delivery_icon = "https://media-assets.swiggy.com/swiggy/image/uploa
 
 // to get content of whats on mind 
 export const whatsonmindcontent_api = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=11.01420&lng=76.99410&collection=80477&tags=layout_BAU_Contextual%2Cparotta&sortBy=&filters=&type=rcv2&offset=0&page_type=null";
+
+
+
+// image on restaurant page
+export const resMenuImage = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/";
