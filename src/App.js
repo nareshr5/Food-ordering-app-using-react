@@ -20,6 +20,8 @@ import { Provider } from 'react-redux';
 import appStore from './utils/store';
 import Payment from "./components/payment";
 import OrderSummary from "./components/ordersummary";
+import WhatsOnMind from "./components/whatsonmind";
+import Whatsonmindcontent from "./components/whatsonmindcontent";
 
 
 
@@ -35,7 +37,11 @@ const appRouter = createBrowserRouter([
      {
         path:"/restaurantmenu",
         element:<RestaurantMenu/>
-     }
+     },
+     {
+      path:"/whatsonmindcontent",
+      element:<Whatsonmindcontent />
+     },
      ],
      errorElement:<ErrorPage/>
   },

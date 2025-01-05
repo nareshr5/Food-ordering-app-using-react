@@ -1,6 +1,35 @@
-import RestaurantAccordion from "./resaccordion";
+import RestaurantAccordionList from "../components/resaccordionlist";
+import { delivery_icon } from "../utils/constant";
+
+import { restaurant_menu } from "../utils/constant";
+import { useState, useEffect } from "react";
 
 const RestaurantMenu = () =>{
+
+    const [resmenu,setresmenu] = useState();
+
+    useEffect(() =>{
+        getData();
+    },[]);
+
+    
+
+    const getData = async() =>{
+        const data = await fetch(restaurant_menu);
+        const jsonValue = await data.json();
+        const resdata = jsonValue?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
+           
+        setresmenu(resdata);
+        //console.log(jsonValue?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
+        //console.log(resdata);
+       
+    }
+    
+
+    if(!resmenu) return null;
+
+    
+
     return(
 
         <div className="w-[800px] mx-auto  bg-slate-50">
@@ -55,7 +84,7 @@ const RestaurantMenu = () =>{
 
                     <ul>
                         <li className="flex mx-4 ">
-                            <img className="w-5 h-5 mr-2" alt="delivery_image" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_40,h_40/v1648635511/Delivery_fee_new_cjxumu"/>
+                            <img className="w-5 h-5 mr-2" alt="delivery_image" src={delivery_icon}/>
                             <div className="text-sm text-gray-600">
                                 <b> 4.0 kms </b>
                                  | ₹39 Delivery fee will apply
@@ -71,13 +100,21 @@ const RestaurantMenu = () =>{
 
             <div className="test-white bg-gray w-[768px] h-[3105px] mx-[16px] my-[24px]">
 
-               <RestaurantAccordion/>
-               <RestaurantAccordion/>
 
-           
-   
-       
-       
+              
+               {resmenu.map((item,index)=> (
+
+                     (index>0) && ( <div key={index}>
+                                
+                                     <RestaurantAccordionList data={item?.card?.card?.itemCards}    />
+                                 
+                                   </div> )
+                
+                  
+                   
+               ))}
+
+    
         </div>
 
  
