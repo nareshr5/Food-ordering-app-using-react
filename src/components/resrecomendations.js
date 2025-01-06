@@ -22,7 +22,7 @@ const ResRecomendations = (props) =>{
                 
                {bestPlaces.map((place,index) =>(
                 //    console.log(index)
-                    ((index<=10) && <div className="p-4 w-[260.78px] h-[53px] border border-gray rounded-xl " key={place.text} >{place.text}</div>) 
+                    ((index<=10) && <div className="p-4 w-[260.78px] h-[53px] border border-gray rounded-xl cursor-pointer" key={place.text} >{place.text}</div>) 
                 
                ))}
 

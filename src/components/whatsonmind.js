@@ -2,22 +2,33 @@ import { useSelector } from "react-redux";
 import { CDN_URL_FOR_DISHES } from "../utils/constant";
 import {useState} from "react";
 
+import { useNavigate } from "react-router-dom";
+
 const WhatsOnMind = () =>{
+
     const {whatsOnMind}= useSelector((store) =>store.rec);
     // const  {imageId} = whatsOnMind?.
 
     const [value,setValue] = useState(0);
 
+    const navigate = useNavigate();
+
     if(!whatsOnMind) return null;
 
     const handleLeftClick=() =>{
-        setValue((prev) => prev-100);
-        console.log(value);
+        if(value>=0){
+            setValue((prev)=> prev-325);
+            console.log(value);
+        }
+        
     }
 
     const handleRightClick=()=>{
-        setValue((prev)=> prev+100);
-        console.log(value);
+        if(value<=975){
+            setValue((prev)=>prev+325);
+            console.log(value);
+        }
+        
     }
 
     return(
@@ -27,13 +38,18 @@ const WhatsOnMind = () =>{
             <h1 className="font-bold text-2xl mb-4">What's on your mind?</h1>
 
             <div className="flex ">
-                 <button className="bg-gray-200 rounded-full px-3 mx-1 " onClick={() =>handleLeftClick()}>👈</button>
-                <button className="bg-gray-200 rounded-full px-3 mx-1" onClick={()=>handleRightClick()}>👉</button>
+                 <button className="bg-gray-200 rounded-full px-3 mx-1 " onClick={() => 
+                  handleLeftClick() 
+                 
+                 }>👈</button>
+                <button className="bg-gray-200 rounded-full px-3 mx-1" onClick={()=>
+                    handleRightClick() 
+                     }>👉</button>
                 
             </div>
         </div>
         
-         <div className= {` w-full overflow-hidden  -translate-x-[${value}px] duration-500`}> 
+         <div className= " w-full overflow-hidden  "> 
             {/* <div className=" w-[1007.22px] "> */}
 
             <div className="flex pl-4 justify-evenly ">
@@ -41,7 +57,11 @@ const WhatsOnMind = () =>{
                 {whatsOnMind.map((res,index) => (
 
                    // index <6 && 
-                     <img key={index} className="w-36 h-[180px] pr-6 object-cover" alt="whats_onmind_images" src={CDN_URL_FOR_DISHES+res?.imageId}/>
+
+
+                     <img  style={{translate:`-${value}%`}}
+                     key={index} className=" w-36 h-[180px] pr-6 object-cover cursor-pointer duration-1000" alt="whats_onmind_images" src={CDN_URL_FOR_DISHES+res?.imageId} onClick={() => navigate("/whatsonmindcontent") }/>
+
                     
                     )
 

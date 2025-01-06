@@ -10,6 +10,10 @@ import { addRestaurantList } from "../utils/restaurantslice";
 import { addWhatsOnMind } from "../utils/recomedationSlice";
 import { addOnlineDelivery } from "../utils/restaurantslice";
 
+import { whatonmind_api , resList_api  ,reswithonlinedelivery_api, bestPlacesToEat_api, bestCuisines_api} from "../utils/constant";
+
+
+
 const MainContainer=()=>{
 
     const dispatch = useDispatch();
@@ -27,7 +31,7 @@ const MainContainer=()=>{
     });
 
     const getWhatsOnMind = async () =>{
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.89960&lng=80.22090&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const data = await fetch(whatonmind_api);
         const jsonValue = await data.json();
         
         const dishImages = jsonValue?.data?.cards[0]?.card?.card?.imageGridCards?.info;
@@ -37,7 +41,7 @@ const MainContainer=()=>{
     }
 
     const getResList = async () =>{
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.89960&lng=80.22090&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const data = await fetch(resList_api);
         const jsonValue = await data.json();
         const resList = jsonValue?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
         //console.log(resList);
@@ -46,7 +50,7 @@ const MainContainer=()=>{
     }
 
     const getResWithOnlineDelivery = async () =>{
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.89960&lng=80.22090&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const data = await fetch(reswithonlinedelivery_api);
         const jsonValue = await data.json();
         //console.log(jsonValue);
         const onlineDelivery = jsonValue?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
@@ -55,7 +59,7 @@ const MainContainer=()=>{
     }
 
     const getBestPlacesToEat = async () =>{
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.89960&lng=80.22090&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const data = await fetch(bestPlacesToEat_api);
         const jsonValue = await data.json();
         const bestPlacesToEat = jsonValue?.data.cards[6]?.card?.card?.brands;
         // console.log(bestPlacesToEat);
@@ -63,7 +67,7 @@ const MainContainer=()=>{
     }
 
     const getBestCuisines = async () =>{
-        const data = await fetch ("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.89960&lng=80.22090&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const data = await fetch (bestCuisines_api);
         const jsonValue = await data.json();
         const Cuisines = jsonValue?.data?.cards[7]?.card?.card?.brands;
         //console.log(jsonValue);
