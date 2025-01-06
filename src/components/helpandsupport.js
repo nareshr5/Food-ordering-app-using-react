@@ -2,9 +2,9 @@ import { useEffect , useState} from "react";
 import {useDispatch} from "react-redux";
 import { useSelector } from "react-redux";
 import { addHelpOptions } from "../utils/helpandsupportslice";
-//import { toggleOnboarding, toggleLegal,toggleFaqs,toggleInstamart } from "../utils/helpandsupportslice";
+
 import { addOnboardingDetails } from "../utils/helpandsupportslice";
-//import { toggle } from "../utils/helpandsupportslice";
+
 
 import Helpandsupportaccordion from "./helpandsupportaccordion";
 const HelpAndSupport = () =>{
@@ -40,7 +40,7 @@ const HelpAndSupport = () =>{
     //const toggleValue = useSelector((store)=> store?.help?.toggle);
     // const isToggleOpen = useSelector((store) => store?.help?.isToggleOpen);
 
-    const [isAccordionOpen , setIsAccordionOpen]= useState(false);
+ 
 
     // const toggleHandle = ()=>{
     //     const value = !isAccordionOpen;
@@ -63,8 +63,7 @@ const HelpAndSupport = () =>{
             </div>
 
             <div className="w-[1300px]  h-[2000.5px] mx-[4.5px] bg-white rounded-3xl">
-                {/* <div className="w-[35px] h-[730.5px]"></div> */}
-                {/* blank */}
+                
                 <div className="w-[1200px] h-[630.5px]  bg-white mx-[50px] py-[50px] flex">
 
                     
@@ -102,7 +101,7 @@ const HelpAndSupport = () =>{
                         {/* accordion coding  */}
                         <div className=" w-[940px] h-[1265.45px] pl-[50px] pt-[37px]">
                              <div className="w-[890px] h-[28.8px] text-[24px] font-semibold">Partner Onboarding</div>
-                             {/* <button className="w-[890px] h-[69.59px] pt-[22px] pb-[26px] border-b border-gray-400"></button> */}
+                            
                              
                              {details.map((detail)=> (
 
