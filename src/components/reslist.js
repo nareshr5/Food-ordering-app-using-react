@@ -2,6 +2,7 @@ import { useState } from "react";
 import ResCard from "./rescard";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 const ResList = (props) =>{
@@ -58,9 +59,11 @@ const ResList = (props) =>{
                 <div className="flex  pl-4 duration-1000" style={{translate:`-${value}%`}} >
                     {resList.map((res,i)=> (
                     
-                            < span onClick={() => navigate("/restaurantmenu")}>
-                              <ResCard resList={res} type={type} key={i} />
-                            </span >
+                            // < span onClick={() => navigate("/restaurantmenu")}>
+                            //   <ResCard resList={res} type={type} key={i} />
+                            // </span >
+
+                            <NavLink to="/restaurantmenu"><ResCard resList={res} type={type} key={i} /></NavLink>
                             
                             
                     
