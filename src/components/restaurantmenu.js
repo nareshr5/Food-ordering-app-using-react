@@ -4,6 +4,8 @@ import { delivery_icon } from "../utils/constant";
 import { restaurant_menu } from "../utils/constant";
 import { useState, useEffect } from "react";
 
+import rating from "../images/rating.png";
+
 const RestaurantMenu = () =>{
 
     const [resmenu,setresmenu] = useState();
@@ -41,8 +43,11 @@ const RestaurantMenu = () =>{
                 <div className="w-[766px] h-[188.18px] bg-white rounded-2xl border-[1.5px] border-slate-300">
 
                     <div className="w-[766px] mb-4 bg-gray=300"> </div>
-
-                    <div className="mt-4 w-[734px] h-[19px] mx-[16px] font-bold">{"⭐"+" 4.0 "+"(1.9K ratings)"+" "+"Rs 250 for two"}</div>
+                    <div className="flex">
+                        <img className="rounded-full w-[20px] h-[20px] ml-[16px] mt-4" src={rating} alt="rating_star"/>
+                        <div className="mt-4 w-[734px] h-[19px] mx-[5px] font-bold">{+" 4.0 "+"(1.9K ratings)"+" "+"Rs 250 for two"}</div>
+                    </div>
+                    
                     <div className="w-[726px] h-[17px] mx-[20px] my-2 text-orange-500 font-bold text-sm">Chinese, Asian</div>
                    
                    
