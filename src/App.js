@@ -22,6 +22,7 @@ import Payment from "./components/payment";
 import OrderSummary from "./components/ordersummary";
 import WhatsOnMind from "./components/whatsonmind";
 import Whatsonmindcontent from "./components/whatsonmindcontent";
+import Shimmer from "./components/shimmer";
 
 
 
@@ -76,6 +77,10 @@ const appRouter = createBrowserRouter([
   {
    path:"/summary",
    element:<OrderSummary/>
+  },
+  {
+   path:"/shimmer",
+   element:<Shimmer/>
   }
 ]);
 
