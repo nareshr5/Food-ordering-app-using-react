@@ -19,6 +19,7 @@
 - working on the whats on mind functinality 
 - creating accordions on restaurant menu page 
 - working on the functionalities inside the accordions
+- shimmer UI is created need to be integrated
 
 (accordion open and close logic is added , proper acccordion fixing needed little )
 
