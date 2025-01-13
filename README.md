@@ -19,7 +19,7 @@
 - working on the whats on mind functinality 
 - creating accordions on restaurant menu page 
 - working on the functionalities inside the accordions
-- shimmer UI is created need to be integrated
+- shimmer UI is created need to be integrated ( need to check whether lazy loading can be used insted?)
 
 (accordion open and close logic is added , proper acccordion fixing needed little )
 
