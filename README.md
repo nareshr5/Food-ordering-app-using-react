@@ -20,7 +20,7 @@
 - creating accordions on restaurant menu page 
 - working on the functionalities inside the accordions
 - shimmer UI is created need to be integrated ( need to check whether lazy loading can be used insted?)
-- need to work on page navigations and dunamic data renderings
+- need to work on page navigations and dynamic data renderings ( for home, restaurant page, payment poage, summary page)
 
 (accordion open and close logic is added , proper acccordion fixing needed little )
 
