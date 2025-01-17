@@ -57,12 +57,12 @@ const RestaurantAccordion = (props) =>{
                                         </div>
                                     </div>
 
-                                    <div className="w-[552px] h-4 mt-3 flex text-sm">
+                                { rating ?    <div className="w-[552px] h-4 mt-3 flex text-sm">
                                         <div className="w-[14px] h-[14px] mr-1">⭐</div>
                                         {(rating>3) ?<div className="w-[16.5px] h-[16px] mx-1 text-green-800 font-bold" >{rating}</div> :<div className="w-[16.5px] h-[16px] mx-1 text-yellow-500 font-bold" >{rating}</div>}
                                         <div className="w-[18.5px] h-[16px] mx-1 text-gray-500 font-semibold">({ratingCountV2})</div>
 
-                                    </div>
+                                    </div> : ""}
 
                                     <div className="w-[552px] h-[50px]">
                                         <div className="w-[552px] h-[38px] mt-3 text-gray-500 font-semibold">
