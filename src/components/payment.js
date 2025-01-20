@@ -2,12 +2,15 @@ import { payment_icons } from "../utils/constant";
 
 import { useSelector } from "react-redux";
 import appStore from "../utils/store";
+import { useNavigate } from "react-router-dom";
 
 
 const Payment = () =>{
 
      const {paymentValue} = useSelector((store)=> store.payment);
     // console.log(toPay);
+
+    const navigate=useNavigate();
 
     return(
         <div className="w-8/12 h-auto  mx-auto my-5  bg-slate-100">
@@ -33,7 +36,7 @@ const Payment = () =>{
                  <div className="border-2 border-orange-600 p-4 rounded-3xl mt-4 w-3/4 mx-auto">
                             
                             <div className="bg-green-500 text-white flex mx-auto w-[80%] p-2 rounded-2xl cursor-pointer ">
-                                <p className="font-bold text-2xl ml-28 ">Amount to be paid: </p>
+                                <p className="font-bold text-2xl ml-28 " onClick={()=> navigate("/summary") }>Amount to be paid: </p>
                                 <p className=" text-2xl font-semibold mx-4 text-black font-serif">{paymentValue}</p>
                             </div>
                             <p className="mt-2 font-semibold w-[30%] mx-auto rounded-lg border-2 border-black">Select a payment option</p>
