@@ -1,7 +1,11 @@
-import { useState } from "react";
+import { useState ,useEffect} from "react";
 import ResCard from "./rescard";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+
+import { useDispatch } from "react-redux";
+import { resList_api } from "../utils/constant";
+import { addRestaurantList } from "../utils/restaurantslice";
 
 
 const ResList = (props) =>{
@@ -11,6 +15,22 @@ const ResList = (props) =>{
 
     const {resList,resWithOnlineDelivery} = useSelector((store) => store.res);
     const [value,setValue] = useState(0);
+
+    const dispatch = useDispatch();
+    useEffect(()=>{
+        getResList();
+    },[])
+
+
+
+    const getResList = async () =>{
+            const data = await fetch(resList_api);
+            const jsonValue = await data.json();
+            const resList = jsonValue?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+            console.log(resList);
+            dispatch(addRestaurantList(resList));
+            
+        }
 
     const navigate = useNavigate();
 
