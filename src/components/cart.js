@@ -1,6 +1,6 @@
 import BillDetails from "./billdetails";
 import {useState} from "react";
-import {useNavigate} from "react-router-dom" 
+import {NavLink, useNavigate} from "react-router-dom" 
 import { veg_logo , rough_res_cartimg} from "../utils/constant";
 
 
@@ -23,7 +23,7 @@ const Cart = ()=>{
     return(
 
     <div className="w-7/12 h-[1000px] mx-auto mt-3 bg-slate-200">
-        <h1 className="bg-orange-500 font-bold text-white py-2 text-2xl "> Cart</h1>
+        <h1 className="bg-orange-500 font-bold text-white py-2 px-5 text-3xl "> Cart</h1>
         
         <div className="bg-white w-auto h-auto mx-4 my-2 border-white border-4 rounded-2xl px-6 ">
             
@@ -106,9 +106,15 @@ const Cart = ()=>{
                     </div>
                   
                 </div>
-                <button onClick={() => 
+
+                {/* <button onClick={() => 
                    
-                    navigate("/payment")} className="text-white bg-green-700 w-full h-[50px] font-bold rounded-xl mb-20">PROCEED TO PAY</button>
+                    navigate("/payment")} className="text-white bg-green-700 w-full h-[50px] font-bold rounded-xl mb-20" </button>*/}
+
+                <button className="text-white bg-green-700 w-full h-[50px] font-bold rounded-xl mb-20">
+                <NavLink to="/payment">PROCEED TO PAY</NavLink>
+                
+                </button>
             </div>
             
         </div>
