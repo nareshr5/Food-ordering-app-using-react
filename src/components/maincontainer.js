@@ -25,7 +25,7 @@ const MainContainer=()=>{
         getWhatsOnMind();
         getBestPlacesToEat();
         getBestCuisines();
-        getResList();
+        // getResList();
         getResWithOnlineDelivery();
         
     });
@@ -40,14 +40,17 @@ const MainContainer=()=>{
 
     }
 
-    const getResList = async () =>{
-        const data = await fetch(resList_api);
-        const jsonValue = await data.json();
-        const resList = jsonValue?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-        //console.log(resList);
-        dispatch(addRestaurantList(resList));
+
+
+    // the data resList has to fetched in the reslist component , so moving there
+    // const getResList = async () =>{
+    //     const data = await fetch(resList_api);
+    //     const jsonValue = await data.json();
+    //     const resList = jsonValue?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+    //     //console.log(resList);
+    //     dispatch(addRestaurantList(resList));
         
-    }
+    // }
 
     const getResWithOnlineDelivery = async () =>{
         const data = await fetch(reswithonlinedelivery_api);
@@ -79,7 +82,7 @@ const MainContainer=()=>{
     return(
         // <div className="h-96 w-[1172px]  m-auto mt-4  bg-slate-400  flex flex-col"> // don't add style in this page
     <div>
-        <WhatsOnMind/>
+            <WhatsOnMind/>
             <div className="my-[32px] w-[1008px] mx-auto border border-slate-200 "></div>
             <ResList title="Top Restaurants chains" type="top restaurants"/>
             <div className="my-[32px] w-[1008px] mx-auto border border-slate-200"></div>
