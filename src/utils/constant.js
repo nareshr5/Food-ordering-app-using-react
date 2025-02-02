@@ -44,9 +44,10 @@ export const bestPlacesToEat_api = "https://www.swiggy.com/dapi/restaurants/list
 export const bestCuisines_api = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.89960&lng=80.22090&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
 
 
-// for restaurant menu
+// for getting the restaurant menu
 
-export const restaurant_menu = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=11.01420&lng=76.99410&restaurantId=61502&catalog_qa=undefined&submitAction=ENTER";
+//export const restaurant_menu = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=11.01420&lng=76.99410&restaurantId=61502&catalog_qa=undefined&submitAction=ENTER";
+export const restaurant_menu = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=11.01420&lng=76.99410&restaurantId=";
 
 // from payment file
 

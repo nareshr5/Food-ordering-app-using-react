@@ -6,6 +6,8 @@ import { useState, useEffect } from "react";
 
 import rating from "../images/rating.png";
 
+import {useParams} from "react-router";
+
 const RestaurantMenu = () =>{
 
     const [resmenu,setresmenu] = useState();
@@ -15,9 +17,17 @@ const RestaurantMenu = () =>{
     },[]);
 
     
+    //  const resId=useParams();  -> this will give the resid inside an object , so we are destructuring it below
+    const {resId}=useParams();
+
+    console.log(resId);
+
+    
 
     const getData = async() =>{
-        const data = await fetch(restaurant_menu);
+        const data = await fetch(restaurant_menu+resId);
+        
+
         const jsonValue = await data.json();
         const resdata = jsonValue?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
            
