@@ -34,7 +34,7 @@ const RestaurantMenu = () =>{
 
     return(
 
-        <div className="w-[800px] mx-auto  bg-slate-50">
+        <div className="w-[800px] mx-auto  bg-slate-50 h-auto">
             <div className="w-[784px] h-[60.1px] ml-[16px] mb-[8px]">
                     <h1 className="h-[28px] my-[16px] font-extrabold text-2xl">Chinese Wok</h1>
             </div>

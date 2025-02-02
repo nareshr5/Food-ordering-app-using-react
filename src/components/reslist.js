@@ -11,17 +11,19 @@ import { addRestaurantList } from "../utils/restaurantslice";
 
 const ResList = (props) =>{
 
+    useEffect(()=>{
+        getResList();
+    },[])
 
+
+ 
     const {title,type}=props;
 
     const {resList,resWithOnlineDelivery} = useSelector((store) => store.res);
     const [value,setValue] = useState(0);
 
     const dispatch = useDispatch();
-    useEffect(()=>{
-        getResList();
-    },[])
-
+    
 
 
     const getResList = async () =>{
@@ -30,6 +32,8 @@ const ResList = (props) =>{
             const resList = jsonValue?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
             console.log(resList);
             dispatch(addRestaurantList(resList));
+
+
             
         }
 
@@ -83,7 +87,8 @@ const ResList = (props) =>{
                             //   <ResCard resList={res} type={type} key={i} />
                             // </span >
 
-                            <NavLink to="/restaurantmenu"><ResCard resList={res} type={type} key={i} /></NavLink>
+                            // <NavLink to="/restaurantmenu"><ResCard resList={res} type={type} key={i} /></NavLink>
+                            <ResCard resList={res} type={type} key={i} />
                             
                             
                     
