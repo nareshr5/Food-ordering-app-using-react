@@ -11,7 +11,7 @@ const RestaurantAccordion = (props) =>{
     const {vegClassifier} = itemAttribute;
 
     // rating >=4 (thick green) , <4 (light green) else yellow
-    console.log(details);
+    //console.log(details);
     const [isopen,setIsOpen]=useState(true);
     const [count,setCount]=useState(0);
  

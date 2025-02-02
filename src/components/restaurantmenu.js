@@ -20,7 +20,7 @@ const RestaurantMenu = () =>{
     //  const resId=useParams();  -> this will give the resid inside an object , so we are destructuring it below
     const {resId}=useParams();
 
-    console.log(resId);
+    //console.log(resId);
 
     
 
