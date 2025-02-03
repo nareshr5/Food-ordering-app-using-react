@@ -1,28 +1,32 @@
 import { useState ,useEffect} from "react";
 import ResCard from "./rescard";
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+
 
 import { useDispatch } from "react-redux";
-import { resList_api } from "../utils/constant";
+import { resList_api , reswithonlinedelivery_api} from "../utils/constant";
 import { addRestaurantList } from "../utils/restaurantslice";
+import { addOnlineDelivery } from "../utils/restaurantslice";
 
 
 const ResList = (props) =>{
 
     useEffect(()=>{
         getResList();
+        getResWithOnlineDelivery();
     },[])
 
 
  
     const {title,type}=props;
 
+    // the data is dispatched to the store and then used 
+    // we can also use it using a usestate variable
     const {resList,resWithOnlineDelivery} = useSelector((store) => store.res);
     const [value,setValue] = useState(0);
 
     const dispatch = useDispatch();
+ 
     
 
 
@@ -30,14 +34,24 @@ const ResList = (props) =>{
             const data = await fetch(resList_api);
             const jsonValue = await data.json();
             const resList = jsonValue?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-            console.log(resList);
+            //console.log(resList);
             dispatch(addRestaurantList(resList));
 
+            //resWithOnlineDelivery(resList);
 
-            
         }
 
-    const navigate = useNavigate();
+
+    const getResWithOnlineDelivery = async () =>{
+            const data = await fetch(reswithonlinedelivery_api);
+            const jsonValue = await data.json();
+            //console.log(jsonValue);
+            const onlineDelivery = jsonValue?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+           // console.log(onlineDelivery);
+            dispatch(addOnlineDelivery(onlineDelivery));
+        }    
+
+    
 
     if(!resList) return null;
     if(!resWithOnlineDelivery) return null;
@@ -112,7 +126,7 @@ const ResList = (props) =>{
             <div className="mx-[16px] my-[32px] flex flex-wrap justify-between ">
             {resWithOnlineDelivery.map((res)=> (
                 
-                 <span onClick={() => navigate("/restaurantmenu")}>
+                 <span>
                     <ResCard  resList={res} type={type} key={res}  />
                  </span>
                     
