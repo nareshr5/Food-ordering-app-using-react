@@ -22,7 +22,7 @@ const MainContainer=()=>{
     
 
     useEffect(()=>{
-        getWhatsOnMind();
+        //getWhatsOnMind();
         getBestPlacesToEat();
         getBestCuisines();
         // getResList();
@@ -30,15 +30,16 @@ const MainContainer=()=>{
         
     });
 
-    const getWhatsOnMind = async () =>{
-        const data = await fetch(whatonmind_api);
-        const jsonValue = await data.json();
+    // the data for whatonmind has to fetched in the whatsonmind component , so moving there
+    // const getWhatsOnMind = async () =>{
+    //     const data = await fetch(whatonmind_api);
+    //     const jsonValue = await data.json();
         
-        const dishImages = jsonValue?.data?.cards[0]?.card?.card?.imageGridCards?.info;
-        // console.log(dishImages);
-        dispatch(addWhatsOnMind(dishImages))
+    //     const dishImages = jsonValue?.data?.cards[0]?.card?.card?.imageGridCards?.info;
+    //     // console.log(dishImages);
+    //     dispatch(addWhatsOnMind(dishImages))
 
-    }
+    // }
 
 
 
@@ -93,7 +94,7 @@ const MainContainer=()=>{
             <ResList title="Restaurants with online food delivery" type="online delivery"/>
             <div className="my-[32px] w-[1172px] mx-auto border border-slate-200"></div>
 
-            
+
             <ResRecomendations title="Best Places to Eat Across Cities" />
             <div className="py-[32px] w-screen"></div>
             <BestCuisines title="Best Cuisines Near Me" />
