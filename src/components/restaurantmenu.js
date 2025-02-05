@@ -13,25 +13,21 @@ const RestaurantMenu = () =>{
     const [resmenu,setresmenu] = useState();
 
     const [resdetails, setresdetails]=useState(" ");
-    const [deliverydetails,setdeliverydetails]=useState();
-
-    useEffect(() =>{
-        getData();
-    },[]);
-
-     //{name,areaName,costForTwo,costForTwoMessage,avgRating,totalRatingsString} =  jsonValue?.data?.cards[2]?.info
-    //{deliveryTime,slaString,lastMileTravel,lastMileTravelString}=jsonValue?.data?.cards[2]?.info?.nearestOutletNudge?.nearestOutletInfo?.siblingOutlet?.sla;
+    const [deliverydetails,setdeliverydetails]=useState({"deliveryTime":40 ,"slaString":30,"lastMileTravel":5,"lastMileTravelString": 4 });
     
-    const {name,areaName,costForTwo,costForTwoMessage,avgRating,totalRatingsString} = resdetails;
-    //const {deliveryTime,slaString,lastMileTravel,lastMileTravelString} = deliverydetails;
-
-
     //  const resId=useParams();  -> this will give the resid inside an object , so we are destructuring it below
     const {resId}=useParams();
 
     //console.log(resId);
 
     
+    //console.log(deliverydetails);
+
+    useEffect(() =>{
+        getData();
+    },[]);
+
+
 
     const getData = async() =>{
         const data = await fetch(restaurant_menu+resId);
@@ -39,20 +35,34 @@ const RestaurantMenu = () =>{
 
         const jsonValue = await data.json();
         const resdata = jsonValue?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
-
+        setresmenu(resdata);
       
  
          setresdetails(jsonValue?.data?.cards[2]?.card?.card?.info);
-         //console.log(jsonValue?.data?.cards[2]?.card?.card?.info)
+         
 
-
-        // setdeliverydetails(jsonValue?.data?.cards[2]?.info?.nearestOutletNudge?.nearestOutletInfo?.siblingOutlet?.sla);   
-        setresmenu(resdata);
-       
-        //console.log(jsonValue?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
-        //console.log(resdata);
+        const deliverydata=jsonValue?.data?.cards[2]?.card?.card?.info?.nearestOutletNudge?.nearestOutletInfo?.siblingOutlet?.sla
+        
+        // this condition is so important , cause sometimes if data is not available in the api response 
+        // and if we try to destructure it , it will throw un caught runtime error 
+        if(deliverydata) setdeliverydetails(deliverydata) 
+        
+        //setdeliverydetails();   
+        
        
     }
+
+    
+    const {name,areaName,costForTwo,costForTwoMessage,avgRating,totalRatingsString} = resdetails;
+    const {deliveryTime,slaString,lastMileTravel,lastMileTravelString} = deliverydetails;
+
+
+
+    
+
+    
+
+   
     
 
     if(!resmenu) return null;
@@ -98,7 +108,7 @@ const RestaurantMenu = () =>{
                             </div>
 
                             <div className="w-[691px] h-[18px] mt-2">
-                                <div className="w-auto h-[18px] font-bold text-sm mt-4">20-30 mins</div>
+                                <div className="w-auto h-[18px] font-bold text-sm mt-4">  {deliveryTime} mins</div>
                             </div>
 
                         </div>
@@ -118,8 +128,8 @@ const RestaurantMenu = () =>{
                         <li className="flex mx-4 ">
                             <img className="w-5 h-5 mr-2" alt="delivery_image" src={delivery_icon}/>
                             <div className="text-sm text-gray-600">
-                                <b> 4.0 kms </b>
-                                 | ₹39 Delivery fee will apply
+                                <b> {lastMileTravel} kms </b>
+                                 {/* | ₹39 Delivery fee will apply */}
                             </div>
                         </li>
                     </ul>

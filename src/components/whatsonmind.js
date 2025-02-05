@@ -1,19 +1,51 @@
 import { useSelector } from "react-redux";
 import { CDN_URL_FOR_DISHES } from "../utils/constant";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 import { useNavigate } from "react-router-dom";
+import { addWhatsOnMind } from "../utils/recomedationSlice";
+import { useDispatch } from "react-redux";
+import { whatonmind_api} from "../utils/constant";
+
+
+
+
 
 const WhatsOnMind = () =>{
 
     const {whatsOnMind}= useSelector((store) =>store.rec);
-    // const  {imageId} = whatsOnMind?.
+    //const  {entityId} = whatsOnMind;
+
+    
+    
+    
 
     const [value,setValue] = useState(0);
+
+    const dispatch =useDispatch();
+
+    useEffect(()=>{
+        getWhatsOnMind();
+    },[])
+
+     const getWhatsOnMind = async () =>{
+        const data = await fetch(whatonmind_api);
+        const jsonValue = await data.json();
+        
+        const dishImages = jsonValue?.data?.cards[0]?.card?.card?.imageGridCards?.info;
+        // console.log(dishImages);
+        dispatch(addWhatsOnMind(dishImages))
+
+    }
 
     const navigate = useNavigate();
 
     if(!whatsOnMind) return null;
+
+    
+   
+
+    
 
     const handleLeftClick=() =>{
         if(value>=0){
@@ -29,6 +61,17 @@ const WhatsOnMind = () =>{
             console.log(value);
         }
         
+    }
+
+    const getcollectionid=(fullstring)=>{
+        
+        const string=fullstring.split("id=");
+       
+        // this will give you the collection id
+        const collection_id=string[1].slice(0,5);
+
+        return collection_id;
+   
     }
 
     return(
@@ -57,10 +100,25 @@ const WhatsOnMind = () =>{
                 {whatsOnMind.map((res,index) => (
 
                    // index <6 && 
+                  
 
 
                      <img  style={{translate:`-${value}%`}}
-                     key={index} className=" w-36 h-[180px] pr-6 object-cover cursor-pointer duration-1000" alt="whats_onmind_images" src={CDN_URL_FOR_DISHES+res?.imageId} onClick={() => navigate("/whatsonmindcontent") }/>
+                     key={index} className=" w-36 h-[180px] pr-6 object-cover cursor-pointer duration-1000" alt="whats_onmind_images" src={CDN_URL_FOR_DISHES+res?.imageId} 
+                     
+                     onClick={() => {
+
+                        let collection_id=res?.entityId;
+                     
+
+                        if(collection_id.length>10){
+                            // the if conditon is to check whether we got a string or the collectionid directly
+                             collection_id=getcollectionid(res?.entityId);
+                        }
+                       
+                        
+                        navigate("/whatsonmindcontent/"+collection_id)
+                     } }/>
 
                     
                     )
@@ -71,14 +129,10 @@ const WhatsOnMind = () =>{
             
             
             
-            {/* <img className="w-36 h-[180px] pr-6 object-cover" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_144,h_180/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Idli.png" alt="food_image" />
-            <img className="w-36 h-[180px] pr-6 object-cover" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_144,h_180/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Idli.png" alt="food_image" />
-            <img className="w-36 h-[180px] pr-6 object-cover" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_144,h_180/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Idli.png" alt="food_image" />
-            <img className="w-36 h-[180px] pr-6 object-cover" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_144,h_180/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Idli.png" alt="food_image" />
-            <img className="w-36 h-[180px] pr-6 object-cover" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_144,h_180/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Idli.png" alt="food_image" /> */}
+           
         
         </div>
-        {/* <div className="border-gray my-9"></div> */}
+       
     </div>
     );
 };
