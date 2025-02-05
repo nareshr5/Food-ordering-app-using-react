@@ -60,8 +60,11 @@ export const delivery_icon = "https://media-assets.swiggy.com/swiggy/image/uploa
 
 
 // to get content of whats on mind 
-export const whatsonmindcontent_api = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=11.01420&lng=76.99410&collection=80477&tags=layout_BAU_Contextual%2Cparotta&sortBy=&filters=&type=rcv2&offset=0&page_type=null";
+//export const whatsonmindcontent_api = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=11.01420&lng=76.99410&collection=80477&tags=layout_BAU_Contextual%2Cparotta&sortBy=&filters=&type=rcv2&offset=0&page_type=null";
 
+// the above url has be shortened and we need to add the collection_id to it
+export const whatsonmindcontent_api = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=11.01420&lng=76.99410&collection=";
+export const whatsonmindcontent_api_end="&type=rcv2";
 
 
 // image on restaurant page

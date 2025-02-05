@@ -40,7 +40,7 @@ const appRouter = createBrowserRouter([
         element:<RestaurantMenu/>
      },
      {
-      path:"/whatsonmindcontent",
+      path:"/whatsonmindcontent/:collection_id",
       element:<Whatsonmindcontent />
      },
      ],
