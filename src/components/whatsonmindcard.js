@@ -3,7 +3,7 @@ import rating from "../images/rating.png"
 
 const Whatsonmindcard = (props) => {
     const {cloudinaryImageId,name,avgRating,cuisines,areaName,sla} = props?.data;
-    console.log(props);
+    //console.log(props);
 
     return(
         <div className="w-[273px] h-[320px]  pr-8 cursor-pointer ">

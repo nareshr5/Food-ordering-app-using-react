@@ -1,7 +1,10 @@
 import { useEffect , useState} from "react";
-import {whatsonmindcontent_api} from "../utils/constant";
+import {whatsonmindcontent_api, whatsonmindcontent_api_end} from "../utils/constant";
 
 import Whatsonmindcard from "./whatsonmindcard";
+
+import { useParams } from "react-router-dom";
+import { collection } from "firebase/firestore/lite";
 
 
 
@@ -9,23 +12,29 @@ const Whatsonmindcontent = () => {
 
     const [list,setList] = useState([]);
 
-    useEffect(()=>{
-        // console.log("loaded");
-        getData();
+    //  const collection_id=useParams();  -> this will give the resid inside an object , so we are destructuring it below
 
+    const {collection_id}=useParams();
+    //console.log(collection_id);
+
+    useEffect(()=>{
+
+        getData();
     },[]);
 
+    
+
     const getData = async () =>{
-        const data = await fetch(whatsonmindcontent_api);
+        const data = await fetch(whatsonmindcontent_api+collection_id+whatsonmindcontent_api_end);
         const jsonValue = await data.json();
         const result = jsonValue?.data?.cards;
-        
         setList(result);
+        
         
     }
 
-    // console.log(list);
-
+    // this 2 conditions are important
+    if(!list) return null;
     if(list.length==0) return null;
    
 
@@ -39,9 +48,9 @@ const Whatsonmindcontent = () => {
 
                     {list.map((item,i) =>(
 
-                      (i>=3)  && <div className="mx-6 my-1">  
-                                <Whatsonmindcard  data={item?.card?.card?.info}/> 
-                            </div> 
+                      (i>=3)  && (<div className="mx-6 my-1">  
+                                <Whatsonmindcard  data={item?.card?.card?.info} key={i}/> 
+                            </div> )
                          
                            
                     ))};
