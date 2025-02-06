@@ -7,6 +7,8 @@ import userReducer from "./userslice";
 // import Whatsonminditemspecificreducer from "../components/whatsonminditemspecific";
 import paymentReducer from "./paymentslice";
 
+import cartReducer from "./cartslice";
+
 
 const appStore = configureStore({
     reducer:{
@@ -16,6 +18,7 @@ const appStore = configureStore({
         user:userReducer,
         // Whatsonminditemspecific:Whatsonminditemspecificreducer,
         payment:paymentReducer,
+        cart:cartReducer,
      
     },
 });
