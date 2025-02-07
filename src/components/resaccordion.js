@@ -4,16 +4,27 @@ import { resMenuImage} from "../utils/constant";
 import nonveg_logo  from "../images/nonveg_logo.png";
 import veg_logo from "../images/veg_logo.png";
 
+import { useDispatch } from "react-redux";
+import { addCartList,removeCartList,increaseCart,decreaseCart} from "../utils/cartslice";
+import { useSelector } from "react-redux";
+
+
 const RestaurantAccordion = (props) =>{
     const {details} = props;
-    const {category,imageId,price,name,description,ratings,itemAttribute} =details?.card?.info;
+    const {category,imageId,price,name,description,ratings,itemAttribute,id} =details?.card?.info;
     const {rating,ratingCountV2}=ratings?.aggregatedRating;
     const {vegClassifier} = itemAttribute;
+
+    console.log(props)
 
     // rating >=4 (thick green) , <4 (light green) else yellow
     //console.log(details);
     const [isopen,setIsOpen]=useState(true);
     const [count,setCount]=useState(0);
+
+    const dispatch=useDispatch();
+    const {cartList} =useSelector((store) => store.cart);
+    console.log(cartList);
  
    // dynamic datas to get  --> accordion title , rating , descriptions ,
    //console.log(data);
@@ -86,15 +97,33 @@ const RestaurantAccordion = (props) =>{
                                                 {/* addin some functionality to the ITEM ADD button */}
                                                {(count===0) ? 
                                                
-                                               (<button className= " w-[118px] h-[38px] text-green-800 font-bold bg-white rounded-lg border-2 border-slate-300 hover:bg-slate-100 " onClick={() => setCount(count+1) }>Add</button>)  :
+                                               (<button className= " w-[118px] h-[38px] text-green-800 font-bold bg-white rounded-lg border-2 border-slate-300 hover:bg-slate-100 " 
+                                                
+                                                onClick={() => {
+
+                                                   setCount(count+1) 
+                                                   dispatch(addCartList(props))
+                                                 } }>Add</button>)  
+                                                 
+                                                 
+                                                 
+                                                 :
                                                
+
+
                                                (<div className="absolute flex justify-evenly w-[118px] h-[38px] text-green-800 font-bold bg-white rounded-lg border-2 border-orange-500 hover:bg-slate-100" >
                                                 
-                                                <button className="text-green-800 font-extrabold text-3xl mx-2 -my-3 " onClick={() => setCount(count-1)}>-</button>
+                                                <button className="text-green-800 font-extrabold text-3xl mx-2 -my-3 " onClick={() => {
+                                                    dispatch(decreaseCart(props)) 
+                                                    setCount(count-1)
+                                                } }>-</button>
                                                 
                                                 <span className="mx-2 my-1">{count}</span>
                                                 
-                                                <button className="text-green-800 font-extrabold text-2xl mx-2 -my-3" onClick={()=> setCount(count+1)} >+</button></div>) 
+                                                <button className="text-green-800 font-extrabold text-2xl mx-2 -my-3" onClick={()=> {
+                                                     dispatch(increaseCart(props)) 
+                                                     setCount(count+1)
+                                                } } >+</button></div>) 
                                                
                                                }
                                                
