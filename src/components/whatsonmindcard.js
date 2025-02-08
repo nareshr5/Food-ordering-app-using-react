@@ -1,11 +1,16 @@
 import { CDN_URL } from "../utils/constant";
 import rating from "../images/rating.png"
 
+import { NavLink } from "react-router-dom";
+
 const Whatsonmindcard = (props) => {
-    const {cloudinaryImageId,name,avgRating,cuisines,areaName,sla} = props?.data;
+    const {cloudinaryImageId,name,avgRating,cuisines,areaName,sla,id} = props?.data;
     //console.log(props);
 
     return(
+        <NavLink to={"/restaurantmenu/"+id}>
+
+        
         <div className="w-[273px] h-[320px]  pr-8 cursor-pointer ">
             
             <div>
@@ -49,6 +54,8 @@ const Whatsonmindcard = (props) => {
 
 
     </div>
+
+    </NavLink>
 
 
 
