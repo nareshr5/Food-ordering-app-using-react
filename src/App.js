@@ -47,27 +47,27 @@ const appRouter = createBrowserRouter([
      errorElement:<ErrorPage/>
   },
   {
-     path:"/help",
+     path:"/Help",
      element:<HelpAndSupport/>
   },
   {
-     path:"/signin",
+     path:"/Signin",
      element:<SignIn/>
   },
   {
-     path:"/search",
+     path:"/Search",
      element:<Search/>
   },
   {
-     path:"/swiggycorporate",
+     path:"/Corporate",
      element:<SwiggyCorporate/>
   },
   {
-     path:"/offers",
+     path:"/Offers",
      element:<Offers/>
   },
   {
-     path:"/cart",
+     path:"/Cart",
      element:<Cart/>
   },
   {
