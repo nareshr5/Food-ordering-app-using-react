@@ -7,6 +7,9 @@ import { addWhatsOnMind } from "../utils/recomedationSlice";
 import { useDispatch } from "react-redux";
 import { whatonmind_api} from "../utils/constant";
 
+import right from "../images/right.png";
+import left from "../images/left.png";
+
 
 
 
@@ -84,10 +87,12 @@ const WhatsOnMind = () =>{
                  <button className="bg-gray-200 rounded-full px-3 mx-1 " onClick={() => 
                   handleLeftClick() 
                  
-                 }>👈</button>
-                <button className="bg-gray-200 rounded-full px-3 mx-1" onClick={()=>
+                 }><img src={left} alt="left_arrow" className="w-5 h-5"/></button>
+                
+
+                <button className="bg-gray-200 rounded-full px-3 py-1 mx-1" onClick={()=>
                     handleRightClick() 
-                     }>👉</button>
+                     }><img alt="rigth_arrow" src={right} className="w-5 h-5"/></button>
                 
             </div>
         </div>
