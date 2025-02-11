@@ -8,6 +8,9 @@ import { resList_api , reswithonlinedelivery_api} from "../utils/constant";
 import { addRestaurantList } from "../utils/restaurantslice";
 import { addOnlineDelivery } from "../utils/restaurantslice";
 
+import right from "../images/right.png"
+import left from "../images/left.png";
+
 
 const ResList = (props) =>{
 
@@ -77,14 +80,14 @@ const ResList = (props) =>{
 
 
     if(type==="top restaurants")return(
-        <div className="p-4 w-[1007px] h-[380px] m-auto cursor-pointer">
+        <div className="p-4 w-[1007px] h-[380px] m-auto cursor-pointer ">
             <div className="flex items-center justify-between w-full">
 
                 <div className="mb-4 text-2xl font-bold">{title}</div>
 
-                <div className="mx-2 rounded-full p-1 mb-2">
-                    <button className="bg-gray-200 rounded-full px-3 mx-1 h-10 " onClick={handleLeftClick}>👈</button>
-                    <button className="bg-gray-200 rounded-full px-3 mx-1 h-10" onClick= {handleRightClick}>👉</button>
+                <div className="mx-2 rounded-full p-1 mb-2 opacity:0.5">
+                    <button className="bg-gray-200 rounded-full px-3 mx-1 h-10 hover:bg-orange-400 " onClick={handleLeftClick}><img src={left} alt="left" className="w-5 h-5 rounded-full "/></button>
+                    <button className="bg-gray-200 rounded-full px-3 mx-1 h-10  hover:bg-orange-400" onClick= {handleRightClick}><img src={right} alt="right" className="w-5 h-5 rounded-full"/></button>
                 </div>
 
             </div>
