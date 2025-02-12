@@ -83,16 +83,16 @@ const WhatsOnMind = () =>{
         <div className="flex justify-between">
             <h1 className="font-bold text-2xl mb-4">What's on your mind?</h1>
 
-            <div className="flex ">
-                 <button className="bg-gray-200 rounded-full px-3 mx-1 " onClick={() => 
+            <div className="flex  rounded-full mx-2 p-1 mb-2">
+                 <button className="bg-gray-200 rounded-full px-3 mx-1 h-10  hover:bg-orange-400" onClick={() => 
                   handleLeftClick() 
                  
-                 }><img src={left} alt="left_arrow" className="w-5 h-5"/></button>
+                 }><img src={left} alt="left" className="w-5 h-5 rounded-full"/></button>
                 
 
-                <button className="bg-gray-200 rounded-full px-3 py-1 mx-1" onClick={()=>
+                <button className="bg-gray-200 rounded-full px-3 mx-1 h-10  hover:bg-orange-400" onClick={()=>
                     handleRightClick() 
-                     }><img alt="rigth_arrow" src={right} className="w-5 h-5"/></button>
+                     }><img src={right} alt="right" className="w-5 h-5 rounded-full"/></button>
                 
             </div>
         </div>
@@ -105,7 +105,8 @@ const WhatsOnMind = () =>{
                 {whatsOnMind.map((res,index) => (
 
                    // index <6 && 
-                  
+                
+                   
 
 
                      <img  style={{translate:`-${value}%`}}

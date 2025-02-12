@@ -85,7 +85,7 @@ const ResList = (props) =>{
 
                 <div className="mb-4 text-2xl font-bold">{title}</div>
 
-                <div className="mx-2 rounded-full p-1 mb-2 opacity:0.5">
+                <div className="mx-2 rounded-full p-1 mb-2 ">
                     <button className="bg-gray-200 rounded-full px-3 mx-1 h-10 hover:bg-orange-400 " onClick={handleLeftClick}><img src={left} alt="left" className="w-5 h-5 rounded-full "/></button>
                     <button className="bg-gray-200 rounded-full px-3 mx-1 h-10  hover:bg-orange-400" onClick= {handleRightClick}><img src={right} alt="right" className="w-5 h-5 rounded-full"/></button>
                 </div>
