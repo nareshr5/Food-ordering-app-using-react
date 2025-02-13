@@ -23,6 +23,8 @@
 - need to work on page navigations and dynamic data renderings ( for home, restaurant page, payment page, summary page, if needed make some design changes)
 - need to adjust the footer (on resturant menu page it is shows in the middle)
 
+- when be come back to the restaurant menu page , it is not showing the selected items
+
 (accordion open and close logic is added , proper acccordion fixing needed little )
 
 
