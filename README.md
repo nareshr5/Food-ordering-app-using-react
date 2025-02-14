@@ -27,6 +27,8 @@
 
 (accordion open and close logic is added , proper acccordion fixing needed little )
 
+- working on the cart page to dispaly details
+
 
 ERROR :- "display name" is not being updated in the redux store
 we need to use "auth.currentuser" and not "user" in the login.js file , because we are trying to fetch the details (uid, displaymname and etc) from a updated user (which is auth.currentuser)
