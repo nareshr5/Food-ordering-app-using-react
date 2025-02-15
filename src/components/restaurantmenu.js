@@ -8,9 +8,20 @@ import rating from "../images/rating.png";
 
 import {useParams} from "react-router";
 
+import { useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
+
+import { useDispatch } from "react-redux";
+import { addResname , addResLocality} from "../utils/cartslice";
+
 const RestaurantMenu = () =>{
 
+    const dispatchresname = useDispatch();
+    const dispatchlocality = useDispatch();
     const [resmenu,setresmenu] = useState();
+    // const [resname,setresname]=useState();
+    // const [reslocality,setreslocality]=useState();
+    
 
     const [resdetails, setresdetails]=useState(" ");
     const [deliverydetails,setdeliverydetails]=useState({"deliveryTime":40 ,"slaString":30,"lastMileTravel":5,"lastMileTravelString": 4 });
@@ -25,32 +36,45 @@ const RestaurantMenu = () =>{
 
     useEffect(() =>{
         getData();
+        // dispatch(addResLocality(reslocality));
+        // dispatch(addResname(resname));
     },[]);
+
+    const {cartList}= useSelector((store)=> store.cart);
+    console.log(cartList)
+
+
+
+    
 
 
 
     const getData = async() =>{
         const data = await fetch(restaurant_menu+resId);
-        
-
         const jsonValue = await data.json();
         const resdata = jsonValue?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
         setresmenu(resdata);
+
+        dispatchlocality(addResLocality(jsonValue?.data?.cards[2]?.card?.card?.info?.areaName));
+        dispatchresname(addResname(jsonValue?.data?.cards[2]?.card?.card?.info?.name))
+        // setresname(jsonValue?.data?.cards[2]?.card?.card?.info?.name);
+        // setreslocality(jsonValue?.data?.cards[2]?.card?.card?.info?.areaName);
+        
       
  
          setresdetails(jsonValue?.data?.cards[2]?.card?.card?.info);
-         
 
-        const deliverydata=jsonValue?.data?.cards[2]?.card?.card?.info?.nearestOutletNudge?.nearestOutletInfo?.siblingOutlet?.sla
+        const deliverydata=jsonValue?.data?.cards[2]?.card?.card?.info?.nearestOutletNudge?.nearestOutletInfo?.siblingOutlet?.sla;
         
         // this condition is so important , cause sometimes if data is not available in the api response 
         // and if we try to destructure it , it will throw un caught runtime error 
         if(deliverydata) setdeliverydetails(deliverydata) 
         
-        //setdeliverydetails();   
+
+        
         
        
-    }
+    };
 
     
     const {name,areaName,costForTwo,costForTwoMessage,avgRating,totalRatingsString} = resdetails;
@@ -73,7 +97,12 @@ const RestaurantMenu = () =>{
 
         <div className="w-[800px] mx-auto  bg-slate-50 h-auto">
             <div className="w-[784px] h-[60.1px] ml-[16px] mb-[8px]">
-                <h1 className="h-[28px] my-[16px] font-extrabold text-2xl">{name}</h1>
+                <div className="flex justify-between ">
+                    <h1 className="h-[28px] my-[16px] font-extrabold text-2xl">{name}</h1>
+
+                  { (cartList.length>0) && (<NavLink to="/cart"><button className= " w-[118px] h-[38px] mr-6 mt-4 text-orange-600 font-bold bg-white rounded-lg border-2 border-slate-300 hover:bg-orange-500 hover:text-white" >Go to cart</button> </NavLink>) }
+                </div>
+                
             </div>
 
             <div className="w-[800px] h-[206.1px] px-4 pb-4 rounded-3xl bg-gradient-to-t from-gray-300">
