@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 import logo from "../images/logos.png";
 
-
 //import { Link } from "react-router-dom";
 const Header = () =>{
     //const headerNavigation = ["💼Swiggy corporate","🔍 Search","💰 Offers","📎 Help","🔐 Sign in","🛒 Cart"]
@@ -16,11 +15,18 @@ const Header = () =>{
                     {headerNavigation.map((item,index) => (
                        //<Link to={item}><li className="px-4 mx-4 font-semibold" key={index}>{item}</li> </Link>
 
-                        <a href={"/"+item}>
-                          <li className="px-4 mx-4 font-semibold" key={index}>{item}</li> 
-                        </a>
+                        // <a href={"/"+item}>
+                        //   <li className="px-4 mx-4 font-semibold" key={index}>{item}</li> 
+                        // </a>
+
+                        <NavLink to={"/"+item}>
+                         <li className="px-4 mx-4 font-semibold" key={index}>{item}</li> 
+                        </NavLink>
+
                     ))
                     }
+
+            
                     
                 </ul>
                 

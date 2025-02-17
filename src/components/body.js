@@ -9,7 +9,7 @@ import { auth } from "../utils/firebase";
 import { useDispatch } from "react-redux";
 import { addUser, removeUser } from "../utils/userslice";
 import { useNavigate } from "react-router-dom";
-
+import Header from "./header";
 const Body = () =>{
   const dispatch  = useDispatch();
   const navigate = useNavigate();
@@ -51,6 +51,7 @@ const Body = () =>{
 
         
         <div>
+          <Header/>
           <Outlet/>   
           <Footer/>
         </div>
