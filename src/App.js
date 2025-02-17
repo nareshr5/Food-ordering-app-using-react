@@ -39,9 +39,23 @@ const appRouter = createBrowserRouter([
         path:"/restaurantmenu/:resId",
         element:<RestaurantMenu/>
      },
+
      {
       path:"/whatsonmindcontent/:collection_id",
       element:<Whatsonmindcontent />
+     },
+
+     {
+      path:"/Cart",
+      element:<Cart/>
+     },
+     {
+      path:"/payment",
+      element:<Payment/>
+     },
+     {
+      path:"/summary",
+      element:<OrderSummary/>
      },
      ],
      errorElement:<ErrorPage/>
@@ -66,18 +80,7 @@ const appRouter = createBrowserRouter([
      path:"/Offers",
      element:<Offers/>
   },
-  {
-     path:"/Cart",
-     element:<Cart/>
-  },
-  {
-   path:"/payment",
-   element:<Payment/>
-  },
-  {
-   path:"/summary",
-   element:<OrderSummary/>
-  },
+  
   {
    path:"/shimmer",
    element:<Shimmer/>
@@ -89,7 +92,7 @@ function App() {
   return (
         <Provider store={appStore}>
           <div>
-            <Header/>
+            {/* <Header/> */}
            <RouterProvider router={appRouter}/>
           </div>
         </Provider>
