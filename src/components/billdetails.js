@@ -1,15 +1,27 @@
 import { useDispatch } from "react-redux";
 import { addPayment } from "../utils/paymentslice";
 
+import { useSelector } from "react-redux";
 
-import { useEffect, useState } from "react";
-const BillDetails = ({exampleItemPrice}) =>{
+const BillDetails = () =>{
 
     const dispatch = useDispatch();
 
-    const delivery_fee = exampleItemPrice*0.08;
+    const {cartList} =useSelector((store)=> store.cart);
+
+    
+
+    let price=0;
+    cartList.map((item)=> (
+        price=price+((item?.details?.card?.info?.price/100)*(item?.quantity))
+    ))
+
+   // settotalprice(price);
+    //console.log(price);
+    //console.log(totalprice);
+    const delivery_fee = (price*0.08);
     const platform_fee=6;
-    const total=exampleItemPrice+delivery_fee+platform_fee;
+    const total=price+delivery_fee+platform_fee;
     const taxes = total*0.07;
     const toPay=total+taxes;
 
@@ -28,36 +40,36 @@ const BillDetails = ({exampleItemPrice}) =>{
 
                 <div className="flex justify-between">
                 <li>Item Total</li>
-                <li>₹{exampleItemPrice}</li>
+                <li>₹ {price}</li>
                 </div>
 
                 <div className="flex justify-between">
                 <li>Delivery Partner fee</li>
-                <li>₹{delivery_fee}</li>
+                <li>₹ {delivery_fee.toPrecision(3)}</li>
 
                 </div>
                 <div className="border-b-2 border-gray-400 my-3"> </div>
 
-                <div className="flex justify-between">
+                {/* <div className="flex justify-between">
                 <li>Delivery Tip</li>
                 <li className="text-orange-600">Add tip</li>
-                </div>
+                </div> */}
 
                 <div className="flex justify-between">
                 <li>Platform fee</li>
-                <li>₹{platform_fee}</li>
+                <li>₹ {platform_fee}</li>
                 </div>
 
                 <div className="flex justify-between">
                 <li>GST and Restaurant Charges</li>
-                <li>₹{taxes.toPrecision(3)}</li>
+                <li>₹ {taxes.toPrecision(3)}</li>
                 </div>
 
                 <div className="border-b-2 border-black my-4"> </div>
 
                 <div className="flex justify-between text-black font-bold mb-2">
                     <li>To PAY</li>
-                    <li>₹{toPay}</li>
+                    <li>₹ {toPay.toPrecision(3)}</li>
                 </div>
 
                 
