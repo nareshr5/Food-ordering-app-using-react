@@ -11,7 +11,6 @@ const Productdetails = (props) =>{
     const [count,setcount]=useState(data?.quantity)
 
 
-  
     
     return(
         <div>
