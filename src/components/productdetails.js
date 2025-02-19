@@ -10,7 +10,7 @@ const Productdetails = (props) =>{
     const {price}=data?.details?.card?.info;
     const [count,setcount]=useState(data?.quantity)
 
-    console.log(data);
+    //console.log(data);
 
     // useEffect(()=>{
     //     fun((data?.details?.card?.info?.defaultPrice)/100);
@@ -24,7 +24,7 @@ const Productdetails = (props) =>{
                 <div className="py-[10px] flex justify-between">
 
                     <div className="flex">
-                        <img className="w-7 h-7" src={veg_logo} alt="veg_icon" />
+                        <img className="w-7 h-7 object-cover" src={veg_logo} alt="veg_icon" />
                         <div className="ml-[5px] mr-[14px] ">{data?.details?.card?.info?.name}</div>
                         
                     </div>
