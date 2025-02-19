@@ -10,11 +10,6 @@ const Productdetails = (props) =>{
     const {price}=data?.details?.card?.info;
     const [count,setcount]=useState(data?.quantity)
 
-    //console.log(data);
-
-    // useEffect(()=>{
-    //     fun((data?.details?.card?.info?.defaultPrice)/100);
-    // },[])
 
   
     
