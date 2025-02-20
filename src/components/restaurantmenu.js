@@ -20,8 +20,7 @@ const RestaurantMenu = () =>{
     const dispatchlocality = useDispatch();
     const dispatchdeliverytime=useDispatch();
     const [resmenu,setresmenu] = useState();
-   
-    
+
 
     const [resdetails, setresdetails]=useState(" ");
     const [deliverydetails,setdeliverydetails]=useState({"deliveryTime":40 ,"slaString":30,"lastMileTravel":5,"lastMileTravelString": 4 });
@@ -44,11 +43,6 @@ const RestaurantMenu = () =>{
     //console.log(cartList)
 
 
-
-    
-
-
-
     const getData = async() =>{
         const data = await fetch(restaurant_menu+resId);
         const jsonValue = await data.json();
@@ -59,9 +53,6 @@ const RestaurantMenu = () =>{
         dispatchlocality(addResLocality(jsonValue?.data?.cards[2]?.card?.card?.info?.areaName));
         dispatchresname(addResname(jsonValue?.data?.cards[2]?.card?.card?.info?.name))
         
-        
-      
- 
          setresdetails(jsonValue?.data?.cards[2]?.card?.card?.info);
         
 
@@ -74,10 +65,6 @@ const RestaurantMenu = () =>{
             setdeliverydetails(deliverydata);
             dispatchdeliverytime(adddeliverytime(deliverydata?.deliveryTime));
         } 
-        
-
-        
-        
        
     };
 
@@ -86,25 +73,15 @@ const RestaurantMenu = () =>{
     const {deliveryTime,slaString,lastMileTravel,lastMileTravelString} = deliverydetails;
 
 
-
-    
-
-    
-
-   
-    
-
     if(!resmenu) return null;
-
-    
 
     return(
 
         <div>
 
-            {/* <div className="sticky top-0">
+            <div className="sticky top-0">
                 { (cartList.length>0) && (<NavLink to="/cart"><button className= "w-[800px] h-[48px] mx-[20%]  mt-4 text-3xl text-white font-bold bg-green-600 rounded-lg border-2 border-slate-300 hover:bg-orange-500 hover:text-white" >Go to cart</button> </NavLink>) }
-            </div> */}
+            </div>
 
         <div className="w-[800px] mx-auto  bg-slate-50 h-auto">
             <div className="w-[784px] h-[60.1px] ml-[16px] mb-[8px]">
