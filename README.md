@@ -27,7 +27,8 @@
 
 (accordion open and close logic is added , proper acccordion fixing needed little )
 
-- working on the cart page to dispaly details
+- working on the cart page to dispaly details 
+- created the go to cart button on the restaurant menu page
 
 
 ERROR :- "display name" is not being updated in the redux store
