@@ -6,6 +6,9 @@ const cartSlice = createSlice({
     name:"cart slice",
     initialState:{
         cartList:[],
+        resname:"",
+        locality:"",
+        deliverytime:"",
     },
     reducers:{
         addCartList:(state,action)=>{
@@ -38,9 +41,19 @@ const cartSlice = createSlice({
             if(productPresent){
                 productPresent.quantity--;
             }
-        }
+        },
+        addResname:(state,action)=>{
+            state.resList=action.payload;
+            
+        },
+        addResLocality:(state,action)=>{
+            state.locality=action.payload;
+        },
+        adddeliverytime:(state,action)=>{
+            state.deliverytime=action.payload;
+        },
     },
 });
 
-export const {addCartList,removeCartList,increaseCart,decreaseCart}=cartSlice.actions;
+export const {addCartList,removeCartList,increaseCart,decreaseCart,addResname,addResLocality,adddeliverytime}=cartSlice.actions;
 export default cartSlice.reducer;

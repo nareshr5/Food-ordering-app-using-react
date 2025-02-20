@@ -16,14 +16,14 @@ const BillDetails = () =>{
         price=price+((item?.details?.card?.info?.price/100)*(item?.quantity))
     ))
 
-   // settotalprice(price);
-    //console.log(price);
-    //console.log(totalprice);
+ 
+    const packing_fee=price*.12;
     const delivery_fee = (price*0.08);
     const platform_fee=6;
     const total=price+delivery_fee+platform_fee;
     const taxes = total*0.07;
-    const toPay=total+taxes;
+    const toPay=packing_fee+total+taxes;
+    
 
     dispatch(addPayment(toPay));
 
@@ -42,6 +42,11 @@ const BillDetails = () =>{
                 <li>Item Total</li>
                 <li>₹ {price}</li>
                 </div>
+
+                <li className="flex justify-between">
+                    <li>Order packaging charges </li>
+                    <li>₹ {packing_fee.toPrecision(2)}</li>
+                </li>
 
                 <div className="flex justify-between">
                 <li>Delivery Partner fee</li>
