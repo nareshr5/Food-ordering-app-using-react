@@ -7,15 +7,22 @@ import veg_logo from "../images/veg_logo.png";
 import { useDispatch } from "react-redux";
 import { addCartList,removeCartList,increaseCart,decreaseCart} from "../utils/cartslice";
 import { useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
 
 
 const RestaurantAccordion = (props) =>{
     const {details} = props;
     const {category,imageId,price,name,description,ratings,itemAttribute,id} =details?.card?.info;
     const {rating,ratingCountV2}=ratings?.aggregatedRating;
-    const {vegClassifier} = itemAttribute;
+    const vegClassifier = details?.card?.info?.itemAttribute || "";
 
-    console.log(props)
+  
+
+    const [openpopup, setopenpopup] = useState(false);
+
+    //console.log(openpopup);
+
+    //console.log(props)
 
     // rating >=4 (thick green) , <4 (light green) else yellow
     //console.log(details);
@@ -24,7 +31,7 @@ const RestaurantAccordion = (props) =>{
 
     const dispatch=useDispatch();
     const {cartList} =useSelector((store) => store.cart);
-    console.log(cartList);
+    //console.log(cartList);
  
    // dynamic datas to get  --> accordion title , rating , descriptions ,
    //console.log(data);
@@ -49,6 +56,7 @@ const RestaurantAccordion = (props) =>{
                     <div className="w-[768px] h-[203px]">
                         <div className="w-[768px] h-[174px] my-1">
                             <div className="w-[768px] h-[174px] flex">
+                                {/* left part of the single accordion */}
                                 <div className="w-[552px] h-[174px] ">
                                     {/* <div className="w-[552px] h-[16px] mb-1">🔺</div> */}
                                     <div className="w-[552px] h-5 mb-1 ">
@@ -61,7 +69,10 @@ const RestaurantAccordion = (props) =>{
                                         <div className="w-[35px] h-[19px] mr-1">
                                             <span className="w-[35px] h-[19px] mr-1 font-semibold"> 
                                                 <div className="w-[35px] h-[19px]">
-                                                Rs{price/100}
+                                                  <div className="flex">
+                                                    <span>₹</span> 
+                                                    < span className="ml-1">{price/100}</span>
+                                                   </div>
                                                 </div>
                                             </span>
                                         
@@ -75,18 +86,28 @@ const RestaurantAccordion = (props) =>{
 
                                     </div> : ""}
 
-                                    <div className="w-[552px] h-[50px]">
+                                { description ?   <div className="w-[552px] h-[50px]">
                                         <div className="w-[552px] h-[38px] mt-3 text-gray-500 font-semibold">
-                                        Serves 1 | {description}
+                                         
+                                            {
+                                                (description.length <147)? description : description.slice(0,140)+" ..."
+                                            }
+                                         
+
+                                         {/* {description} */}
                                         </div>
                                     
-                                    </div>
+                                    </div> : " "}
 
                                 </div>
 
+
+
+                                {/* image and product add button part */}
                                 <div className="w-[156px] h-[174px] ml-[60px] ">
                                     <button className="w-[165px] h-[144px]">
-                                    <img className="w-[156px] h-[144px] rounded-lg object-cover" alt="food_image" src={resMenuImage+imageId}/>
+                                    {(imageId) && (<img className="w-[156px] h-[144px] rounded-lg object-cover" alt="food_image" 
+                                    src={resMenuImage+imageId}/>) }
                                     </button>
 
                                     <div className="w-[156px] h-[58px]">
@@ -103,6 +124,7 @@ const RestaurantAccordion = (props) =>{
 
                                                    setCount(count+1) 
                                                    dispatch(addCartList(props))
+                                                   setopenpopup(true)
                                                  } }>Add</button>)  
                                                  
                                                  
@@ -116,6 +138,7 @@ const RestaurantAccordion = (props) =>{
                                                 <button className="text-green-800 font-extrabold text-3xl mx-2 -my-3 " onClick={() => {
                                                     dispatch(decreaseCart(props)) 
                                                     setCount(count-1)
+                                                    
                                                 } }>-</button>
                                                 
                                                 <span className="mx-2 my-1">{count}</span>
@@ -123,9 +146,28 @@ const RestaurantAccordion = (props) =>{
                                                 <button className="text-green-800 font-extrabold text-2xl mx-2 -my-3" onClick={()=> {
                                                      dispatch(increaseCart(props)) 
                                                      setCount(count+1)
+                                                    
                                                 } } >+</button></div>) 
                                                
                                                }
+
+
+                                               {/* adding the "got to cart" button below the add button */}
+
+                                               {/* {openpopup && (<div className="my-1">
+                                                    <button className= " w-[118px] h-[38px] text-orange-600 font-bold bg-white rounded-lg border-2 border-slate-300 hover:bg-orange-500 hover:text-white">Go to cart</button>
+                                               </div>)} */}
+
+
+                                               {/* <div className="my-1">
+                                                <NavLink to={"/cart"}>
+                                                     <button className= " w-[118px] h-[38px] text-orange-600 font-bold bg-white rounded-lg border-2 border-slate-300 hover:bg-orange-500 hover:text-white" >Go to cart</button>
+
+                                                </NavLink>
+                                                   
+                                               </div> */}
+
+                                               
                                                
                                                 
 
@@ -144,14 +186,13 @@ const RestaurantAccordion = (props) =>{
                     </div>
 
 
-                    
 
 
 
                 </div>
               }
 
-              <div className="w-[768px] border-b-2 border-slate-300 mt-1 mb-5"> </div>
+              <div className="w-[768px] border-b-2 border-slate-300 mt-4 mb-5"> </div>
 
 
 
