@@ -48,6 +48,7 @@ const RestaurantMenu = () =>{
         const jsonValue = await data.json();
         const resdata = jsonValue?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
         setresmenu(resdata);
+        //console.log(resdata);
         
       
         dispatchlocality(addResLocality(jsonValue?.data?.cards[2]?.card?.card?.info?.areaName));
@@ -77,12 +78,14 @@ const RestaurantMenu = () =>{
 
     return(
 
-        <div>
+        <div >
 
             <div className="sticky top-0">
                 { (cartList.length>0) && (<NavLink to="/cart"><button className= "w-[800px] h-[48px] mx-[20%]  mt-4 text-3xl text-white font-bold bg-green-600 rounded-lg border-2 border-slate-300 hover:bg-orange-500 hover:text-white" >Go to cart</button> </NavLink>) }
             </div>
 
+        {/* changed for footer fixing */}
+        {/* <div className="w-[800px] mx-auto  bg-slate-50 h-auto"> */}
         <div className="w-[800px] mx-auto  bg-slate-50 h-auto">
             <div className="w-[784px] h-[60.1px] ml-[16px] mb-[8px]">
                 <div className="flex justify-between ">
@@ -159,8 +162,10 @@ const RestaurantMenu = () =>{
             </div>
 
             
+            {/* changed for fixing the footer */}
+            {/* <div className="test-white bg-gray w-[768px] h-[3105px] mx-[16px] my-[24px]"> */}
 
-            <div className="test-white bg-gray w-[768px] h-[3105px] mx-[16px] my-[24px]">
+            <div className="test-white bg-gray w-[768px] h-auto mx-[16px] my-[24px]">
 
 
               

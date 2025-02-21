@@ -18,7 +18,10 @@ const RestaurantAccordion = (props) =>{
 
   
 
-    const [openpopup, setopenpopup] = useState(false);
+
+
+    // const [openpopup, setopenpopup] = useState(false);
+
 
     //console.log(openpopup);
 
@@ -43,22 +46,24 @@ const RestaurantAccordion = (props) =>{
         <div>
 
 
-             <button className="w-[768px] h-[20.3px] mb-6 pr-4 flex justify-between">
+             {/* <button className="w-[768px] h-[20.3px] mb-6 pr-4 flex justify-between">
                 <h3 className="font-extrabold w-[154.3px] h-[20px]" >{category}</h3>
                 
                 <div className="w-4 h-5" onClick={() => setIsOpen(!isopen)}>🔺</div>
-                </button>
+                </button> */}
 
             <div>
 
 
-             {isopen && <div className="w-[768px] h-[3061]">
-                    <div className="w-[768px] h-[203px]">
+
+             {/* changed for fixing the footer */}
+             {/* {isopen && <div className="w-[768px] h-[3061]"> */}
+             {isopen && <div className="w-[768px] h-[203px]">
                         <div className="w-[768px] h-[174px] my-1">
                             <div className="w-[768px] h-[174px] flex">
                                 {/* left part of the single accordion */}
                                 <div className="w-[552px] h-[174px] ">
-                                    {/* <div className="w-[552px] h-[16px] mb-1">🔺</div> */}
+                                   
                                     <div className="w-[552px] h-5 mb-1 ">
                                         { (vegClassifier==="NONVEG")? <img  className="w-5 h-5" src={nonveg_logo} alt="veg_logo"/> :  <img  className="w-5 h-5" src={veg_logo} alt="veg_logo"/>}
                                         
@@ -124,7 +129,10 @@ const RestaurantAccordion = (props) =>{
 
                                                    setCount(count+1) 
                                                    dispatch(addCartList(props))
-                                                   setopenpopup(true)
+
+
+                                                //    setopenpopup(true)
+
                                                  } }>Add</button>)  
                                                  
                                                  
@@ -189,7 +197,7 @@ const RestaurantAccordion = (props) =>{
 
 
 
-                </div>
+                
               }
 
               <div className="w-[768px] border-b-2 border-slate-300 mt-4 mb-5"> </div>
