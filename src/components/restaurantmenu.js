@@ -12,19 +12,19 @@ import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
 import { useDispatch } from "react-redux";
-import { addResname , addResLocality} from "../utils/cartslice";
+import { addResname , addResLocality,adddeliverytime} from "../utils/cartslice";
 
 const RestaurantMenu = () =>{
 
     const dispatchresname = useDispatch();
     const dispatchlocality = useDispatch();
+    const dispatchdeliverytime=useDispatch();
     const [resmenu,setresmenu] = useState();
-    // const [resname,setresname]=useState();
-    // const [reslocality,setreslocality]=useState();
-    
+
 
     const [resdetails, setresdetails]=useState(" ");
     const [deliverydetails,setdeliverydetails]=useState({"deliveryTime":40 ,"slaString":30,"lastMileTravel":5,"lastMileTravelString": 4 });
+    
     
     //  const resId=useParams();  -> this will give the resid inside an object , so we are destructuring it below
     const {resId}=useParams();
@@ -36,17 +36,11 @@ const RestaurantMenu = () =>{
 
     useEffect(() =>{
         getData();
-        // dispatch(addResLocality(reslocality));
-        // dispatch(addResname(resname));
+        
     },[]);
 
     const {cartList}= useSelector((store)=> store.cart);
-    console.log(cartList)
-
-
-
-    
-
+    //console.log(cartList)
 
 
     const getData = async() =>{
@@ -54,25 +48,23 @@ const RestaurantMenu = () =>{
         const jsonValue = await data.json();
         const resdata = jsonValue?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
         setresmenu(resdata);
-
-        dispatchlocality(addResLocality(jsonValue?.data?.cards[2]?.card?.card?.info?.areaName));
-        dispatchresname(addResname(jsonValue?.data?.cards[2]?.card?.card?.info?.name))
-        // setresname(jsonValue?.data?.cards[2]?.card?.card?.info?.name);
-        // setreslocality(jsonValue?.data?.cards[2]?.card?.card?.info?.areaName);
         
       
- 
-         setresdetails(jsonValue?.data?.cards[2]?.card?.card?.info);
-
-        const deliverydata=jsonValue?.data?.cards[2]?.card?.card?.info?.nearestOutletNudge?.nearestOutletInfo?.siblingOutlet?.sla;
+        dispatchlocality(addResLocality(jsonValue?.data?.cards[2]?.card?.card?.info?.areaName));
+        dispatchresname(addResname(jsonValue?.data?.cards[2]?.card?.card?.info?.name))
         
+         setresdetails(jsonValue?.data?.cards[2]?.card?.card?.info);
+        
+
+        let deliverydata= jsonValue?.data?.cards[2]?.card?.card?.info?.nearestOutletNudge?.nearestOutletInfo?.siblingOutlet?.sla || jsonValue?.data?.cards[2]?.card?.card?.info?.sla;
+        
+     
         // this condition is so important , cause sometimes if data is not available in the api response 
         // and if we try to destructure it , it will throw un caught runtime error 
-        if(deliverydata) setdeliverydetails(deliverydata) 
-        
-
-        
-        
+        if(deliverydata){
+            setdeliverydetails(deliverydata);
+            dispatchdeliverytime(adddeliverytime(deliverydata?.deliveryTime));
+        } 
        
     };
 
@@ -81,26 +73,24 @@ const RestaurantMenu = () =>{
     const {deliveryTime,slaString,lastMileTravel,lastMileTravelString} = deliverydetails;
 
 
-
-    
-
-    
-
-   
-    
-
     if(!resmenu) return null;
 
-    
-
     return(
+
+        <div>
+
+            <div className="sticky top-0">
+                { (cartList.length>0) && (<NavLink to="/cart"><button className= "w-[800px] h-[48px] mx-[20%]  mt-4 text-3xl text-white font-bold bg-green-600 rounded-lg border-2 border-slate-300 hover:bg-orange-500 hover:text-white" >Go to cart</button> </NavLink>) }
+            </div>
 
         <div className="w-[800px] mx-auto  bg-slate-50 h-auto">
             <div className="w-[784px] h-[60.1px] ml-[16px] mb-[8px]">
                 <div className="flex justify-between ">
                     <h1 className="h-[28px] my-[16px] font-extrabold text-2xl">{name}</h1>
 
-                  { (cartList.length>0) && (<NavLink to="/cart"><button className= " w-[118px] h-[38px] mr-6 mt-4 text-orange-600 font-bold bg-white rounded-lg border-2 border-slate-300 hover:bg-orange-500 hover:text-white" >Go to cart</button> </NavLink>) }
+
+                        
+                
                 </div>
                 
             </div>
@@ -114,7 +104,8 @@ const RestaurantMenu = () =>{
                         <div className="mt-4 w-[734px] h-[19px] mx-[5px] font-bold">{avgRating+" ("+totalRatingsString+") ₹"+" "+costForTwo/100+" for two"}</div>
                     </div>
                     
-                    <div className="w-[726px] h-[17px] mx-[20px] my-2 text-orange-500 font-bold text-sm">Chinese, Asian</div>
+                    <div className="w-[726px] h-[17px] mx-[20px] my-2 text-orange-500 font-bold text-sm">{resdetails?.cuisines[0]}</div>
+                    {/* <div className="w-[726px] h-[17px] mx-[20px] my-2 text-orange-500 font-bold text-sm">Chinese, Asian</div> */}
                    
                    
                     <div className="w-[726px] h-[47.2px] py-1 mx-5 flex">
@@ -137,7 +128,7 @@ const RestaurantMenu = () =>{
                             </div>
 
                             <div className="w-[691px] h-[18px] mt-2">
-                                <div className="w-auto h-[18px] font-bold text-sm mt-4">  {deliveryTime} mins</div>
+                                <div className="w-auto h-[18px] font-bold text-sm mt-4">{deliveryTime} mins</div>
                             </div>
 
                         </div>
@@ -191,6 +182,8 @@ const RestaurantMenu = () =>{
  
 
         </div>
+
+        </div> 
         
     );
 }
