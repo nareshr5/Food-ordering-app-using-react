@@ -49,12 +49,11 @@ const Body = () =>{
 
     return(
 
-        
-        <div>
+        <>
           <Header/>
           <Outlet/>   
           <Footer/>
-        </div>
+        </>
     );
 };
 
