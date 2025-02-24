@@ -13,6 +13,7 @@ import { NavLink } from "react-router-dom";
 
 import { useDispatch } from "react-redux";
 import { addResname , addResLocality,adddeliverytime} from "../utils/cartslice";
+import Shimmer from "./shimmer";
 
 const RestaurantMenu = () =>{
 
@@ -74,7 +75,8 @@ const RestaurantMenu = () =>{
     const {deliveryTime,slaString,lastMileTravel,lastMileTravelString} = deliverydetails;
 
 
-    if(!resmenu) return null;
+    //if(!resmenu) return null;
+    if(!resmenu) return <Shimmer/>
 
     return(
 

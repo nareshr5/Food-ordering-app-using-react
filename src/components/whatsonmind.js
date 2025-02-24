@@ -10,6 +10,8 @@ import { whatonmind_api} from "../utils/constant";
 import right from "../images/right.png";
 import left from "../images/left.png";
 
+import Shimmer from "./shimmer";
+
 
 
 
@@ -43,7 +45,8 @@ const WhatsOnMind = () =>{
 
     const navigate = useNavigate();
 
-    if(!whatsOnMind) return null;
+    //if(!whatsOnMind) return null;
+    if(!whatsOnMind) return <Shimmer/>;
 
     
    

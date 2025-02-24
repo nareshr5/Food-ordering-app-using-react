@@ -6,13 +6,13 @@ const Shimmer =() =>{
 
             <div className="flex justify-evenly  bg-gradient-to-b from-gray-400 mb-8">
 
-                 <div className="  m-[5px] w-36 h-[180px] p-[7px] border-[1px] border-solid border-black bg-gradient-to-r from-gray-300"></div>
-                 <div className="  m-[5px] w-36 h-[180px] p-[7px] border-[1px] border-solid border-black bg-gradient-to-l from-slate-100"></div>
-                 <div className="  m-[5px] w-36 h-[180px] p-[7px] border-[1px] border-solid border-black bg-gradient-to-r from-slate-300"></div>
-                 <div className="  m-[5px] w-36 h-[180px] p-[7px] border-[1px] border-solid border-black bg-gradient-to-l from-slate-100"></div>
-                 <div className="  m-[5px] w-36 h-[180px] p-[7px] border-[1px] border-solid border-black bg-gradient-to-r from-slate-300"></div>
-                 <div className="  m-[5px] w-36 h-[180px] p-[7px] border-[1px] border-solid border-black bg-gradient-to-l from-slate-100"></div>
-                 <div className="  m-[5px] w-36 h-[180px] p-[7px] border-[1px] border-solid border-black bg-gradient-to-r from-slate-300"></div>
+                 <div className="  m-[5px] w-36 h-[180px] p-[7px] border-[1px] border-solid border-gray-200 bg-gradient-to-r from-gray-300"></div>
+                 <div className="  m-[5px] w-36 h-[180px] p-[7px] border-[1px] border-solid border-gray-500 bg-gradient-to-l from-slate-100"></div>
+                 <div className="  m-[5px] w-36 h-[180px] p-[7px] border-[1px] border-solid border-gray-200 bg-gradient-to-r from-slate-300"></div>
+                 <div className="  m-[5px] w-36 h-[180px] p-[7px] border-[1px] border-solid border-gray-500 bg-gradient-to-l from-slate-100"></div>
+                 <div className="  m-[5px] w-36 h-[180px] p-[7px] border-[1px] border-solid border-gray-200 bg-gradient-to-r from-slate-300"></div>
+                 <div className="  m-[5px] w-36 h-[180px] p-[7px] border-[1px] border-solid border-gray-500 bg-gradient-to-l from-slate-100"></div>
+                 <div className="  m-[5px] w-36 h-[180px] p-[7px] border-[1px] border-solid border-gray-200bg-gradient-to-r from-slate-300"></div>
                  
                  
             
@@ -29,20 +29,20 @@ const Shimmer =() =>{
 
             <div className="flex justify-evenly my-14 bg-gradient-to-b from-gray-400">
 
-                <div className=" bg-gray-100 m-[5px] w-[273px] h-[284px] p-[7px] border-[1px] border-solid border-black bg-gradient-to-r from-gray-300"></div>
-                <div className=" bg-gray-100 m-[5px] w-[273px] h-[284px] p-[7px] border-[1px] border-solid border-black bg-gradient-to-l from-slate-200"></div>
-                <div className=" bg-gray-100 m-[5px] w-[273px] h-[284px] p-[7px] border-[1px] border-solid border-black bg-gradient-to-r from-gray-300"></div>
-                <div className=" bg-gray-100 m-[5px] w-[273px] h-[284px] p-[7px] border-[1px] border-solid border-black bg-gradient-to-l from-slate-200"></div>
+                <div className=" bg-gray-100 m-[5px] w-[273px] h-[284px] p-[7px] border-[1px] border-solid border-gray-200 bg-gradient-to-r from-gray-300"></div>
+                <div className=" bg-gray-100 m-[5px] w-[273px] h-[284px] p-[7px] border-[1px] border-solid border-gray-500 bg-gradient-to-l from-slate-200"></div>
+                <div className=" bg-gray-100 m-[5px] w-[273px] h-[284px] p-[7px] border-[1px] border-solid border-gray-200 bg-gradient-to-r from-gray-300"></div>
+                <div className=" bg-gray-100 m-[5px] w-[273px] h-[284px] p-[7px] border-[1px] border-solid border-gray-500 bg-gradient-to-l from-slate-200"></div>
                 
                 
             </div>
 
             <div className="flex justify-evenly bg-gradient-to-b from-gray-400">
 
-                <div className=" bg-gray-100 m-[5px] w-[273px] h-[284px] p-[7px] border-[1px] border-solid border-black bg-gradient-to-r from-gray-300"></div>
-                <div className=" bg-gray-100 m-[5px] w-[273px] h-[284px] p-[7px] border-[1px] border-solid border-black bg-gradient-to-l from-slate-200"></div>
-                <div className=" bg-gray-100 m-[5px] w-[273px] h-[284px] p-[7px] border-[1px] border-solid border-black bg-gradient-to-r from-gray-300"></div>
-                <div className=" bg-gray-100 m-[5px] w-[273px] h-[284px] p-[7px] border-[1px] border-solid border-black bg-gradient-to-l from-slate-200"></div>
+                <div className=" bg-gray-100 m-[5px] w-[273px] h-[284px] p-[7px] border-[1px] border-solid border-gray-200 bg-gradient-to-r from-gray-300"></div>
+                <div className=" bg-gray-100 m-[5px] w-[273px] h-[284px] p-[7px] border-[1px] border-solid border-gray-500 bg-gradient-to-l from-slate-200"></div>
+                <div className=" bg-gray-100 m-[5px] w-[273px] h-[284px] p-[7px] border-[1px] border-solid border-gray-200 bg-gradient-to-r from-gray-300"></div>
+                <div className=" bg-gray-100 m-[5px] w-[273px] h-[284px] p-[7px] border-[1px] border-solid border-gray-500 bg-gradient-to-l from-slate-200"></div>
                 
                     
                     

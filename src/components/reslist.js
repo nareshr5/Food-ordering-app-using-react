@@ -10,6 +10,7 @@ import { addOnlineDelivery } from "../utils/restaurantslice";
 
 import right from "../images/right.png"
 import left from "../images/left.png";
+import Shimmer from "./shimmer";
 
 
 const ResList = (props) =>{
@@ -31,7 +32,7 @@ const ResList = (props) =>{
     const dispatch = useDispatch();
  
     
-
+   
 
     const getResList = async () =>{
             const data = await fetch(resList_api);
@@ -56,8 +57,11 @@ const ResList = (props) =>{
 
     
 
-    if(!resList) return null;
-    if(!resWithOnlineDelivery) return null;
+    // if(!resList) return null;
+    // if(!resWithOnlineDelivery) return null;
+
+    if(!resList) return <Shimmer/>
+    if(!resWithOnlineDelivery) return <Shimmer/>
 
     
     
@@ -73,10 +77,12 @@ const ResList = (props) =>{
     const handleRightClick=() => {
         if(value<=448){
             setValue((prev) => prev+56)
-            console.log(value);
+            //console.log(value);
         }
         
     }
+
+    
 
 
     if(type==="top restaurants")return(
@@ -100,15 +106,8 @@ const ResList = (props) =>{
                 <div className="flex  pl-4 duration-1000" style={{translate:`-${value}%`}} >
                     {resList.map((res,i)=> (
                     
-                            // < span onClick={() => navigate("/restaurantmenu")}>
-                            //   <ResCard resList={res} type={type} key={i} />
-                            // </span >
-
-                            // <NavLink to="/restaurantmenu"><ResCard resList={res} type={type} key={i} /></NavLink>
+                            
                             <ResCard resList={res} type={type} key={i} />
-                            
-                            
-                    
                             
                         
                     )
