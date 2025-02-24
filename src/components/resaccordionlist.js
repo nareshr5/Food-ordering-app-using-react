@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 
 import { useSelector } from "react-redux";
 
+import dropdown from "../images/arrow_down.png"
+
 const RestaurantAccordionList = (props) =>{
    
 
@@ -32,11 +34,13 @@ const RestaurantAccordionList = (props) =>{
                             {/* accordion group heading */}
 
                             <div>
-                                <button className="w-[768px] h-[20.3px] mb-6 pr-4 flex justify-between">
+                                <button className="w-[768px] h-[30.3px] mb-6 pr-4 flex justify-between bg-amber-500 rounded-lg  delay-100 duration-300 hover:scale-105" onClick={() => setIsOpen(!isopen)}>
                                 
-                                  <h3 className="font-extrabold w-[154.3px] h-[20px] text-left" >{data[0]?.card?.info?.category}</h3>
+                                  <h3 className="font-extrabold w-[154.3px] h-[20px] text-left px-2 py-1 text-lime-50 text-" >{data[0]?.card?.info?.category}</h3>
                                  
-                                  <div className="w-4 h-5" onClick={() => setIsOpen(!isopen)}>🔺</div>
+                                  {(isopen)? <div className="w-4 h-5" >🔺</div> : <div className="w-4 h-5" > 🔻</div>}
+                                  
+                                  
                                 </button>
                             </div>
 
