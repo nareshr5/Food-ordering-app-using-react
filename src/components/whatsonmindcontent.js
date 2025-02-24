@@ -5,6 +5,7 @@ import Whatsonmindcard from "./whatsonmindcard";
 
 import { useParams } from "react-router-dom";
 import { collection } from "firebase/firestore/lite";
+import Shimmer from "./shimmer";
 
 
 
@@ -18,7 +19,6 @@ const Whatsonmindcontent = () => {
     //console.log(collection_id);
 
     useEffect(()=>{
-
         getData();
     },[]);
 
@@ -34,8 +34,10 @@ const Whatsonmindcontent = () => {
     }
 
     // this 2 conditions are important
-    if(!list) return null;
-    if(list.length==0) return null;
+    if(!list) return null  // i this is not added the 1st whatson mind item is showing error;
+    
+    //if(list.length==0) return null;
+    if(list.length===0) return <Shimmer/>
    
 
     return(
