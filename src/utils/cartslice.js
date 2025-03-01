@@ -26,7 +26,16 @@ const cartSlice = createSlice({
             }
         },
         removeCartList:(state,action)=>{
-            state.cartList=null;
+            
+            // this logic is so important because it removes the items from the cart list , if its
+            // quantity goes to zero
+             state.cartList = state.cartList.filter((item)=>{
+                return item?.details?.card?.info?.id !== action.payload?.details?.card?.info?.id;
+            } );
+
+          
+
+            
         },
         increaseCart:(state,action)=>{
             const productPresent= state.cartList.find((item)=> item?.details?.card?.info?.id === action.payload?.details?.card?.info?.id);
