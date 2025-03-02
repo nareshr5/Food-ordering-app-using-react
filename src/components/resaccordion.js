@@ -17,7 +17,7 @@ const RestaurantAccordion = (props) =>{
     const vegClassifier = details?.card?.info?.itemAttribute || "";
 
   
-
+    
 
 
     // const [openpopup, setopenpopup] = useState(false);
@@ -76,7 +76,9 @@ const RestaurantAccordion = (props) =>{
                                                 <div className="w-[35px] h-[19px]">
                                                   <div className="flex">
                                                     <span>₹</span> 
-                                                    < span className="ml-1">{price/100}</span>
+                                                    {/* < span className="ml-1">{(price)? price/100 : details?.card?.defaultPrice/100}</span> */}
+                                                    {(price)?<span className="ml-1">{price/100}</span>:<span className="ml-1">{details?.card?.info?.defaultPrice/100}</span> }
+                                                    
                                                    </div>
                                                 </div>
                                             </span>
@@ -144,7 +146,7 @@ const RestaurantAccordion = (props) =>{
                                                (<div className="absolute flex justify-evenly w-[118px] h-[38px] text-green-800 font-bold bg-white rounded-lg border-2 border-orange-500 hover:bg-slate-100" >
                                                 
                                                 <button className="text-green-800 font-extrabold text-3xl mx-2 -my-3 " onClick={() => {
-                                                    dispatch(decreaseCart(props)) 
+                                                    (count>1) ? dispatch(decreaseCart(props)) : dispatch(removeCartList(props))
                                                     setCount(count-1)
                                                     
                                                 } }>-</button>
