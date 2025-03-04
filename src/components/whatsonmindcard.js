@@ -11,7 +11,7 @@ const Whatsonmindcard = (props) => {
         <NavLink to={"/restaurantmenu/"+id}>
 
         
-        <div className="w-[273px] h-[320px]  pr-8 cursor-pointer ">
+        <div className="w-[273px] h-[320px]  pr-8 cursor-pointer delay-100 duration-150 hover:scale-110 ">
             
             <div>
                 <img  src={CDN_URL+cloudinaryImageId} alt="restaurant_image" className=" object-cover w-[273px] h-[182px] rounded-xl"/>
