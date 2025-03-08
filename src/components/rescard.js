@@ -9,19 +9,21 @@ const ResCard = (props) =>{
     
     const {name,avgRating,sla,cuisines,areaName,cloudinaryImageId,id} = resList?.info;
     const {slaString}=sla;
+
+ 
     
 
     // console.log(type);
     
     if(type==="top restaurants") return(
         <NavLink to={"/restaurantmenu/"+id}>
-            <div className="w-[273px] h-[284px]   pr-8 ">
+            <div className="w-[273px] h-[284px]   pr-8  delay-100 duration-100 hover:scale-90">
 
                 
             
                 <img className="w-[273px] h-[182px] object-cover rounded-2xl" alt="restaurant_image" src={CDN_URL+cloudinaryImageId} />
                 <div className="pl-2 pt-1">
-                <div className="w-[261px] h-[24px] font-bold text-lg">{name}</div>
+                <div className="w-[261px] h-[24px] font-bold text-lg mb-2">{name.length>20 ? name.slice(0,18)+".." : name }</div>
                     <div className="flex items-center">
                         <img className="rounded-full w-[20px] h-[20px] mr-1" src={rating} alt="rating_star"/>
                         <div className="font-bold text-sm">{avgRating+" "+"."+" "+slaString}</div>
@@ -39,11 +41,12 @@ const ResCard = (props) =>{
 
             <NavLink to={"/restaurantmenu/"+id}>
 
-                    <div className="w-[220px] h-[248.3px]">
+                    <div className="w-[220px] h-[248.3px] mb-2 delay-100 duration-100 hover:scale-110">
                     
+
                         <img className=" w-[220px] h-[146.5px] object-cover rounded-2xl" alt="restaurant_image" src={CDN_URL+cloudinaryImageId} />
                         <div className="pl-2 pt-1">
-                        <div className="w-[207px] h-[24px] font-bold text-lg">{name}</div>
+                        <div className="w-[207px] h-[24px] font-bold text-lg mb-2">{name.length>20 ? name.slice(0,18)+".." : name }</div>
                             <div className="flex items-center">
                                 <img className="rounded-full w-[20px] h-[20px] mr-1" src={rating} alt="rating_star"/>
                                 <div className="font-bold text-sm">{avgRating+" "+"."+" "+slaString}</div>
