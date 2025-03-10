@@ -15,6 +15,7 @@ import { useDispatch } from "react-redux";
 import { addResname , addResLocality,adddeliverytime} from "../utils/cartslice";
 import Shimmer from "./shimmer";
 
+
 const RestaurantMenu = () =>{
 
     const dispatchresname = useDispatch();
@@ -39,6 +40,8 @@ const RestaurantMenu = () =>{
         getData();
         
     },[]);
+
+    
 
     const {cartList}= useSelector((store)=> store.cart);
     //console.log(cartList)
