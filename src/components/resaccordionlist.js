@@ -9,6 +9,7 @@ const RestaurantAccordionList = (props) =>{
    
 
     const {data} =props;
+    //console.log(data);
    
     const [accordionData,useAccordionData]=useState(data);
     //console.log(accordionData);
