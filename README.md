@@ -21,14 +21,14 @@
 - working on the functionalities inside the accordions
 - shimmer UI is created need to be integrated ( need to check whether lazy loading can be used insted?)
 - need to work on page navigations and dynamic data renderings ( for home, restaurant page, payment page, summary page, if needed make some design changes)
-- need to adjust the footer (on resturant menu page it is shows in the middle)
+- need to adjust the footer (on resturant menu page it is shows in the middle) (done)
 
 - when be come back to the restaurant menu page , it is not showing the selected items
 
 (accordion open and close logic is added , proper acccordion fixing needed little )
 
-- working on the cart page to dispaly details 
-- created the go to cart button on the restaurant menu page 
+- working on the cart page to dispaly details  (done)
+- created the go to cart button on the restaurant menu page  (done)
 
 
 ERROR :- "display name" is not being updated in the redux store
