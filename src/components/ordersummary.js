@@ -62,7 +62,7 @@ const OrderSummary = () =>{
 
                     
 
-                    <div className="bg-slate-200 w-[60%] mx-auto p-4 rounded-3xl my-8">
+                    <div className="bg-slate-200 w-[60%] mx-auto p-4 rounded-3xl my-8 shadow-2xl shadow-gray-600">
                         <p className="font-semibold text-xl px-6">Bill Details</p>
 
                         <div className="w-3/4 mx-auto my-2 ">
@@ -139,7 +139,7 @@ const OrderSummary = () =>{
                     <span className="mt-2 flex mx-1" >
                             <Foodimages/> 
                         </span>
-                    <span className="text-5xl flex justify-end mx-7 font-semibold">Food is on the way...</span>
+                    <span className="text-5xl flex justify-end mx-7 my-2 font-semibold">Food is on the way...</span>
                 </div>
                 
             </div>
