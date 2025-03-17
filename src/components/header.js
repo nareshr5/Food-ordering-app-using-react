@@ -1,14 +1,19 @@
 import { NavLink,useNavigate} from "react-router-dom";
 import logo from "../images/logos.png";
 
+import useOnlineStatus from "../utils/useOnlineStatus";
+
 //import { Link } from "react-router-dom";
 const Header = () =>{
     //const headerNavigation = ["💼Swiggy corporate","🔍 Search","💰 Offers","📎 Help","🔐 Sign in","🛒 Cart"]
     const headerNavigation = ["Corporate","Search","Offers","Help","Signin","Cart"]
     const navigate = useNavigate();
 
+    const onlinestatus = useOnlineStatus();
+    console.log(onlinestatus);
+
     return(
-        <div className=" mx-3 h-20 text-black bg-slate-100 flex justify-between shadow-lg">
+        <div className=" mx-3 h-20 text-black bg-amber-500 flex justify-between shadow-lg">
        
            <img className=" p-2 width-[70%] height-[30%] rounded-1xl cursor-pointer" alt="logo" src={logo}  onClick={() => navigate("/")}/>
         
@@ -24,7 +29,7 @@ const Header = () =>{
                         // </a>
 
                         <NavLink to={"/"+item}>
-                         <li className="px-4 mx-4 font-semibold" key={index}>{item}</li> 
+                         <li className="px-4 mx-4 font-semibold hover:text-white" key={index}>{item}</li> 
                         </NavLink>
 
                     ))
