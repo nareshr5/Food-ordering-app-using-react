@@ -29,7 +29,7 @@
 
 - working on the cart page to dispaly details  (done - but need to work on the upgrading part)
 - created the go to cart button on the restaurant menu page  (done)
-- the custom hook (useRestaurantMenu) is used to support yhe restaurantmenu component
+- the custom hook (useRestaurantMenu) is used to support the restaurantmenu component ( facing some issues on this )
 
 ERROR :- "display name" is not being updated in the redux store
 we need to use "auth.currentuser" and not "user" in the login.js file , because we are trying to fetch the details (uid, displaymname and etc) from a updated user (which is auth.currentuser)
