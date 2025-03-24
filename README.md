@@ -30,7 +30,9 @@
 - working on the cart page to dispaly details  (done - but need to work on the upgrading part)
 - created the go to cart button on the restaurant menu page  (done)
 
-- the custom hook (useRestaurantMenu) is used to support yhe restaurantmenu component
+
+- the custom hook (useRestaurantMenu) is used to support the restaurantmenu component ( facing some issues on this )
+
 
 
 - need to the fire base authentication issue(working on it)
