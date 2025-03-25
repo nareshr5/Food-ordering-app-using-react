@@ -18,7 +18,7 @@
 - need to work on some funtionalities of help page
 - working on the whats on mind functinality 
 - creating accordions on restaurant menu page 
-- working on the functionalities inside the accordions
+- working on the functionalities inside the accordions (done)
 - shimmer UI is created need to be integrated ( need to check whether lazy loading can be used insted?)
 - need to work on page navigations and dynamic data renderings ( for home, restaurant page, payment page, summary page, if needed make some design changes)
 - need to adjust the footer (on resturant menu page it is shows in the middle) (done)
