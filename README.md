@@ -22,7 +22,7 @@
 - shimmer UI is created need to be integrated ( need to check whether lazy loading can be used insted?)
 - need to work on page navigations and dynamic data renderings ( for home, restaurant page, payment page, summary page, if needed make some design changes)
 - need to adjust the footer (on resturant menu page it is shows in the middle) (done)
--working on the changes on firebase
+-working on the changes on firebase (facing some issues on authentication)
 
 - when be come back to the restaurant menu page , it is not showing the selected items
 
