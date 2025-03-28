@@ -1,6 +1,9 @@
 import { useState ,useEffect} from "react";
 import { veg_logo} from "../utils/constant";
 
+import { useDispatch } from "react-redux";
+import { addCartList,removeCartList,increaseCart,decreaseCart} from "../utils/cartslice";
+
 
 const Productdetails = (props) =>{
 
@@ -8,7 +11,19 @@ const Productdetails = (props) =>{
     const {data} = props;
     const {quantity}=data;
     const {price}=data?.details?.card?.info;
-    const [count,setcount]=useState(data?.quantity)
+    const [count,setcount]=useState(data?.quantity);
+
+    const dispatch = useDispatch();
+
+    const countincrease=()=>{
+        setcount(count+1);
+        dispatch(increaseCart(props))
+    }
+
+    const countdecrease=()=>{
+        setcount(count-1);
+        dispatch(decreaseCart(props))
+    }
 
 
     
@@ -28,7 +43,7 @@ const Productdetails = (props) =>{
                         <div className="border-2 border-slate-300 h-[32px] w-[70px] flex justify-around">
                             <div><button onClick={() => {
                            
-                            count!=1 && setcount(count-1)
+                            count!=1 && countdecrease()
                             }} >-</button></div>
 
                             
@@ -37,11 +52,15 @@ const Productdetails = (props) =>{
                             
 
                             <div><button onClick={() =>{
+                                // (count>0)&& (
+                                //     dispatch(increaseCart(props))
+                                //     setcount(count+1)
+                                // ) 
                                 
-                                count>0 && setcount(count+1)
+                                count>0 && countincrease()
+                               
 
-                                
-                                
+
                                 
                             }} >+</button></div>
                         </div>
@@ -53,6 +72,9 @@ const Productdetails = (props) =>{
 
                 </div>
             </div>
+
+                            
+
         </div>
         
     );
