@@ -37,6 +37,7 @@
 
 
 - need to the fire base authentication issue(working on it)
+- added some changes to the productdetails component
 
 
 ERROR :- "display name" is not being updated in the redux store
