@@ -36,7 +36,7 @@
 
 
 
-- need to the fire base authentication issue(working on it)
+- need to the fire base authentication issue(working on it, chages status as owner but didnt help)
 - added some changes to the productdetails component
 
 
