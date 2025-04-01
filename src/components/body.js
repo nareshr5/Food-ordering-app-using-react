@@ -10,6 +10,7 @@ import { useDispatch } from "react-redux";
 import { addUser, removeUser } from "../utils/userslice";
 import { useNavigate } from "react-router-dom";
 import Header from "./header";
+import ScrollToTop from "./ScrollToTop";
 const Body = () =>{
   const dispatch  = useDispatch();
   const navigate = useNavigate();
@@ -50,6 +51,7 @@ const Body = () =>{
     return(
 
         <>
+          <ScrollToTop/>
           <Header/>
           <Outlet/>   
           <Footer/>
