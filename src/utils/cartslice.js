@@ -44,13 +44,30 @@ const cartSlice = createSlice({
             }
         },
         decreaseCart:(state,action)=>{
-            const productPresent=state.cartList.find((item)=> item?.details?.
-            card?.info?.id === action.payload?.details?.card?.info?.id);
+            const productPresent=state.cartList.find((item)=> item?.details?.card?.info?.id === action.payload?.details?.card?.info?.id);
 
             if(productPresent){
                 productPresent.quantity--;
             }
         },
+        
+        increaseCartByCart:(state,action)=>{
+            // while dispatching from the cart , the structure of "props" is like {details --> details -->card --> info -->id } but on increaseCart function above ,  
+            // we are checking for {action --> payload -->  details --> card --> info --> id} hence we didn't find a match , now it is correct in the below code
+
+            const productPresent = state.cartList.find((item) => item?.details?.card?.info?.id === action?.payload?.details?.details?.card?.info?.id );
+            if(productPresent){
+                productPresent.quantity++;
+            }
+        },
+        decreaseCartByCart:(state,action) => {
+            const productPresent = state.cartList.find((item) => item?.details?.card?.info?.id === action?.payload?.details?.details?.card?.info?.id);
+
+            if(productPresent){
+                productPresent.quantity--;
+            }
+        },
+        
         addResname:(state,action)=>{
             state.resList=action.payload;
             
@@ -64,5 +81,5 @@ const cartSlice = createSlice({
     },
 });
 
-export const {addCartList,removeCartList,increaseCart,decreaseCart,addResname,addResLocality,adddeliverytime}=cartSlice.actions;
+export const {addCartList,removeCartList,increaseCart,increaseCartByCart,decreaseCart,decreaseCartByCart,addResname,addResLocality,adddeliverytime}=cartSlice.actions;
 export default cartSlice.reducer;
