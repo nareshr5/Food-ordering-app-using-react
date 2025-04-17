@@ -3,24 +3,32 @@ import { addPayment } from "../utils/paymentslice";
 
 import { useSelector } from "react-redux";
 
-const BillDetails = (props) =>{
 
-    const {data} = props;
+const BillDetails = (prop) =>{
+
+    
+    
+    const {cartList} =useSelector((store)=> store?.cart);
+
+    //console.log(cartList);
+
     const dispatch = useDispatch();
 
-    console.log(data)
-   // const {cartList} =useSelector((store)=> store?.cart);
+    //console.log(data)
+  
 
     
 
     let price=0;
-    // cartList.map((item)=> (
-    //     price=price+((item?.details?.card?.info?.price/100)*(item?.quantity))
-    // ))
 
-    price=price+((data?.details?.card?.info?.price/100)*(data?.quantity))
+    cartList.map((item)=> (
+        price=price+((item?.details?.card?.info?.price/100)*(item?.quantity))
+        
+    ))
 
- 
+   
+  
+    
     const packing_fee=price*.12;
     const delivery_fee = (price*0.08);
     const platform_fee=6;
