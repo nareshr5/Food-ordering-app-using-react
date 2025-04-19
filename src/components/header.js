@@ -10,7 +10,7 @@ const Header = () =>{
     const navigate = useNavigate();
 
     const onlinestatus = useOnlineStatus();
-    console.log(onlinestatus);
+  //  console.log(onlinestatus);
 
     return(
         <div className=" mx-3 h-20 text-black bg-amber-500 flex justify-between shadow-lg">
