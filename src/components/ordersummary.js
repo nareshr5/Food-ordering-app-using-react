@@ -1,11 +1,11 @@
-import veglogo from ".././images/veg_logo.png";
+
 import { useSelector } from "react-redux";
 import Paiditems from "../components/paiditems";
 
-import img1 from "../images/foodimgs/img1.png"
+
 import Foodimages from "./foodimages";
 
-import order_approve from "../images/order_approve.png";
+
 
 const OrderSummary = () =>{
 

@@ -156,6 +156,7 @@ const RestaurantAccordion = (props) =>{
                                                 <button className="text-green-800 font-extrabold text-2xl mx-2 -my-3" onClick={()=> {
                                                      dispatch(increaseCart(props)) 
                                                      setCount(count+1)
+                                                
                                                     
                                                 } } >+</button></div>) 
                                                
