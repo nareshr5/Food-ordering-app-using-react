@@ -14,8 +14,21 @@ const Header = () =>{
 
     return(
         <div className=" mx-3 h-20 text-black bg-amber-500 flex justify-between shadow-lg">
-       
-           <img className=" p-2 width-[70%] height-[30%] rounded-1xl cursor-pointer" alt="logo" src={logo}  onClick={() => navigate("/")}/>
+
+           
+
+                <img className=" p-2 width-[70%] height-[30%] rounded-1xl cursor-pointer" alt="logo" src={logo}  onClick={() => navigate("/")}/>
+
+                <span className="text-3xl font-semibold font-serif py-2 my-3 -ml-20 text-white ">
+                Food-Hub
+                </span>
+
+
+   
+
+            
+
+           
         
            
             
@@ -29,7 +42,7 @@ const Header = () =>{
                         // </a>
 
                         <NavLink to={"/"+item}>
-                         <li className="px-4 mx-4 font-semibold hover:text-white" key={index}>{item}</li> 
+                         <li className="px-4 mx-4 font-semibold  hover:text-white" key={index}>{item}</li> 
                         </NavLink>
 
                     ))
