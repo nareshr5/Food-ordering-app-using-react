@@ -28,7 +28,7 @@
 
 (accordion open and close logic is added , proper acccordion fixing needed little )
 
-- working on the cart page to dispaly details  (done - but need to work on the upgrading part)
+- working on the cart page to dispaly details  (done)
 - created the go to cart button on the restaurant menu page  (done)
 
 
