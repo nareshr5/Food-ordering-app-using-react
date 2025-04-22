@@ -5,7 +5,7 @@ const Footer = () =>{
             
             <footer className="cursor-pointer text-white bg-black w-screen flex justify-evenly ">
                 <div>
-                        <p className="text-2xl font-bold font-sans">SWIGGY</p>
+                        <p className="text-2xl font-bold font-sans">Food-Hub</p>
                     </div>
 
                     <div>
@@ -14,9 +14,9 @@ const Footer = () =>{
                             <li>About</li>
                             <li>Careers</li>
                             <li>Team</li>
-                            <li>Swiggy One</li>
-                            <li>Swiggy Instamart</li>
-                            <li>Swiggy Genie</li>
+                            <li>Food-hub One</li>
+                            <li>Food-hub Instamart</li>
+                            <li>Food-hub Genie</li>
                         </ul>
                     </div>
 
