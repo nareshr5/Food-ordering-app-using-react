@@ -14,13 +14,13 @@ const Productdetails = (props) =>{
     const [count,setcount]=useState(details?.quantity);
     const {name}=details?.details?.card?.info
 
-    //console.log(quantity)
+   
 
     const dispatch = useDispatch();
 
     const countincrease=()=>{
         
-      //dispatch(increaseCart(props))
+  
        dispatch(increaseCartByCart(props))
       
         setcount(count+1);
@@ -29,7 +29,7 @@ const Productdetails = (props) =>{
 
     const countdecrease=()=>{
         
-       // dispatch(decreaseCart(props))
+   
         dispatch(decreaseCartByCart(props))
        
         setcount(count-1);

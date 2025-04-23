@@ -20,7 +20,7 @@ const useOnlineStatus = () =>{
 
     }
 
-    console.log(status);
+   // console.log(status);
 
     return status;
 }

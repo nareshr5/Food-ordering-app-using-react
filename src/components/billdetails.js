@@ -10,11 +10,11 @@ const BillDetails = (prop) =>{
     
     const {cartList} =useSelector((store)=> store?.cart);
 
-    //console.log(cartList);
+   
 
     const dispatch = useDispatch();
 
-    //console.log(data)
+    
   
 
     
