@@ -30,6 +30,7 @@
 
 - working on the cart page to dispaly details  (done)
 - created the go to cart button on the restaurant menu page  (done)
+- added the app name onto the header (done)
 
 
 - the custom hook (useRestaurantMenu) is used to support the restaurantmenu component ( facing some issues on this )
