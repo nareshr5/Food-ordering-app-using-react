@@ -6,7 +6,7 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 //import { Link } from "react-router-dom";
 const Header = () =>{
     //const headerNavigation = ["💼Swiggy corporate","🔍 Search","💰 Offers","📎 Help","🔐 Sign in","🛒 Cart"]
-    const headerNavigation = ["Corporate","Search","Offers","Help","Signin","Cart"]
+    const headerNavigation = ["Help","Signin","Cart"]
     const navigate = useNavigate();
 
     const onlinestatus = useOnlineStatus();
