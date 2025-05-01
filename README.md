@@ -33,7 +33,7 @@
 - added the app name onto the header (done)
 - should  go to the cart page if there is no item in the cart and display an epty banner (done)
 - need to add some labels on the restaurants (need to work on it)
-- need to work on the deployment
+- need to work on the deployment (firebase is not supporingt authentication)
 
 
 - the custom hook (useRestaurantMenu) is used to support the restaurantmenu component ( facing some issues on this )
