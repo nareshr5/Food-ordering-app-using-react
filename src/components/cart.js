@@ -8,6 +8,7 @@ import Productdetails from "./productdetails";
 import { CDN_URL_FOR_DISHES } from "../utils/constant";
 import emptycart from "../images/emptycart.png"
 
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -28,6 +29,9 @@ const Cart = ()=>{
 
     //if(cartList.length===0) return <h1>hey there</h1>;
 
+    const navigate = useNavigate();
+
+
 
   
 
@@ -44,7 +48,7 @@ const Cart = ()=>{
                     </div>
 
                     <div className="ml-[46%]">
-                        <button className="w-auto p-2 h-auto bg-white rounded-2xl ">Fill by bowl</button>
+                        <button className="w-auto p-2 h-auto bg-white rounded-2xl " onClick={()=> navigate("/")}>Fill by bowl</button>
                     </div>
                     
             
