@@ -33,9 +33,17 @@
 - added the app name onto the header (done)
 - should  go to the cart page if there is no item in the cart and display an epty banner (done)
 - need to add some labels on the restaurants (need to work on it)
+
 - need to work on the deployment (firebase is not supporingt authentication)
-- added the navigation from the empty cart to the home page (done)
+
 - logic fro once the user places the order , if goes again to the cart page it should not show the previously added items (need to work on it)
+
+
+- added the navigation from the empty cart tot he homw page (done)
+
+
+- need to work on the deployment (firebase is not supporting authentication ,need to work with different accounts it seems)
+
 
 
 - the custom hook (useRestaurantMenu) is used to support the restaurantmenu component ( facing some issues on this )
