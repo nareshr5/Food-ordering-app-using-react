@@ -48,10 +48,9 @@
 
 - the custom hook (useRestaurantMenu) is used to support the restaurantmenu component ( facing some issues on this )
 
-
-
 - need to the fire base authentication issue(working on it, chages status as owner but didnt help)
-- added some changes to the productdetails component
+- added some changes to the productdetails component (done)
+
 
 
 ERROR :- "display name" is not being updated in the redux store
