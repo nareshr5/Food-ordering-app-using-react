@@ -22,7 +22,7 @@
 - shimmer UI is created need to be integrated ( need to check whether lazy loading can be used insted?)
 - need to work on page navigations and dynamic data renderings ( for home, restaurant page, payment page, summary page, if needed make some design changes)
 - need to adjust the footer (on resturant menu page it is shows in the middle) (done)
--working on the changes on firebase (facing some issues on authentication)
+
 
 - when be come back to the restaurant menu page , it is not showing the selected items
 
@@ -32,7 +32,7 @@
 - created the go to cart button on the restaurant menu page  (done)
 - added the app name onto the header (done)
 - should  go to the cart page if there is no item in the cart and display an epty banner (done)
-- need to add some labels on the restaurants (need to work on it)
+- need to add some labels on the restaurants (need to work on it)  ??? ( working on it using HOC)
 
 - need to work on the deployment (firebase is not supporingt authentication)
 
@@ -45,12 +45,12 @@
 
 
 - need to work on the deployment (firebase is not supporting authentication ,need to work with different accounts it seems)
-
+- need to the fire base authentication issue(working on it, chages status as owner but didnt help)
 
 
 - the custom hook (useRestaurantMenu) is used to support the restaurantmenu component ( facing some issues on this )
 
-- need to the fire base authentication issue(working on it, chages status as owner but didnt help)
+
 - added some changes to the productdetails component (done)
 
 
