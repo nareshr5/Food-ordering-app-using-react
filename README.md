@@ -52,7 +52,7 @@
 
 
 - added some changes to the productdetails component (done)
-
+- working on the custom hook ( working)
 
 
 ERROR :- "display name" is not being updated in the redux store
