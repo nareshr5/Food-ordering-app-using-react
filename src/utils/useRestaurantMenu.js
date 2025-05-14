@@ -1,10 +1,12 @@
-import { useEffect } from "react"
+import { useEffect , useState } from "react"
 import { restaurant_menu } from "../utils/constant";
 import { useParams } from "react-router-dom";
 
-const useRestaurantMenu=()=>{
+export const useRestaurantMenu=()=>{
 
     const {resId} = useParams();
+
+    const[resMenu,setResMenu]=useState();
 
     useEffect(()=>{
         getData();
@@ -16,6 +18,9 @@ const useRestaurantMenu=()=>{
         const jsonValue = await data.json();
         const resdata = jsonValue?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
 
-        return resdata;
+         setResMenu(resdata?.data);
+        
     }
-}
+
+    return resMenu;
+};
