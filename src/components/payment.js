@@ -63,7 +63,7 @@ const Payment = () =>{
 
                                 <p className=" text-2xl font-semibold mx-4 text-black font-serif">{paymentValue.toPrecision(3)}</p>
                             </button>
-                            <p className="mt-2 font-semibold w-[30%] mx-auto rounded-lg border-2 border-black">Select a payment option</p>
+                            <p className="mt-2 font-semibold w-[30%] mx-auto rounded-lg border-2 border-black" onClick={()=> alert("it for reference purpose alone!")}>Select a payment option</p>
                  </div>
 
 
