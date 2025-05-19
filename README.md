@@ -51,7 +51,7 @@
 
 
 - the custom hook (useRestaurantMenu) is used to support the restaurantmenu component ( facing some issues on this )
-
+- react 19 version has a new feature for fetch know as "use" , use that
 
 - added some changes to the productdetails component (done)
 - working on the custom hook ( working)
