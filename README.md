@@ -33,6 +33,7 @@
 - added the app name onto the header (done)
 - should  go to the cart page if there is no item in the cart and display an epty banner (done)
 - need to add some labels on the restaurants (need to work on it)  ??? ( working on it using HOC)
+- can introduce usememo and usecallback for optimization (working)
 
 - need to work on the deployment (firebase is not supporingt authentication)
 
