@@ -40,7 +40,7 @@
 - logic fro once the user places the order , if goes again to the cart page it should not show the previously added items (need to work on it)
 
 - working on lazy loading (working)
-- working on pagination (working)
+- working on pagination (need to be implement is possible)
 
 - added the navigation from the empty cart tot he homw page (done)
 
