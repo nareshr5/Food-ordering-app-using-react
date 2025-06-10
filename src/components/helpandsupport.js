@@ -15,9 +15,30 @@ import {partner_onboard} from "../utils/constant";
 
 const HelpAndSupport = () =>{
     useEffect(()=>{
+
+        const getOnboardingDetails= async() =>{
+
+            try{
+                const response = await fetch(partner_onboard);
+    
+                if(!response.ok) throw new Error("failed to fetch the data");
+                const jsonValue=await response.json();
+                const details = jsonValue?.data?.issues?.data;
+                //console.log(details);
+                dispatch(addOnboardingDetails(details));
+    
+            }catch(err){
+                setonboardingerror(err.message);
+            }
+            
+        }
+
+        
         getSupportOptions();
         getOnboardingDetails();
     },[]);
+
+    const [onboardingerror , setonboardingerror] = useState(null);
 
     const dispatch = useDispatch();
 
@@ -30,14 +51,7 @@ const HelpAndSupport = () =>{
         
     }
 
-    const getOnboardingDetails= async() =>{
-        const data = await fetch(partner_onboard);
-        const jsonValue=await data.json();
-        const details = jsonValue?.data?.issues?.data;
-        //console.log(details);
-        dispatch(addOnboardingDetails(details));
-        
-    }
+    
 
     
 
