@@ -21,8 +21,8 @@ const BillDetails = (prop) =>{
 
     let price=0;
 
-    cartList.map((item)=> (
-        price=price+((item?.details?.card?.info?.price/100)*(item?.quantity))
+    cartList.map((item,index)=> (
+        <span key={index}>price=price+((item?.details?.card?.info?.price/100)*(item?.quantity))</span>
         
     ))
 

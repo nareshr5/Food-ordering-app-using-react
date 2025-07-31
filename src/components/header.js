@@ -41,8 +41,8 @@ const Header = () =>{
                         //   <li className="px-4 mx-4 font-semibold" key={index}>{item}</li> 
                         // </a>
 
-                        <NavLink to={"/"+item}>
-                         <li className="px-4 mx-4 font-semibold  hover:text-white" key={index}>{item}</li> 
+                        <NavLink to={"/"+item} key={index}>
+                         <li className="px-4 mx-4 font-semibold  hover:text-white" >{item}</li> 
                         </NavLink>
 
                     ))

@@ -107,7 +107,7 @@ const ResList = (props) =>{
                     {resList.map((res,i)=> (
                     
                             
-                            <ResCard resList={res} type={type} key={i} />
+                           <span key={res?.info?.id}><ResCard resList={res} type={type}  /></span> 
                             
                         
                     )
@@ -126,10 +126,11 @@ const ResList = (props) =>{
         <div className=" w-[1007.2px] h-[592.6px] m-auto cursor-pointer">
             <div className="mb-4 text-2xl font-bold">{title}</div>
             <div className="mx-[16px] my-[32px] flex flex-wrap justify-between ">
-            {resWithOnlineDelivery.map((res)=> (
+            {resWithOnlineDelivery.map((res ,index)=> (
                 
-                 <span>
-                    <ResCard  resList={res} type={type} key={res}  />
+                 <span key={res?.info?.id}>
+               
+                    <ResCard  resList={res} type={type}   />
                  </span>
                     
                  
