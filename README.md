@@ -49,13 +49,16 @@
 - need to the fire base authentication issue(working on it, chages status as owner but didnt help)
 
 - need to work on the price amount (working)
+- need to work on the fetch with error handling(working)
 
 
 - the custom hook (useRestaurantMenu) is used to support the restaurantmenu component ( facing some issues on this )
 - react 19 version has a new feature for fetch know as "use" , use that
 
+
 - added some changes to the productdetails component (done)
 - working on the custom hook ( working)
+
 
 - working on recat 19 update --> "use" for fetching
 ERROR :- "display name" is not being updated in the redux store
