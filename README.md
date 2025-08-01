@@ -33,11 +33,14 @@
 - added the app name onto the header (done)
 - should  go to the cart page if there is no item in the cart and display an epty banner (done)
 - need to add some labels on the restaurants (need to work on it)  ??? ( working on it using HOC)
+- can introduce usememo and usecallback for optimization (working)
 
 - need to work on the deployment (firebase is not supporingt authentication)
 
 - logic fro once the user places the order , if goes again to the cart page it should not show the previously added items (need to work on it)
 
+- working on lazy loading (working)
+- working on pagination (need to be implement is possible)
 
 - added the navigation from the empty cart tot he homw page (done)
 
@@ -50,13 +53,14 @@
 
 
 - the custom hook (useRestaurantMenu) is used to support the restaurantmenu component ( facing some issues on this )
+- react 19 version has a new feature for fetch know as "use" , use that
 
 
-- added some changes to the productdetails component (done) 
+- added some changes to the productdetails component (done)
+- working on the custom hook ( working)
 
 
-
-
+- working on recat 19 update --> "use" for fetching
 ERROR :- "display name" is not being updated in the redux store
 we need to use "auth.currentuser" and not "user" in the login.js file , because we are trying to fetch the details (uid, displaymname and etc) from a updated user (which is auth.currentuser)
 
