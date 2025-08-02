@@ -1,4 +1,5 @@
 
+
 # App building flow:
 - created app using npx create-react-app command
 - removed the unwanted things
@@ -80,7 +81,7 @@ add -> overflow-hidden
 translate-x-[100px] duration-1000
 
 
-# Getting Started with Create React App
+# Getting Started with Create React App  (Create React App --> was depricated now)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
