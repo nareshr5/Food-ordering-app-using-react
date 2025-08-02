@@ -46,7 +46,7 @@
 - need to the fire base authentication issue(working on it, chages status as owner but didnt help)
 
 - need to work on the price amount (working)
-- need to work on the fetch with error handling(working)
+- need to work on the fetch with error handling on different components or if possibel need to create custom hooks(working)
 
 
 - the custom hook (useRestaurantMenu) is used to support the restaurantmenu component ( facing some issues on this )
