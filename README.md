@@ -54,6 +54,8 @@
 
 - added some changes to the productdetails component (done) 
 
+- need to add some optimization techniques
+
 
 
 
