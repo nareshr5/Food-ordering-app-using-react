@@ -60,9 +60,9 @@
 
 - need to add some optimization techniques
 
+- need to work on some optimization changes
 
-
-- working on the custom hook ( working)
+- working on the custom hook ( working - some changes needed)
 
 
 
