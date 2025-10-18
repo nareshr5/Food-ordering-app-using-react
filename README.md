@@ -63,6 +63,8 @@
 
 - working on the custom hook ( working - some changes needed)
 
+- need some local storage configurations
+
 
 
 - working on recat 19 update --> "use" for fetching
