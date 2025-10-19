@@ -63,6 +63,8 @@
 
 - working on the custom hook ( working - some changes needed)
 
+- typescript 
+
 - need some local storage configurations
 
 
