@@ -64,7 +64,7 @@
 
 - working on the custom hook ( working - some changes needed)
 
-- typescript 
+- typescript (working on the tasks)
 
 - need some local storage configurations
 
