@@ -65,7 +65,7 @@
 - working on the custom hook ( working - some changes needed)
 
 - typescript (working on the tasks  - started working on it - need to adopt testing also)
-- converting from react to typescript also
+- converting from react to typescript also by following little transitions
 
 - need some local storage configurations
 
