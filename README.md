@@ -1,6 +1,6 @@
 
 # App building flow:
-- created app using npx create-react-app command
+- created app using npx create-react-app command (this is depricated now)
 - removed the unwanted things
 - initializd the tailwindcss into the project
 - created the basic components [Head , Body , Footer]
@@ -65,9 +65,10 @@
 
 - typescript (working on the tasks  - started working on it - need to adopt testing also)
 - converting from react to typescript also by following little transitions
-- facing little issues
-
+- facing little issues 
 - need some local storage configurations
+
+
 
 
 
