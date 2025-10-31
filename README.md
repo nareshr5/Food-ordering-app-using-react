@@ -67,7 +67,7 @@
 - typescript (working on the tasks  - started working on it - need to adopt testing also)
 - converting from react to typescript also by following little transitions (working on it)
 - working on the tasks
-- working on documentation(DONE)
+- completed the  documentation(DONE)
 
 - facing little issues 
 - need some local storage configurations
