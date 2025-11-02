@@ -67,7 +67,7 @@
 - converting from react to typescript also by following little transitions (working on it)
 - working on the tasks
 - completed the  documentation(DONE)
-- working on the planning
+- working on the planning and documentation
 
 - facing little issues 
 - need some local storage configurations
