@@ -68,7 +68,7 @@
 - working on the tasks
 - completed the  documentation(DONE)
 - working on the planning and documentation
-- going through the documentations to understant the situations
+- going through the documentations to understant the situations and terms of them
 
 - facing little issues 
 - need some local storage configurations
