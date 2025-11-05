@@ -69,6 +69,7 @@
 - completed the  documentation(DONE)
 - working on the planning and documentation
 - going through the documentations to understant the situations and terms of them
+- docs completion
 
 - facing little issues 
 - need some local storage configurations
