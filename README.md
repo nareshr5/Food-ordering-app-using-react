@@ -72,6 +72,8 @@
 - going through the documentations to understant the situations and terms of them
 - docs completion
 
+Refing the app listings:
+
 - facing little issues 
 - need some local storage configurations
 
