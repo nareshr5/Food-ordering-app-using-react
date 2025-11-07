@@ -73,6 +73,7 @@
 - docs completion
 
 Refing the app listings:
+need to refine the code with SUC
 
 - facing little issues 
 - need some local storage configurations
