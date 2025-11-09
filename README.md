@@ -73,7 +73,7 @@
 - docs completion
 
 Refing the app listings:
-need to refine the code with SUC abd possible custom hooks 
+need to refine the code with SUC , possible custom hooks and possible optimization at places
 
 - facing little issues 
 - need some local storage configurations
