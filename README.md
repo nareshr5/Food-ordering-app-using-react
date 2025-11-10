@@ -29,7 +29,7 @@
 
 (accordion open and close logic is added , proper acccordion fixing needed little )
 
-- working on the cart page to dispaly details  (done)
+- working on the cart page to display details  (done)
 - created the go to cart button on the restaurant menu page  (done)
 - added the app name onto the header (done)
 - should  go to the cart page if there is no item in the cart and display an epty banner (done)
@@ -38,19 +38,19 @@
 
 - need to work on the deployment (firebase is not supporingt authentication)
 
-- logic fro once the user places the order , if goes again to the cart page it should not show the previously added items (need to work on it)
+- logic for once the user places the order , if goes again to the cart page it should not show the previously added items (need to work on it)
 
 - working on lazy loading (working)
 - working on pagination (need to be implement is possible)
 
-- added the navigation from the empty cart tot he homw page (done)
+- added the navigation from the empty cart to the home page (done)
 
 
 - need to work on the deployment (firebase is not supporting authentication ,need to work with different accounts it seems)
 - need to the fire base authentication issue(working on it, chages status as owner but didnt help)
 
 - need to work on the price amount (working)
-- need to work on the fetch with error handling on different components or if possibel need to create custom hooks(working)
+- need to work on the fetch with error handling on different components or if possible need to create custom hooks(working)
 
 
 - the custom hook (useRestaurantMenu) is used to support the restaurantmenu component ( facing some issues on this )
@@ -60,13 +60,16 @@
 
 - need to add some optimization techniques
 
-- need to work on some optimization changes
 
 - working on the custom hook ( working - some changes needed)
 
+
+TYPESCRIPT
 - typescript (working on the tasks  - started working on it - need to adopt testing also)
 - converting from react to typescript also by following little transitions (working on it)
 - working on the tasks
+
+
 - completed the  documentation(DONE)
 - working on the planning and documentation
 - going through the documentations to understant the situations and terms of them
