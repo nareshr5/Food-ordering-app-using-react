@@ -75,8 +75,10 @@ TYPESCRIPT
 - going through the documentations to understant the situations and terms of them
 - docs completion
 
+
 Refing the app listings:
 need to refine the code with SUC , possible custom hooks and possible optimization at places
+
 
 - facing little issues 
 - need some local storage configurations
@@ -92,6 +94,7 @@ we need to use "auth.currentuser" and not "user" in the login.js file , because 
 
 
 
+installations:
 npm install @flaticon/flaticon-uicons --> install this
 
 @import "@flaticon/flaticon-uicons/css/all/all";  -->add this to the index.css file
