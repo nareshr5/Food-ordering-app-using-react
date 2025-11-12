@@ -25,7 +25,7 @@
 - need to adjust the footer (on resturant menu page it is shows in the middle) (done)
 
 
-- when be come back to the restaurant menu page , it is not showing the selected items
+- when we come back to the restaurant menu page , it is not showing the selected items
 
 (accordion open and close logic is added , proper acccordion fixing needed little )
 
@@ -58,7 +58,7 @@
 
 - added some changes to the productdetails component (done) 
 
-- need to add some optimization techniques
+- need to add some optimization techniques (reducing rerendeing,etc)
 
 
 - working on the custom hook ( working - some changes needed)
