@@ -1,4 +1,5 @@
 
+
 # App building flow:
 - created app using npx create-react-app command (this is depricated now)
 - removed the unwanted things
@@ -75,8 +76,9 @@ TYPESCRIPT
 - docs completion
 
 
+Refing the app listings:
+need to refine the code with SUC , possible custom hooks and possible optimization at places
 
-Refining the app listings:
 
 - facing little issues 
 - need some local storage configurations
@@ -106,7 +108,7 @@ add -> overflow-hidden
 translate-x-[100px] duration-1000
 
 
-# Getting Started with Create React App
+# Getting Started with Create React App  (Create React App --> was depricated now)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
