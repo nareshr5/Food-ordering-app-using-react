@@ -84,7 +84,7 @@ need to refine the code with SUC , possible custom hooks and possible optimizati
 - need some local storage configurations
 - working new exports and imports (done)
 - working on documents 
-- working on the courses with gen AI and prompts (working on it) - module 1(done) , module 2
+- working on the courses with gen AI and prompts (working on it) - module 1(done) , module 2(done)
 
 
 
