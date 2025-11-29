@@ -86,6 +86,7 @@ need to refine the code with SUC , possible custom hooks and possible optimizati
 - working on documents 
 - working on the courses with gen AI and prompts (working on it) - module 1(done) , module 2(done)
 - understanding agentic AI and prompting (done)
+- need to start course content
 
 
 - working on recat 19 update --> "use" for fetching
