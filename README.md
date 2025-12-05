@@ -88,7 +88,7 @@ need to refine the code with SUC , possible custom hooks and possible optimizati
 - understanding agentic AI and prompting (done)
 - workflow agents and AI agents and prompt types
 - need to start course content (1st chapter )
--libuv understanding (working on it )
+-libuv understanding + node js (working on it )
 
 - working on recat 19 update --> "use" for fetching
 ERROR :- "display name" is not being updated in the redux store
