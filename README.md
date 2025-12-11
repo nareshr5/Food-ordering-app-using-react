@@ -90,7 +90,7 @@ need to refine the code with SUC , possible custom hooks and possible optimizati
 - prompt types and agent types
 - need to start course content (1st chapter )
 -libuv understanding + node js + async operations (working on it )
-sync and async operations and setTimeout 
+sync and async operations , setTimeZero and setTimeout 
 
 
 
