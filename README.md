@@ -92,7 +92,7 @@ need to refine the code with SUC , possible custom hooks and possible optimizati
 -libuv understanding + node js + async operations (working on it )
 sync and async operations , setTimeZero and setTimeout
 - V8 engine architecture
-- event loop in libuv
+- event loop and its architecture in libuv
 
 
 - working on recat 19 update --> "use" for fetching
