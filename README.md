@@ -93,7 +93,7 @@ need to refine the code with SUC , possible custom hooks and possible optimizati
 sync and async operations , setTimeZero and setTimeout
 - V8 engine architecture
 - event loop and its architecture in libuv
-- inner structure of event loop 
+- inner structure of event loop and its 4 phases and inner cycles
 
 
 - working on recat 19 update --> "use" for fetching
