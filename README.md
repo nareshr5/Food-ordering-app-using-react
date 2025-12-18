@@ -94,7 +94,7 @@ sync and async operations , setTimeZero and setTimeout
 - V8 engine architecture
 - event loop and its architecture in libuv
 - inner structure of event loop and its 4 phases and inner cycles
-- database understanding
+- database understanding and cluster setup
 
 - working on recat 19 update --> "use" for fetching
 ERROR :- "display name" is not being updated in the redux store
