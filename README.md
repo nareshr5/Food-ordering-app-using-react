@@ -95,6 +95,7 @@ sync and async operations , setTimeZero and setTimeout
 - event loop and its architecture in libuv
 - inner structure of event loop and its 4 phases and inner cycles
 - database understanding and cluster setup for mongoDB
+- mongoDB compass 
 
 - working on recat 19 update --> "use" for fetching
 ERROR :- "display name" is not being updated in the redux store
