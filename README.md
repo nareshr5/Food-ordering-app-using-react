@@ -98,6 +98,7 @@ sync and async operations , setTimeZero and setTimeout
 - database understanding and cluster setup for mongoDB
 - mongoDB compass
 - server and working
+- working on next items
 
 - working on recat 19 update --> "use" for fetching
 ERROR :- "display name" is not being updated in the redux store
