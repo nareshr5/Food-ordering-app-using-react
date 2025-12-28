@@ -99,7 +99,7 @@ sync and async operations , setTimeZero and setTimeout
 - mongoDB compass
 - server and working
 - working on next items
-- versioning in software
+- versioning in software (done) 
 - project planning and features planning
 
 - working on recat 19 update --> "use" for fetching
