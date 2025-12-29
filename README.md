@@ -100,7 +100,7 @@ sync and async operations , setTimeZero and setTimeout
 - server and working
 - working on next items
 - versioning in software (done) 
-- project planning and features planning
+- project planning and features planning (done)
 
 - working on recat 19 update --> "use" for fetching
 ERROR :- "display name" is not being updated in the redux store
