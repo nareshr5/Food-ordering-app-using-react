@@ -103,6 +103,7 @@ sync and async operations , setTimeZero and setTimeout
 - project planning and features planning (done)
 - working on route
 - working with middlewares and routes
+- error handlings 
 - mongoose and connection string
 - working on recat 19 update --> "use" for fetching
 ERROR :- "display name" is not being updated in the redux store
