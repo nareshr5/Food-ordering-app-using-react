@@ -108,7 +108,7 @@ sync and async operations , setTimeZero and setTimeout
 - model creation
 - connection establishment between database and app
 - microservice and monolithic architecture (done )
-- API building
+- API building wirh different methods and routes
 - working on recat 19 update --> "use" for fetching
 ERROR :- "display name" is not being updated in the redux store
 we need to use "auth.currentuser" and not "user" in the login.js file , because we are trying to fetch the details (uid, displaymname and etc) from a updated user (which is auth.currentuser)
