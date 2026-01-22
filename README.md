@@ -110,7 +110,7 @@ sync and async operations , setTimeZero and setTimeout
 - microservice and monolithic architecture (done )
 - API building with different methods and routes (working on it )
 - server creating using node:http module and createServer() function
-- creating get API 
+- creating get API , post api, delete api , patch api
 
 
 
