@@ -111,7 +111,7 @@ sync and async operations , setTimeZero and setTimeout
 - API building with different methods and routes (working on it )
 - server creating using node:http module and createServer() function
 - creating get API , post api, delete api , patch api
-- api data validations
+- api data validations and sanitation 
 
 
 
