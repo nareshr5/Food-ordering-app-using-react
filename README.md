@@ -113,6 +113,7 @@ sync and async operations , setTimeZero and setTimeout
 - creating get API , post api, delete api , patch api
 - api data validations and sanitation 
 - password encryption and hashing
+- JWT tokens
 
 
 
