@@ -114,6 +114,7 @@ sync and async operations , setTimeZero and setTimeout
 - api data validations and sanitation 
 - password encryption and hashing
 - JWT tokens ane cookies (working on it )
+- validations
 
 
 
