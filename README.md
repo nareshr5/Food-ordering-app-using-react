@@ -115,7 +115,7 @@ sync and async operations , setTimeZero and setTimeout
 - password encryption and hashing
 - JWT tokens and cookies (working on it )
 - validations and understanding  (working on it ) 
-
+- expiring tokens and cookies
 
 
 - working on recat 19 update --> "use" for fetching
