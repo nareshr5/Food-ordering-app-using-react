@@ -116,7 +116,8 @@ sync and async operations , setTimeZero and setTimeout
 - JWT tokens and cookies (working on it )
 - validations and understanding  (working on it ) 
 - expiring tokens and cookies
-- userschema methods 
+- userschema methods
+- express Router 
 
 
 - working on recat 19 update --> "use" for fetching
