@@ -118,7 +118,8 @@ sync and async operations , setTimeZero and setTimeout
 - expiring tokens and cookies
 - userschema methods
 - express Router and API creations (working on it )
-- logical DB query
+- logical DB query and compound indexes
+- 
 
 
 - working on recat 19 update --> "use" for fetching
