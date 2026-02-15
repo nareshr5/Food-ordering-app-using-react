@@ -119,7 +119,7 @@ sync and async operations , setTimeZero and setTimeout
 - userschema methods
 - express Router and API creations (working on it )
 - logical DB query and compound indexes ( working on it ) 
-- 
+- mongoose pre- middleware for connection validation 
 
 
 - working on recat 19 update --> "use" for fetching
