@@ -120,7 +120,7 @@ sync and async operations , setTimeZero and setTimeout
 - express Router and API creations (working on it )
 - logical DB query and compound indexes ( working on it ) 
 - mongoose pre- middleware for connection validation and check (working on it )
-- compound indexes
+- compound indexes (working on it ) 
 
 
 - working on recat 19 update --> "use" for fetching
