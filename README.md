@@ -121,7 +121,7 @@ sync and async operations , setTimeZero and setTimeout
 - logical DB query and compound indexes ( working on it ) 
 - mongoose pre- middleware for connection validation and check (working on it )
 - compound indexes (working on it )
-- vuex - state management for vue(working on it ) 
+- vuex - state management for vue(working on it ) (understanding the flow of 4 items)
 
 
 - working on recat 19 update --> "use" for fetching
