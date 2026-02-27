@@ -122,7 +122,7 @@ sync and async operations , setTimeZero and setTimeout
 - mongoose pre- middleware for connection validation and check (working on it )
 - compound indexes (working on it )
 - vuex - state management for vue(working on it ) (understanding the flow of 4 items)
-- ref between different schemas (working on it )
+- ref between different schemas and populate method (working on it )
 
 
 - working on recat 19 update --> "use" for fetching
