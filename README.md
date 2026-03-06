@@ -125,7 +125,8 @@ sync and async operations , setTimeZero and setTimeout
 - ref between different schemas and populate method from mongoose (working on it )
 - schema relation building (working on it )
 - chaining populates
-- constructing the feed API (working on it )  
+- constructing the feed API (working on it )
+- addressing the edge cases
 
 - working on recat 19 update --> "use" for fetching
 ERROR :- "display name" is not being updated in the redux store
