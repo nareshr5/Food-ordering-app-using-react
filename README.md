@@ -126,7 +126,7 @@ sync and async operations , setTimeZero and setTimeout
 - schema relation building (working on it )
 - chaining populates
 - constructing the feed API (working on it )
-- addressing the edge cases (working on it )
+- addressing the edge cases for feed API(working on it )
 
 - working on recat 19 update --> "use" for fetching
 ERROR :- "display name" is not being updated in the redux store
