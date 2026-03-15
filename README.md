@@ -128,7 +128,7 @@ sync and async operations , setTimeZero and setTimeout
 - constructing the feed API (working on it )
 - addressing the edge cases for feed API(working on it )
 - understand github copilot (working on it ) ( thwre is some issue with installation ) (working on it )
-- - working on mock data ( working on it ) 
+- - working on mock data and structuring ( working on it ) 
 
 - working on recat 19 update --> "use" for fetching
 ERROR :- "display name" is not being updated in the redux store
