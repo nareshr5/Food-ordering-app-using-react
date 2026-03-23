@@ -131,7 +131,7 @@ sync and async operations , setTimeZero and setTimeout
 - - working on mock data and structuring ( working on it )
   - re-analysis of data and restructuring (working on it )
   - working with figma design for different pages (working on it )
-  - getting components created for APIs 
+  - getting components created for APIs (working on it ) 
 
 - working on recat 19 update --> "use" for fetching
 ERROR :- "display name" is not being updated in the redux store
