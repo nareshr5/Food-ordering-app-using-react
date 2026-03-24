@@ -132,7 +132,7 @@ sync and async operations , setTimeZero and setTimeout
   - re-analysis of data and restructuring (working on it )
   - working with figma design for different pages (working on it )
   - getting components created for APIs (working on it ) 
-
+- understand the flow 
 - working on recat 19 update --> "use" for fetching
 ERROR :- "display name" is not being updated in the redux store
 we need to use "auth.currentuser" and not "user" in the login.js file , because we are trying to fetch the details (uid, displaymname and etc) from a updated user (which is auth.currentuser)
