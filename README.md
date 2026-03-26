@@ -133,7 +133,7 @@ sync and async operations , setTimeZero and setTimeout
   - working with figma design for different pages (working on it )
   - getting components created for APIs (working on it ) 
 - understand the flow
-- understanding "this "
+- understanding "this " (working on it ) 
 
 
 - working on recat 19 update --> "use" for fetching
