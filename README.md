@@ -132,7 +132,7 @@ sync and async operations , setTimeZero and setTimeout
   - re-analysis of data and restructuring (working on it )
   - working with figma design for different pages (working on it )
   - getting components created for APIs (working on it ) 
-- understand the flow
+- understand the flow (working on it )
 - understanding "this ". and its edge cases and how ir works  (working on it ) 
 
 
