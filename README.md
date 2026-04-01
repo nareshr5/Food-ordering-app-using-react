@@ -134,7 +134,7 @@ sync and async operations , setTimeZero and setTimeout
   - getting components created for APIs (working on it ) 
 - understand the flow (working on it )
 - understanding "this ". and its edge cases and how it works  (done)
-- understanding logic behind the problems 
+- understanding logic behind the problems (done )
 
 
 - working on recat 19 update --> "use" for fetching
