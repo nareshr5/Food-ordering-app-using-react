@@ -135,6 +135,7 @@ sync and async operations , setTimeZero and setTimeout
 - understand the flow (working on it )
 - understanding "this ". and its edge cases and how it works  (done)
 - understanding logic behind the problems (done )
+- understand dynamic programming 
 
 
 - working on recat 19 update --> "use" for fetching
