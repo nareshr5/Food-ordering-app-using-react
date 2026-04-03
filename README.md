@@ -108,8 +108,8 @@ sync and async operations , setTimeZero and setTimeout
 - model creation
 - connection establishment between database and app
 - microservice and monolithic architecture (done )
-- API building with different methods and routes (working on it )
-- server creating using node:http module and createServer() function
+- API building with different methods and routes (working on it ) done
+- server creating using node:http module and createServer() fution
 - creating get API , post api, delete api , patch api
 - api data validations and sanitation 
 - password encryption and hashing
