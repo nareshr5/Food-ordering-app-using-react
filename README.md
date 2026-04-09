@@ -129,7 +129,7 @@ sync and async operations , setTimeZero and setTimeout
 - addressing the edge cases for feed API(working on it )
 - understand github copilot (working on it ) ( thwre is some issue with installation ) (working on it )
 - - working on mock data and structuring ( working on it )
-  - re-analysis of data and restructuring (working on it )
+  - re-analysis of data and restructuring (working on it - needs some restructurig)
   - working with figma design for different pages (done )
   - getting components created for APIs (working on it ) 
 - understand the flow (done )
