@@ -137,6 +137,8 @@ sync and async operations , setTimeZero and setTimeout
 - understanding logic behind the problems (done )
 - understand dynamic programming (working on it )
 - understanding merging (working on it )
+- revert things 
+  
 
 
 - working on recat 19 update --> "use" for fetching
