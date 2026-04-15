@@ -138,7 +138,7 @@ sync and async operations , setTimeZero and setTimeout
 - understand dynamic programming (working on it )
 - understanding merging (working on it )
 - revert things (working on it )
-- - requirement collection (working on it ) 
+- - requirement collection (done) 
   
 
 
