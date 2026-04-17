@@ -139,7 +139,7 @@ sync and async operations , setTimeZero and setTimeout
 - understanding merging (working on it )
 - revert things (working on it )
 - - requirement collection (done)
-  -  integrating endpoints 
+  -  integrating endpoints (working on it ) 
   - 
   
 
