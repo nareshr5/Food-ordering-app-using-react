@@ -140,7 +140,7 @@ sync and async operations , setTimeZero and setTimeout
 - revert things (working on it )
 - - requirement collection (done)
   -  integrating endpoints (working on it ) (facing some data flow and integration issues )
-  - debugging on the data flow
+  - debugging on the data flow , found out the function issues
   
 
 
