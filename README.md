@@ -141,7 +141,7 @@ sync and async operations , setTimeZero and setTimeout
 - - requirement collection (done)
   -  integrating endpoints (working on it ) (facing some data flow and integration issues )
   - debugging on the data flow , found out the function issues (working on it )
-  - understandimg brancing issues and responses
+  - understandimg brancing issues and responses (working on it )
   
 
 
