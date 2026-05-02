@@ -142,7 +142,7 @@ sync and async operations , setTimeZero and setTimeout
   -  integrating endpoints (working on it ) (facing some data flow and integration issues )
   - debugging on the data flow , found out the function issues (working on it )
   - understanding branching issues and responses (working on it )
-  - mongoose methods (find, findone, findByIdAndUpdate ) (working on it )
+  - mongoose methods (find, findone, findByIdAndUpdate , findByIdAndDelete) (working on it )
   - 
 
 
