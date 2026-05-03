@@ -1,4 +1,4 @@
-use
+nouse
 
 # App building flow:
 - created app using npx create-react-app command (this is depricated now)
@@ -143,6 +143,7 @@ sync and async operations , setTimeZero and setTimeout
   - debugging on the data flow , found out the function issues (working on it )
   - understanding branching issues and responses (working on it )
   - mongoose methods (find, findone, findByIdAndUpdate , findByIdAndDelete) (working on it )
+  - adding time stamps
   - 
 
 
