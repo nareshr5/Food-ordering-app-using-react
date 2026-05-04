@@ -143,7 +143,7 @@ sync and async operations , setTimeZero and setTimeout
   - debugging on the data flow , found out the function issues (working on it )
   - understanding branching issues and responses (working on it )
   - mongoose methods (find, findone, findByIdAndUpdate , findByIdAndDelete) (working on it )
-  - adding time stamps
+  - adding time stamps (working on it )
   - 
 
 
