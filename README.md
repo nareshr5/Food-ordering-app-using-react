@@ -1,4 +1,4 @@
-nouse
+hunouse
 
 # App building flow:
 - created app using npx create-react-app command (this is depricated now)
@@ -144,7 +144,7 @@ sync and async operations , setTimeZero and setTimeout
   - understanding branching issues and responses (working on it )
   - mongoose methods (find, findone, findByIdAndUpdate , findByIdAndDelete) (working on it )
   - adding time stamps (working on it )
-  - 
+  - custom validate 
 
 
 - working on recat 19 update --> "use" for fetching
