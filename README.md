@@ -143,8 +143,9 @@ sync and async operations , setTimeZero and setTimeout
   - debugging on the data flow , found out the function issues (working on it )
   - understanding branching issues and responses (working on it )
   - mongoose methods (find, findone, findByIdAndUpdate , findByIdAndDelete) (working on it )
-  - adding time stamps (working on it )
+  - adding time stamps and validators (working on it )
   - custom validate and how it works with update and patch function (working on it )
+    
 
 
 - working on recat 19 update --> "use" for fetching
