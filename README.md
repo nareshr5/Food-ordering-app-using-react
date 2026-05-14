@@ -146,7 +146,7 @@ sync and async operations , setTimeZero and setTimeout
   - adding time stamps and validators (working on it )
   - custom validate and how it works with update and patch function (working on it )
   - data sanitation(working on it )
-  - password encrypt
+  - password encrypt (working on it )
     
 
 
