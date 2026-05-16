@@ -147,6 +147,7 @@ sync and async operations , setTimeZero and setTimeout
   - custom validate and how it works with update and patch function (working on it )
   - data sanitation(working on it )
   - password encrypt (working on it )
+  - cookies generate 
     
 
 
