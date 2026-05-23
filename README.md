@@ -145,7 +145,7 @@ sync and async operations , setTimeZero and setTimeout
   - mongoose methods (find, findone, findByIdAndUpdate , findByIdAndDelete) (working on it )
   - adding time stamps and validators (working on it )
   - custom validate and how it works with update and patch function (working on it )
-  - data sanitation(working on it )
+  - data sanitation(done)
   - password encrypt (done )
   - cookies generate (done)
   - asp.net demo (done) 
