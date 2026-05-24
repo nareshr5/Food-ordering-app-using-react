@@ -144,7 +144,7 @@ sync and async operations , setTimeZero and setTimeout
   - understanding branching issues and responses (working on it )
   - mongoose methods (find, findone, findByIdAndUpdate , findByIdAndDelete) (working on it )
   - adding time stamps and validators (working on it )
-  - custom validate and how it works with update and patch function (working on it )
+  - custom validate and how it works with update and patch function (done  )
   - data sanitation(done)
   - password encrypt (done )
   - cookies generate (done)
