@@ -148,7 +148,8 @@ sync and async operations , setTimeZero and setTimeout
   - data sanitation(done)
   - password encrypt (done )
   - cookies generate (done)
-  - asp.net demo and flow understand (done) 
+  - asp.net demo and flow understand (done)
+  - working on the requirements 
     
 
 
