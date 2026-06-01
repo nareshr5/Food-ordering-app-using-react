@@ -149,7 +149,7 @@ sync and async operations , setTimeZero and setTimeout
   - password encrypt (done )
   - cookies generate (done)
   - asp.net demo and flow understand (done)
-  - working on the requirements (working on it )
+  - working on the requirements (done)
   - express router (working on it ) 
     
 
