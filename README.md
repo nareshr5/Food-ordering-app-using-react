@@ -150,7 +150,8 @@ sync and async operations , setTimeZero and setTimeout
   - cookies generate (done)
   - asp.net demo and flow understand (done)
   - working on the requirements (done)
-  - express router (working on it ) 
+  - express router (working on it )
+  - initial setup for projects
     
 
 
