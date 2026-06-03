@@ -151,7 +151,7 @@ sync and async operations , setTimeZero and setTimeout
   - asp.net demo and flow understand (done)
   - working on the requirements (done)
   - express router (working on it )
-  - initial setup for projects
+  - initial setup for projects (working on it )
     
 
 
