@@ -154,7 +154,7 @@ sync and async operations , setTimeZero and setTimeout
   - initial setup for projects (working on it )
   - testing flows (working on it )
   - express routing (working on it)
-  - password update creation
+  - password update creation (working on it )
 
 
 
