@@ -153,7 +153,7 @@ sync and async operations , setTimeZero and setTimeout
   - express router (working on it )
   - initial setup for projects (working on it )
   - testing flows (working on it )
-  - express Routing (working on it)
+  - express Routing (done)
   - password update creation (working on it )
   - querying and indexing ( working on it )
   - connection request schema creation and dealing edge cases (working on it ) 
