@@ -155,7 +155,7 @@ sync and async operations , setTimeZero and setTimeout
   - testing flows (working on it )
   - express Routing (done)
   - password update creation (working on it )
-  - querying and indexing ( working on it )
+  - querying and indexing (done )
   - connection request schema creation and dealing edge cases (working on it and need some logical cues ) 
 
 
