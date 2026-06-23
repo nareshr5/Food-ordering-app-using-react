@@ -156,7 +156,8 @@ sync and async operations , setTimeZero and setTimeout
   - express Routing (done)
   - password update creation (working on it )
   - querying and indexing (done )
-  - connection request schema creation and dealing edge cases (working on it and need some logical cues ) 
+  - connection request schema creation and dealing edge cases (working on it and need some logical cues )
+  - refs , populate and APIs
 
 
 
