@@ -154,7 +154,7 @@ sync and async operations , setTimeZero and setTimeout
   - initial setup for projects (working on it )
   - testing flows (working on it )
   - express Routing (done)
-  - password update creation (working on it )
+  - password update creation (done )
   - querying and indexing (done )
   - connection request schema creation and dealing edge cases (working on it and need some logical cues )
   - refs between collections , populate and APIs (done ) 
