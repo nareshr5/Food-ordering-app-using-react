@@ -158,7 +158,7 @@ sync and async operations , setTimeZero and setTimeout
   - querying and indexing (done )
   - connection request schema creation and dealing edge cases (working on it and need some logical cues )
   - refs between collections , populate and APIs (done )
-  - integrating apps
+  - integrating apps ( working on it ) 
 
 
 - working on recat 19 update --> "use" for fetching
