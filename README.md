@@ -159,8 +159,8 @@ sync and async operations , setTimeZero and setTimeout
   - connection request schema creation and dealing edge cases (working on it and need some logical cues )
   - refs between collections , populate and APIs (done )
   - integrating apps ( working on it )
-  - cors and fixing 
-
+  - cors and fixing (working on it )
+ (
 
 - working on recat 19 update --> "use" for fetching
 ERROR :- "display name" is not being updated in the redux store
