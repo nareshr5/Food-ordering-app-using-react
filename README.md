@@ -151,7 +151,7 @@ sync and async operations , setTimeZero and setTimeout
   - asp.net demo and flow understand (done)
   - working on the requirements (done)
   - express router (working on it )
-  - initial setup for projects (working on it )
+  - initial setup for projects (done )
   - testing flows (done )
   - express Routing (done)
   - password update creation (done )
@@ -160,7 +160,7 @@ sync and async operations , setTimeZero and setTimeout
   - refs between collections , populate and APIs (done )
   - integrating apps ( working on it )
   - cors and fixing (working on it )
- (
+ 
 
 - working on recat 19 update --> "use" for fetching
 ERROR :- "display name" is not being updated in the redux store
