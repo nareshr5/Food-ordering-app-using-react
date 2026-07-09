@@ -1,4 +1,4 @@
-hunouse
+hihunouse
 
 # App building flow:
 - created app using npx create-react-app command (this is depricated now)
@@ -160,6 +160,7 @@ sync and async operations , setTimeZero and setTimeout
   - refs between collections , populate and APIs (done )
   - integrating apps ( working on it )
   - cors and fixing (working on it )
+  - redux (working on it )
  
 
 - working on recat 19 update --> "use" for fetching
