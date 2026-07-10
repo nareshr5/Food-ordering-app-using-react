@@ -160,7 +160,7 @@ sync and async operations , setTimeZero and setTimeout
   - refs between collections , populate and APIs (done )
   - integrating apps ( working on it )
   - cors and fixing (working on it )
-  - redux (working on it )
+  - redux (done)
  
 
 - working on recat 19 update --> "use" for fetching
