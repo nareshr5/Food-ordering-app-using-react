@@ -162,6 +162,7 @@ sync and async operations , setTimeZero and setTimeout
   - cors and fixing (working on it )
   - redux (done)
   - handling login (done)
+  - UI integrations (working on it )
  
 
 - working on recat 19 update --> "use" for fetching
