@@ -163,6 +163,7 @@ sync and async operations , setTimeZero and setTimeout
   - redux (done)
   - handling login (done)
   - UI integrations (working on it )
+  - developing profile feature (working on it ) 
  
 
 - working on recat 19 update --> "use" for fetching
