@@ -163,7 +163,7 @@ sync and async operations , setTimeZero and setTimeout
   - redux (done)
   - handling login (done)
   - UI integrations (working on it )
-  - developing profile feature (working on it )
+  - developing profile feature (done)
   - login edge cases and routings (working on it )
  
 
