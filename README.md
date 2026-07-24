@@ -164,7 +164,7 @@ sync and async operations , setTimeZero and setTimeout
   - handling login (done)
   - UI integrations (working on it )
   - developing profile feature (done)
-  - login edge cases and routings (working on it )
+  - login edge cases and routings (update)
   - introducing new components for connections and requests (done)
  
 
