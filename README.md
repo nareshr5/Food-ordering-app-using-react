@@ -162,7 +162,7 @@ sync and async operations , setTimeZero and setTimeout
   - cors and fixing (working on it )
   - redux (done)
   - handling login (done)
-  - UI integrations (working on it )
+  - UI integrations (done)
   - developing profile feature (done)
   - login edge cases and routings (update)
   - introducing new components for connections and requests (done)
