@@ -166,6 +166,8 @@ sync and async operations , setTimeZero and setTimeout
   - developing profile feature (done)
   - login edge cases and routings (update)
   - introducing new components for connections and requests (done)
+  - understandimg the folder connections and imports (working on it ) 
+    
  
 
 - working on recat 19 update --> "use" for fetching
