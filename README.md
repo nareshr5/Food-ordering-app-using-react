@@ -167,7 +167,7 @@ sync and async operations , setTimeZero and setTimeout
   - login edge cases and routings (update)
   - introducing new components for connections and requests (done)
   - understandimg the folder connections, building locally and imports (working on it )
-  - debugging 
+  - debugging (working on it )
     
  
 
