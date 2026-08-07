@@ -169,6 +169,8 @@ sync and async operations , setTimeZero and setTimeout
   - understandimg the folder connections, building locally and imports (working on it )
   - debugging (working on it )
   - code version fix in the local (working on it )
+  - understanding bundle files
+    
     
  
 
