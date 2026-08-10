@@ -170,6 +170,7 @@ sync and async operations , setTimeZero and setTimeout
   - debugging (working on it )
   - code version fix in the local (working on it )
   - understanding bundle files (done )
+  - feed cards and functionalities
     
     
  
